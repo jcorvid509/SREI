@@ -6,10 +6,10 @@ Servicios de Red e Internet
 
 23/09/2024
 
-~~Actividad de introducción
+Actividad de introducción
     - ~~Introducción al http~~
-    - ~~UDP y TCP
-    - ~~Telnet/http
-    - ~~cURL
-    - ~~Servidor web
-    - ~~Repositorio GitHub
+    - UDP y TCP
+    - Telnet/http
+    - cURL
+    - Servidor web
+    - Repositorio GitHub
