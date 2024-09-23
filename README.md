@@ -7,7 +7,7 @@ Servicios de Red e Internet
 23/09/2024
 
 ~~Actividad de introducción
-    - ~~Introducción al http
+    - ~~Introducción al http~~
     - ~~UDP y TCP
     - ~~Telnet/http
     - ~~cURL
