@@ -6,7 +6,9 @@ Servicios de Red e Internet
 
 ### 23/09/2024
 
-#### Actividad de introducción
+<details>
+
+<summary>Actividad de introducción</summary>
 
 > * [ ] Introducción al http
 > * [ ] UDP y TCP
@@ -14,3 +16,5 @@ Servicios de Red e Internet
 > * [ ] cURL
 > * [ ] Servidor web
 > * [ ] Repositorio GitHub
+>
+</details>
