@@ -1,8 +1,6 @@
 
 # SREI Tareas
 
-Servicios de Red e Internet
-
 ## Tema 0: INTRODUCCIÓN
 
 ### 23/09/2024

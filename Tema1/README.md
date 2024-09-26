@@ -1,7 +1,5 @@
 # SREI Tareas
 
-Servicios de Red e Internet
-
 ## Tema 1: SERVIDORES WEB
 
 ### --/--/2024
