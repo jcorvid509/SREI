@@ -7,15 +7,15 @@ Este repositorio incluye actividades llevadas a cabo en el módulo nombre del m�
 
 | Actividad   | Descripción         |
 | ----------- | ------------------- |
-| Actividad 1 | [HTTP Introduction](/Tema0/1.1_HTTP.md) |
-| Actividad 2 | [UDP and TCP: Comparison of Transport Protocols](/Tema0/1.2_UDPTCP.md) |
-| Actividad 3 | [Práctica telnet/http](/Tema0/1.3_TelnetHTTP.md) |
-| Actividad 4 | [Usando cURL](/Tema0/1.4_cURL.md) |
-| Actividad 5 | [Práctica servidor web](/Tema0/1.5_ServWeb.md) |
-| Actividad 6 | [Repositorio de GitHub](/Tema0/1.6_GitHub.md) |
+| Actividad 1 | [HTTP Introduction](/Tema0/Actividades/1.1_HTTP.md) |
+| Actividad 2 | [UDP and TCP: Comparison of Transport Protocols](/Tema0/Actividades/1.2_UDPTCP.md) |
+| Actividad 3 | [Práctica telnet/http](/Tema0/Actividades/1.3_TelnetHTTP.md) |
+| Actividad 4 | [Usando cURL](/Tema0/Actividades/1.4_cURL.md) |
+| Actividad 5 | [Práctica servidor web](/Tema0/Actividades/1.5_ServWeb.md) |
+| Actividad 6 | [Repositorio de GitHub](/Tema0/Actividades/1.6_GitHub.md) |
 
 ### [Tema 1 - Servidores Web](Tema1/readme.md)
 
 | **Ejercicio 1** | Breve descripción 1.1 |
 | ----------- | --------------------- |
-| **Ejercicio 2** | Breve descripción 1.2 | 
+| **Ejercicio 2** | Breve descripción 1.2 |
