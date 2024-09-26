@@ -5,7 +5,7 @@
 
 ### 23/09/2024
 
-´´´html:
+```html:
     <details>
 
     <summary>Actividad de introducción</summary>
@@ -18,4 +18,4 @@
     > * [ ] Repositorio GitHub
 
     </details>
-´´´
+```
