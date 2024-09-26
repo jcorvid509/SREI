@@ -13,7 +13,7 @@ Este repositorio incluye actividades llevadas a cabo en el módulo nombre del m�
 | Actividad 4 | Usando cURL |
 | Actividad 5 | Práctica servidor web |
 
-### [Tema 1 - Servidores Web](/Tema1/readme.md)
+### [Tema 1 - Servidores Web](Tema1/readme.md)
 
 | **Ejercicio 1** | Breve descripción 1.1 |
 | ----------- | --------------------- |
