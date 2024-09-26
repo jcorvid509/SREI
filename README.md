@@ -3,7 +3,7 @@
 ## Servicios de Red e Internet
 Este repositorio incluye actividades llevadas a cabo en el módulo nombre del módulo
 
-### [Tema 0 - Introducción](/Tem0/readme.md)
+### [Tema 0 - Introducción](Tema0/readme.md)
 
 | Actividad   | Descripción         |
 | ----------- | ------------------- |
