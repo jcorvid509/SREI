@@ -5,15 +5,17 @@
 
 ### 23/09/2024
 
-<details>
+´´´html:
+    <details>
 
-<summary>Actividad de introducción</summary>
+    <summary>Actividad de introducción</summary>
 
-> * [ ] Introducción al http
-> * [ ] UDP y TCP
-> * [ ] Telnet/http
-> * [ ] cURL
-> * [ ] Servidor web            
-> * [ ] Repositorio GitHub
+    > * [ ] Introducción al http
+    > * [ ] UDP y TCP
+    > * [ ] Telnet/http
+    > * [ ] cURL
+    > * [ ] Servidor web            
+    > * [ ] Repositorio GitHub
 
-</details>
+    </details>
+´´´
