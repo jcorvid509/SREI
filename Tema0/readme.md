@@ -7,7 +7,7 @@
 
 ### 23/09/2024
 
-<details>
+<details open>
 
 <summary>Actividad de introducción</summary>
 
