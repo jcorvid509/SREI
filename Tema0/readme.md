@@ -5,8 +5,6 @@
 
 ## Tema 0: INTRODUCCIÓN
 
-### 23/09/2024
-
 <details open>
 
 <summary>Actividad de introducción</summary>
