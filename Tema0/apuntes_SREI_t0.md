@@ -11,3 +11,5 @@ https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme#Esquema_URL
     Browser renders 
 
     DOM     =>  Estructura interna del documento
+    
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04-es
