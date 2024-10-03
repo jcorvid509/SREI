@@ -10,7 +10,7 @@
 <summary>Actividad de introducción</summary>
 
 > * [x] [HTTP Introduction](Actividades/0.1.md)
-> * [ ] [UDP and TCP: Comparison of Transport Protocols](Actividades/0.2.md)
+> * [x] [UDP and TCP: Comparison of Transport Protocols](Actividades/0.2.md)
 > * [ ] [Práctica telnet/http](Actividades/0.3.md)
 > * [ ] [Usando cURL](Actividades/0.4.md)
 > * [ ] [Práctica servidor web](Actividades/0.5.md)
