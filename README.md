@@ -8,16 +8,17 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Servicios de 
 
 | Actividad   | Descripción         |
 | ----------- | ------------------- |
-| **Actividad 1** | [HTTP Introduction](/Tema0/Actividades/0.1_HTTP.md) |
-| **Actividad 2** | [UDP and TCP: Comparison of Transport Protocols](/Tema0/Actividades/0.2_UDPTCP.md) |
-| **Actividad 3** | [Práctica telnet/http](/Tema0/Actividades/0.3_TelnetHTTP.md) |
-| **Actividad 4** | [Usando cURL](/Tema0/Actividades/0.4_cURL.md) |
-| **Actividad 5** | [Práctica servidor web](/Tema0/Actividades/0.5_ServWeb.md) |
-| **Actividad 6** | [Repositorio de GitHub](/Tema0/Actividades/0.6_GitHub.md) |
+| **Actividad 1** | [HTTP Introduction](/Tema0/Actividades/0.1.md) |
+| **Actividad 2** | [UDP and TCP: Comparison of Transport Protocols](/Tema0/Actividades/0.2.md) |
+| **Actividad 3** | [Práctica telnet/http](/Tema0/Actividades/0.3.md) |
+| **Actividad 4** | [Usando cURL](/Tema0/Actividades/0.4.md) |
+| **Actividad 5** | [Práctica servidor web](/Tema0/Actividades/0.5.md) |
+| **Actividad 6** | [Repositorio de GitHub](/Tema0/Actividades/0.6.md) |
 
 ### [Tema 1 - Servidores Web](Tema1/readme.md)
 
 | Actividad   | Descripción         |
 | ----------- | ------------------- |
-| **Actividad 1** | -- |
-| **Actividad 2** | -- |
+| **Actividad 1** | [Instalación de Apache](/Tema1/Actividades/1.1.md) |
+| **Actividad 2** | [Configuración básica de Apache](/Tema1/Actividades/0.1.md) |
+| **Actividad 3** | [Directivas básicas](/Tema1/Actividades/0.1.md) |
