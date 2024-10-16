@@ -1,4 +1,4 @@
-q- Usar "aliaas" para redireccionar a   ~ = /home/usuario
+Usar "alias" para redireccionar a   ~ = /home/usuario
 
 ## Creamos un directorio en ~
 
