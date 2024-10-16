@@ -9,7 +9,7 @@
 
 <summary>Actividad de introducción</summary>
 
-> * [ ] [Instalación de Apache](Actividades/1.1.md)
+> * [x] [Instalación de Apache](Actividades/1.1.md)
 > * [ ] [Configuración básica de Apache](Actividades/1.2.md)
 > * [ ] [Directivas básicas](Actividades/1.3.md)
 
