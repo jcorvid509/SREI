@@ -20,5 +20,8 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Servicios de 
 | Actividad   | Descripción         |
 | ----------- | ------------------- |
 | **Actividad 1** | [Instalación de Apache](/Tema1/Actividades/1.1.md) |
-| **Actividad 2** | [Configuración básica de Apache](/Tema1/Actividades/0.1.md) |
-| **Actividad 3** | [Directivas básicas](/Tema1/Actividades/0.1.md) |
+| **Actividad 2** | [Configuración básica de Apache](/Tema1/Actividades/1.2.md) |
+| **Actividad 3** | [Directivas básicas](/Tema1/Actividades/1.3.md) |
+| **Actividad 4** | [Directivas básicas 2](/Tema1/Actividades/1.4.md) |
+| **Actividad 5** | [Directiva Directory](/Tema1/Actividades/1.5.md) |
+| **Actividad 6** | [Expresiones regulares](/Tema1/Actividades/1.6.md) |
