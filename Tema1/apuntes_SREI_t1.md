@@ -112,24 +112,39 @@ match	2 files found?
 match	24 files found?
 skip	No files found.
 \d+\sfiles?\sfound\?
-
+```
 match	1.   abc
-match	2.	abc             <br>
-match	3.           abc    <br>
-skip	4.abc               <br>
+match	2.  abc
+match	3.           abc
+skip	4.abc
+```
 \d.\s+abc
 
 ### Indicar principio ^ y final $ de la línea
-
-match	Mission: successful                             <br>
-skip	Last Mission: unsuccessful                      <br>
-skip	Next Mission: successful upon capture of target <br>
-`^Mission`
+```
+match	Mission: successful
+skip	Last Mission: unsuccessful
+skip	Next Mission: successful upon capture of target
+```
+`^Mission`      <br>
 `\ssuccessful$`
 
 ### Grupos de captura
-
-capture	file_record_transcript.pdf	file_record_transcript  <br>
-capture	file_07241999.pdf	        file_07241999           <br>
-skip	testfile_fake.pdf.tmp                               <br>
+```
+capture	file_record_transcript.pdf	file_record_transcript
+capture	file_07241999.pdf	        file_07241999
+skip	testfile_fake.pdf.tmp
+```
 `^(file.*)\.pdf`
+
+## Caracteres
+
+|   Caracter    |   Descripción         |   Ejemplo                     |
+|   --------    |   -----------         |   -------                     |
+|   **/**       |   Slash               |                               |
+|   **\\**      |   Backslash           |                               |
+|   **\|**      |   Operando OR         |   2\|3, se elige entre 2 o 3  |
+|   **(...)**   |   Captura de grupos   |   h(o)la                      |
+|   **\1**      |   Contenido grupo 1   |   r(\w)g\1x -> lo contenido en el grupo 1, se ha de repetir en el \1  |
+|   **\2**      |   Contenido gupo 2    |   igual que el anterior creando otro grupo    |
+
