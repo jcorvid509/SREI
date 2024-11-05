@@ -46,8 +46,12 @@ apachectl configtext
 sudo service apache2 restart
 ```
 
+<br>
 
-----------------------------------------------------------------------------------------------------
+---
+---
+
+<br>
 
 # Expresiones regulares
 
@@ -147,4 +151,13 @@ skip	testfile_fake.pdf.tmp
 |   **(...)**   |   Captura de grupos   |   h(o)la                      |
 |   **\1**      |   Contenido grupo 1   |   r(\w)g\1x -> lo contenido en el grupo 1, se ha de repetir en el \1  |
 |   **\2**      |   Contenido gupo 2    |   igual que el anterior creando otro grupo    |
+
+<br>
+
+---
+---
+
+<br>
+
+[Redirecciones](https://www.elarraydejota.com/ejemplos-de-redirecciones-utiles-y-comunes-con-mod_rewrite-para-apache/)
 
