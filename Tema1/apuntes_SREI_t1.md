@@ -161,3 +161,5 @@ skip	testfile_fake.pdf.tmp
 
 [Redirecciones](https://www.elarraydejota.com/ejemplos-de-redirecciones-utiles-y-comunes-con-mod_rewrite-para-apache/)
 
+
+$USER   ->  Nombre de usuario del usuario actual
