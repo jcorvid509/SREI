@@ -26,4 +26,4 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Servicios de 
 | **Actividad 5** | [Directiva Directory](/Tema1/Actividades/1.5.md) |
 | **Actividad 6** | [Expresiones regulares](/Tema1/Actividades/1.6.md) |
 
-### [Práctica 1º Trimestre - Servidores Web]([Practica1/readme.md](https://github.com/jcorvid509/SREI_Servers/README.MD))
+### [Práctica 1º Trimestre - Servidores Web](https://github.com/jcorvid509/SREI_Servers/blob/main/README.md)
