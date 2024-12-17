@@ -1,3 +1,9 @@
+
+![](https://github.com/jcorvid509/SREI_Servers/blob/main/md/res/_bannerD.png?raw=true#gh-dark-mode-only)
+![](https://github.com/jcorvid509/SREI_Servers/blob/main/md/res/_bannerL.png?raw=true#gh-light-mode-only)
+
+---
+
 # SREI
 
 ## Servicios de Red e Internet
