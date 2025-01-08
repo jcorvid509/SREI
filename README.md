@@ -34,4 +34,4 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Servicios de 
 
 ### [Práctica 1º Trimestre - Servidores Web](https://github.com/jcorvid509/SREI_Servers/blob/main/README.md)
 
-### [Tema 2 - Sistema de Nombres de Dominio](Tema1/readme.md)
+### [Tema 2 - Sistema de Nombres de Dominio](Tema3/readme.md)
