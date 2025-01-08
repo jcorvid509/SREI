@@ -32,6 +32,6 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Servicios de 
 | **Actividad 5** | [Directiva Directory](/Tema1/Actividades/1.5.md) |
 | **Actividad 6** | [Expresiones regulares](/Tema1/Actividades/1.6.md) |
 
-### [Práctica 1º Trimestre - Servidores Web](https://github.com/jcorvid509/SREI_Servers/blob/main/README.md)
+### [Práctica 1º Trimestre - Servidores Web](/Tema1/ServidoresWeb/readme.md)
 
 ### [Tema 2 - Sistema de Nombres de Dominio](Tema2/readme.md)
