@@ -17,11 +17,11 @@ Subject: `Servicios de Red e Internet`
 
 |||
 |--|--|
-| Introducción I        | [<img src="/.resGen/_arrow.svg" width="30">](/Tema3/act/1.md) |
-| Introducción II       | [<img src="/.resGen/_arrow.svg" width="30">](/Tema3/act/2.md) |
-| Nslookup              | [<img src="/.resGen/_arrow.svg" width="30">](/Tema3/act/3.md) |
-| Dig                   | [<img src="/.resGen/_arrow.svg" width="30">](/Tema3/act/4.md) |
-| Caching & Fordwarding | [<img src="/.resGen/_arrow.svg" width="30">](/Tema3/act/5.md) |
-| Master DNS            | [<img src="/.resGen/_arrow.svg" width="30">](/Tema3/act/6.md) |
-| Slave DNS             | [<img src="/.resGen/_arrow.svg" width="30">](/Tema3/act/7.md) |
-| Subdominio            | [<img src="/.resGen/_arrow.svg" width="30">](/Tema3/act/8.md) |
+| Introducción I        | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/1.md) |
+| Introducción II       | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/2.md) |
+| Nslookup              | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/3.md) |
+| Dig                   | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/4.md) |
+| Caching & Fordwarding | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/5.md) |
+| Master DNS            | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/6.md) |
+| Slave DNS             | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/7.md) |
+| Subdominio            | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/8.md) |
