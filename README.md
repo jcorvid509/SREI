@@ -1,6 +1,6 @@
 
-![](https://github.com/jcorvid509/SREI_Servers/blob/main/md/res/_bannerD.png?raw=true#gh-dark-mode-only)
-![](https://github.com/jcorvid509/SREI_Servers/blob/main/md/res/_bannerL.png?raw=true#gh-light-mode-only)
+![](/.resGen/_bannerD.png#gh-dark-mode-only)
+![](/.resGen/_bannerL.png#gh-light-mode-only)
 
 ---
 
@@ -33,3 +33,5 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Servicios de 
 | **Actividad 6** | [Expresiones regulares](/Tema1/Actividades/1.6.md) |
 
 ### [Práctica 1º Trimestre - Servidores Web](https://github.com/jcorvid509/SREI_Servers/blob/main/README.md)
+
+### [Tema 2 - Sistema de Nombres de Dominio](Tema1/readme.md)
