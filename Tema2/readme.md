@@ -11,7 +11,7 @@ Subject: `Servicios de Red e Internet`
 
 ---
 
-# Tema 2 Domain Name System (DNS)
+# Tema 2: Domain Name System (DNS)
 
 ## Prácticas de DNS:
 
