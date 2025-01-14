@@ -34,8 +34,7 @@ def descargar_e_invertir_imagen():
     inverted_img = Image.merge("RGBA", (r, g, b, a))
 
     # Añadir "_i" al nombre del archivo antes de la extensión
-    nombre_invertido = f"{nombre_guardado}_i"
-    ruta_guardado_invertido = os.path.join(ruta_directorio, f"{nombre_invertido}.png")
+    ruta_guardado_invertido = os.path.join(ruta_directorio, f"{nombre_guardado}_i.png")
 
     # Guardar la imagen invertida
     inverted_img.save(ruta_guardado_invertido)
