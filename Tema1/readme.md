@@ -1,7 +1,7 @@
 
 # SREI Tareas
 
-[Readme Principal](/README.md)
+<a href="/README.md"><img src="/.resGen/_home.svg" width="30"></a>
 
 ## Tema 1: SERVIDORES WEB
 
