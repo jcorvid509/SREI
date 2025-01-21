@@ -2,9 +2,9 @@
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 
 <svg
-   width="800px"
-   height="800px"
-   viewBox="0 0 24 24"
+   width="1400"
+   height="800"
+   viewBox="0 0 42 24"
    fill="none"
    version="1.1"
    id="svg2"
@@ -25,34 +25,32 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.625625"
-     inkscape:cx="409.19081"
-     inkscape:cy="437.16284"
-     inkscape:window-width="2400"
-     inkscape:window-height="1261"
+     inkscape:zoom="0.3128125"
+     inkscape:cx="1224.3756"
+     inkscape:cy="557.84216"
+     inkscape:window-width="1920"
+     inkscape:window-height="1111"
      inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-y="1341"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <g
-     id="g2"
-     style="stroke:#808080;stroke-opacity:1"
-     transform="matrix(1.117294,0,0,1.117294,-1.4184387,-1.4131967)">
+     id="g1">
     <path
-       d="m 22,8.33994 v 7.31996 c 0,1.5 -1.63,2.44 -2.93,1.69 L 15.9,15.5299 12.73,13.7 c -0.2,-0.12 -0.36,-0.25 -0.49,-0.41 v -2.56 c 0.13,-0.16 0.29,-0.29 0.49,-0.41 L 15.9,8.48993 19.07,6.66996 c 1.3,-0.77 2.93,0.16998 2.93,1.66998 z"
+       d="M 2.9013552,8.6243027 16.734597,1.3436477 c 3.282262,-1.73064696 6.850976,1.766454 5.191942,5.084523 l -1.933551,3.8670423 c -0.537097,1.074195 -0.537097,2.339357 0,3.413552 l 1.933551,3.867101 c 1.659034,3.318069 -1.90968,6.803234 -5.191942,5.084523 L 2.9013552,15.379735 c -2.721293,-1.43226 -2.721293,-5.323232 0,-6.7554323 z"
        stroke="#292D32"
-       stroke-width="1.5"
+       stroke-width="1.79032"
        stroke-linecap="round"
        stroke-linejoin="round"
-       id="path1"
+       id="path1-0"
        style="stroke:#808080;stroke-opacity:1" />
     <path
-       d="m 12.24,8.33994 v 7.31996 c 0,1.5 -1.63,2.44 -2.93001,1.69 L 6.14001,15.5299 2.97,13.7 c -1.3,-0.75 -1.3,-2.62 0,-3.38 L 6.14001,8.48993 9.30999,6.66996 C 10.61,5.89996 12.24,6.83994 12.24,8.33994 Z"
+       d="m 21.668443,8.6243026 13.833242,-7.280655 c 3.282263,-1.73064695 6.850977,1.766454 5.191942,5.084523 l -1.933551,3.8670424 c -0.537097,1.074195 -0.537097,2.339357 0,3.413552 l 1.933551,3.867101 c 1.659034,3.318069 -1.90968,6.803234 -5.191942,5.084523 L 21.668443,15.379735 c -2.721292,-1.43226 -2.721292,-5.323231 0,-6.7554324 z"
        stroke="#292D32"
-       stroke-width="1.5"
+       stroke-width="1.79032"
        stroke-linecap="round"
        stroke-linejoin="round"
-       id="path2"
+       id="path1-0-9"
        style="stroke:#808080;stroke-opacity:1" />
   </g>
 </svg>
