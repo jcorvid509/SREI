@@ -7,17 +7,17 @@
    viewBox="0 0 24 24"
    fill="none"
    version="1.1"
-   id="svg6"
-   sodipodi:docname="_home.svg"
+   id="svg3"
+   sodipodi:docname="back-square-svgrepo-com.svg"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs6" />
+     id="defs3" />
   <sodipodi:namedview
-     id="namedview6"
+     id="namedview3"
      pagecolor="#ffffff"
      bordercolor="#000000"
      borderopacity="0.25"
@@ -25,43 +25,38 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.531875"
-     inkscape:cx="193.65452"
-     inkscape:cy="288.60164"
+     inkscape:zoom="1.06375"
+     inkscape:cx="400.47004"
+     inkscape:cy="400"
      inkscape:window-width="1920"
      inkscape:window-height="1111"
      inkscape:window-x="-9"
      inkscape:window-y="1341"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg6" />
-  <g
-     id="g6"
-     transform="matrix(0.64359822,0,0,0.64359822,4.2929272,4.1050261)"
-     style="stroke:#808080;stroke-width:2.60165418;stroke-dasharray:none;stroke-opacity:1">
-    <path
-       d="M 21,22 V 9.96999 c 0,-0.62 -0.28,-1.19996 -0.77,-1.57996 l -7.0001,-5.44 c -0.73,-0.56 -1.7399,-0.56 -2.4599,0 L 3.76995,8.40004 c -0.48,0.38 -0.77,0.95995 -0.77,1.56995 L 2.94995,22 Z"
-       stroke="#292d32"
-       stroke-width="1.5"
-       stroke-miterlimit="10"
-       stroke-linejoin="round"
-       id="path2"
-       style="stroke:#808080;stroke-width:2.60165418;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       d="m 19.0001,7 -0.03,-3 h -4.4"
-       stroke="#292d32"
-       stroke-width="1.5"
-       stroke-miterlimit="10"
-       stroke-linecap="round"
-       stroke-linejoin="round"
-       id="path6"
-       style="stroke:#808080;stroke-width:2.60165418;stroke-dasharray:none;stroke-opacity:1" />
-  </g>
+     inkscape:current-layer="svg3" />
   <path
-     d="m 8.651163,23.16279 h 6.697675 c 5.581394,0 7.813952,-2.232558 7.813952,-7.813953 V 8.651163 c 0,-5.581396 -2.232558,-7.813954 -7.813952,-7.813954 H 8.651163 c -5.581395,0 -7.813953,2.232558 -7.813953,7.813954 v 6.697674 c 0,5.581395 2.232558,7.813953 7.813953,7.813953 z"
+     d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
      stroke="#292D32"
-     stroke-width="1.67442"
+     stroke-width="1.5"
      stroke-linecap="round"
      stroke-linejoin="round"
      id="path1"
+     style="stroke:#808080;stroke-opacity:1" />
+  <path
+     d="M9.00002 15.3802H13.92C15.62 15.3802 17 14.0002 17 12.3002C17 10.6002 15.62 9.22021 13.92 9.22021H7.15002"
+     stroke="#292D32"
+     stroke-width="1.5"
+     stroke-miterlimit="10"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path2"
+     style="stroke:#808080;stroke-opacity:1" />
+  <path
+     d="M8.57 10.7701L7 9.19012L8.57 7.62012"
+     stroke="#292D32"
+     stroke-width="1.5"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     id="path3"
      style="stroke:#808080;stroke-opacity:1" />
 </svg>
