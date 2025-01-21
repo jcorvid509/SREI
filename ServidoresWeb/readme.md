@@ -1,7 +1,7 @@
 ![](/.resGen/_bannerD.png#gh-dark-mode-only)
 ![](/.resGen/_bannerL.png#gh-light-mode-only)
 
-<a href="/Tema2/readme.md"><img src="/.resGen/_back.svg" width="30"></a>
+<a href="/README.md"><img src="/.resGen/_home.svg" width="30"></a>
 
 ---
 
