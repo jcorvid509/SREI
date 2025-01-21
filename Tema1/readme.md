@@ -1,7 +1,9 @@
-
-# SREI Tareas
+![](/.resGen/_bannerD.png#gh-dark-mode-only)
+![](/.resGen/_bannerL.png#gh-light-mode-only)
 
 <a href="/README.md"><img src="/.resGen/_home.svg" width="30"></a>
+
+# SREI Tareas
 
 ## Tema 1: SERVIDORES WEB
 
