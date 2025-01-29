@@ -17,8 +17,8 @@ Subject: `Servicios de Red e Internet`
 
 ## Prácticas de AFTPsz:
 
-|||||
-|--|--| --|--|
+|||
+|--|--|
 | Introducción              | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/1.md) |
 | Basic FTP Commands        | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/2.md) |
 | ProFTPd                   | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/3.md) |
