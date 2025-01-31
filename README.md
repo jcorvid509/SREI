@@ -16,4 +16,6 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Servicios de 
 
 ## [Tema 2 - Sistema de Nombres de Dominio](Tema2/readme.md)
 
+### [AWS](Tema2/aws/readme.md)
+
 ## [Tema 3 - Servidores de transferencia de archivos](Tema3/readme.md)
