@@ -14,7 +14,7 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Servicios de 
 
 ## Tema 1 - Servidores Web<a href="Tema1/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-### Práctica 1º Trimestre - Servidores Web<a href="/1.ServidoresWeb/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Práctica 1º Trimestre - Servidores Web<a href="/ServidoresWeb/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
 ### Actividad AWS
 
