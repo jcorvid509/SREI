@@ -28,7 +28,18 @@ architecture-beta
 
 ```
 
+## Actividades
+
 |||
 | --- | --- |
 | **Actividad VPC 1** | [<img src="/.resGen/_arrow.svg" width="30">](1.md) |
 | **Actividad VPC 2** | [<img src="/.resGen/_arrow.svg" width="30">](2.md) |
+
+## Apuntes
+
+|||
+| --- | --- |
+| **CCI** | [<img src="/.resGen/_arrow.svg" width="30">](1.1.md) |
+| **PCS** | [<img src="/.resGen/_arrow.svg" width="30">](1.2.md) |
+| **VPC** | [<img src="/.resGen/_arrow.svg" width="30">](1.3.md) |
+| **ECC** | [<img src="/.resGen/_arrow.svg" width="30">](1.4.md) |

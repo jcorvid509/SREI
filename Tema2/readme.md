@@ -27,3 +27,4 @@ Subject: `Servicios de Red e Internet`
 | Master DNS            | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/6.md) |
 | Slave DNS             | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/7.md) |
 | Subdominio            | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/8.md) |
+
