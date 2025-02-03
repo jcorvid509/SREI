@@ -17,14 +17,15 @@ Subject: `Servicios de Red e Internet`
 
 ## Prácticas de DNS:
 
-|||
-|--|--|
-| Introducción I        | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/1.md) |
-| Introducción II       | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/2.md) |
-| Nslookup              | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/3.md) |
-| Dig                   | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/4.md) |
-| Caching & Fordwarding | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/5.md) |
-| Master DNS            | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/6.md) |
-| Slave DNS             | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/7.md) |
-| Subdominio            | [<img src="/.resGen/_arrow.svg" width="30">](/Tema2/act/8.md) |
+### Introducción I          <a href="act/1.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Introducción II         <a href="act/2.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Nslookup                <a href="act/3.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Dig                     <a href="act/4.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Caching & Fordwarding   <a href="act/5.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Master DNS              <a href="act/6.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Slave DNS               <a href="act/7.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Subdominio              <a href="act/8.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+
+## Amazon Web Services (AWS)<a href="aws/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+
 
