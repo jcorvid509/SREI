@@ -17,7 +17,7 @@ Subject: `Servicios de Red e Internet`
 
 ## Prácticas de DNS:
 
-1. Introducción I          <a href="act/1.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Introducción I          <a href="act/1.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 ### Introducción II         <a href="act/2.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 ### Nslookup                <a href="act/3.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 ### Dig                     <a href="act/4.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
