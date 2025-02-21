@@ -16,8 +16,8 @@
 
 |||
 | --- | --- |
-| **Actividad VPC 1** | [<img src="/.resGen/_arrow.svg" width="30">](1.md) |
-| **Actividad VPC 2** | [<img src="/.resGen/_arrow.svg" width="30">](2.md) |
+| **Actividad 1 VPC** | [<img src="/.resGen/_arrow.svg" width="30">](1.md) |
+| **Actividad 2 EFS** | [<img src="/.resGen/_arrow.svg" width="30">](2.md) |
 
 ## Apuntes
 
