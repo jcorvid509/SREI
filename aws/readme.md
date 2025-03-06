@@ -21,3 +21,9 @@ Subject: `Servicios de Red e Internet`
 > - Crear un certificado autofirmado y activar el módulo SSL
 >
 > Debemos documentar el proceso y subirlo al repositorio de `Github` de la asignatura.
+
+## 1. Instalación del servidor web Apache
+
+Primero hemos 
+
+## 2. Autenticación MySQL
