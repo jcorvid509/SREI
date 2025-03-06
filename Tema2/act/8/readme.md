@@ -159,11 +159,22 @@ sudo /usr/local/bin/create_subdomain.sh iesmarisma.intranet informatica 192.168.
 ![alt text](image-8.png)
 
 ## Implementación en Python
-Crea un script en Python usando `subprocess.Popen`:
+
+Para automatizar la creación de subdominios en BIND9 con Python, seguiremos estos pasos:
+
+### 1. Crear el archivo del script
+Abre un terminal y crea un nuevo archivo Python:
+```bash
+sudo nano /usr/local/bin/create_subdomain.py
+```
+
+### 2. Escribir el código Python
+Añade el siguiente código al archivo:
 ```python
 import subprocess
 
 def create_subdomain(domain, subdomain, ip):
+    """Crea un archivo de zona para un subdominio y reinicia el servidor DNS."""
     zone_file = f"/etc/bind/zones/db.{subdomain}.{domain}"
     config = f"""
 $TTL 604800
@@ -180,23 +191,44 @@ www     IN  A   {ip}
 ftp     IN  A   {ip}
 smtp    IN  A   {ip}
 """
-    with open(zone_file, "w") as file:
-        file.write(config)
     
-    subprocess.Popen(["systemctl", "restart", "bind9"], stdout=subprocess.PIPE)
-    print(f"Zona creada en {zone_file}")
+    try:
+        # Escribir la configuración en el archivo de zona
+        with open(zone_file, "w") as file:
+            file.write(config)
+        print(f"Archivo de zona creado en {zone_file}")
 
-# Uso
+        # Reiniciar el servicio BIND9 para aplicar los cambios
+        subprocess.run(["systemctl", "restart", "bind9"], check=True)
+        print("Servidor DNS reiniciado correctamente.")
+    except Exception as e:
+        print(f"Error al crear el subdominio: {e}")
+
+# Uso del script
 domain = "iesmarisma.intranet"
 subdomain = "informatica"
 ip = "192.168.2.1"
 create_subdomain(domain, subdomain, ip)
 ```
-Ejecuta el script:
+
+### 3. Asignar permisos de ejecución
+Guarda el archivo y asigna permisos de ejecución:
 ```bash
-sudo python3 create_subdomain.py
+sudo chmod +x /usr/local/bin/create_subdomain.py
 ```
 
+### 4. Ejecutar el script
+Ejecuta el script con permisos de superusuario:
+```bash
+sudo python3 /usr/local/bin/create_subdomain.py
+```
+
+### 5. Verificar la configuración
+Para asegurarte de que el subdominio ha sido creado correctamente, usa:
+```bash
+dig @localhost informatica.iesmarisma.intranet
+```
+Si el subdominio responde con la dirección IP configurada, la automatización ha sido exitosa.
 
 ## Recursos
 - [Subdominio virtual](http://www.zytrax.com/books/dns/ch9/subdomain.html)
