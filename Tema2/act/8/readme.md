@@ -17,6 +17,8 @@ sudo apt update
 sudo apt install bind9 bind9utils bind9-doc
 ```
 
+![alt text](image.png)
+
 ## Configuración del DNS Primario
 ### 1. Configurar el archivo de zona principal
 Edita el archivo de configuración de BIND9:
@@ -37,6 +39,9 @@ Crea el directorio si no existe y luego el archivo de zona:
 sudo mkdir -p /etc/bind/zones
 sudo nano /etc/bind/zones/db.iesmarisma.intranet
 ```
+
+![alt text](image-1.png)
+
 Agrega el siguiente contenido:
 ```bash
 $TTL 604800
@@ -54,14 +59,21 @@ ftp     IN  A   192.168.1.3
 smtp    IN  A   192.168.1.4
 ```
 
+![alt text](image-2.png)
+
 ### 3. Configurar el subdominio
 Edita `named.conf.local` y añade:
+```bash
+sudo nano /etc/bind/named.conf.local
+```
 ```bash
 zone "informatica.iesmarisma.intranet" {
     type master;
     file "/etc/bind/zones/db.informatica.iesmarisma.intranet";
 };
 ```
+
+![alt text](image-3.png)
 
 Crea el archivo de zona:
 ```bash
@@ -84,12 +96,19 @@ ftp     IN  A   192.168.2.3
 smtp    IN  A   192.168.2.4
 ```
 
+![alt text](image-4.png)
+
 ## Delegación del Subdominio
 Si deseas delegar la gestión del subdominio a otro servidor, en `db.iesmarisma.intranet` añade:
+```bash
+sudo nano /etc/bind/zones/db.iesmarisma.intranet
+```
 ```bash
 informatica  IN  NS  ns1.informatica.iesmarisma.intranet.
 ns1.informatica  IN  A   192.168.2.1
 ```
+
+![alt text](image-5.png)
 
 ## Creación de Subdominios mediante Script Bash
 Crea un script para automatizar la creación de zonas DNS:
@@ -123,14 +142,21 @@ EOF
 
 echo "Zona creada en \$ZONE_FILE"
 ```
+
+![alt text](image-6.png)
+
 Dale permisos de ejecución:
 ```bash
 sudo chmod +x /usr/local/bin/create_subdomain.sh
 ```
+![alt text](image-7.png)
+
 Ejemplo de uso:
 ```bash
 sudo /usr/local/bin/create_subdomain.sh iesmarisma.intranet informatica 192.168.2.1
 ```
+
+![alt text](image-8.png)
 
 ## Implementación en Python
 Crea un script en Python usando `subprocess.Popen`:
@@ -171,6 +197,7 @@ Ejecuta el script:
 sudo python3 create_subdomain.py
 ```
 
+
 ## Recursos
 - [Subdominio virtual](http://www.zytrax.com/books/dns/ch9/subdomain.html)
 - [Delegación del subdominio](http://www.zytrax.com/books/dns/ch9/delegate.html)
@@ -183,4 +210,5 @@ sudo python3 create_subdomain.py
 
 ## Conclusión
 Siguiendo estos pasos, habrás configurado un DNS primario, creado y delegado un subdominio, y automatizado el proceso con scripts en Bash y Python. ¡Ahora tu infraestructura DNS está lista para ser utilizada! 🚀
+
 
