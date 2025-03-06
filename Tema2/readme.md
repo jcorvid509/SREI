@@ -26,6 +26,5 @@ Subject: `Servicios de Red e Internet`
 ### Slave DNS
 ### Subdominio              <a href="act/8.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-## Amazon Web Services (AWS)<a href="aws/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
 
