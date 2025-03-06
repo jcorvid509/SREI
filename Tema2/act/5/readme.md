@@ -3,11 +3,6 @@
 
 <a href="/Tema2/readme.md"><img src="/.resGen/_back.svg" width="52.5"></a>
 
-<a href="4.md"><img src="/.resGen/_arrow_r.svg" width="30"></a>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-<a href="6.md"><img src="/.resGen/_arrow.svg" width="30"></a>
-<a href="5.1.md"><img src="/.resGen/_notes.svg" width="30" align="right"></a>
-
 ---
 
 # Configuración de BIND9 como Servidor Caché y Forwarding
@@ -27,19 +22,24 @@ BIND9 (Berkeley Internet Name Domain) es uno de los servidores DNS más utilizad
    ```bash
    sudo apt update && sudo apt upgrade -y
    ```
+    ![alt text](image.png)
 2. Instala BIND9:
    ```bash
    sudo apt install bind9 -y
    ```
+    ![alt text](image-1.png)
 3. Verifica que el servicio está en ejecución:
    ```bash
    systemctl status bind9
    ```
+    ![alt text](image-2.png)
+
    Si no está en ejecución, inícialo con:
    ```bash
    sudo systemctl start bind9
    sudo systemctl enable bind9
    ```
+
 
 ---
 
@@ -66,11 +66,15 @@ options {
 ```
 Guarda y cierra el archivo.
 
+![alt text](image-3.png)
+
 ### **2. Comprobar la sintaxis**
 ```bash
 sudo named-checkconf
 ```
 Si no hay errores, continúa.
+
+![alt text](image-4.png)
 
 ### **3. Reiniciar BIND9**
 ```bash
@@ -81,6 +85,8 @@ Verifica que está funcionando:
 systemctl status bind9
 ```
 
+![alt text](image-5.png)
+
 ### **4. Verificar que responde correctamente**
 Prueba resolviendo un dominio:
 ```bash
@@ -88,10 +94,14 @@ nslookup google.com 127.0.0.1
 ```
 Si devuelve una respuesta con la IP de Google, el servidor caché está funcionando.
 
+![alt text](image-6.png)
+
 Revisa el log:
 ```bash
 sudo tail -f /var/log/syslog
 ```
+
+![alt text](image-7.png)
 
 ---
 
@@ -124,6 +134,8 @@ options {
 ```
 Guarda y cierra el archivo.
 
+![alt text](image-8.png)
+
 ### **2. Comprobar la sintaxis**
 ```bash
 sudo named-checkconf
@@ -134,10 +146,15 @@ Si no hay errores, continúa.
 ```bash
 sudo systemctl restart bind9
 ```
+
+![alt text](image-9.png)
+
 Verifica el estado:
 ```bash
 systemctl status bind9
 ```
+
+![alt text](image-10.png)
 
 ### **4. Probar el servidor Forwarding**
 Realiza una consulta DNS:
@@ -146,17 +163,4 @@ nslookup facebook.com 127.0.0.1
 ```
 Si devuelve una IP correctamente, el servidor está funcionando.
 
-Revisa el log:
-```bash
-sudo tail -f /var/log/syslog
-```
-
----
-
-## **Conclusión**
-Has configurado BIND9 como:
-✅ **Servidor Caché**
-✅ **Servidor Forwarding**
-
-Ahora puedes usarlo para optimizar las consultas DNS en tu red. 🚀
-
+![alt text](image-11.png)

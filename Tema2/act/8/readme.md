@@ -3,9 +3,6 @@
 
 <a href="/Tema2/readme.md"><img src="/.resGen/_back.svg" width="52.5"></a>
 
-<a href="7.md"><img src="/.resGen/_arrow_r.svg" width="30"></a>
-<a href="8.1.md"><img src="/.resGen/_notes.svg" width="30" align="right"></a>
-
 ---
 
 # Subdominios
