@@ -22,6 +22,8 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Servicios de 
 
 ## Tema 2 - Sistema de Nombres de Dominio<a href="Tema2/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-- ### Amazon Web Services<a href="Tema2/aws/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+## Práctica AWS<a href="Tema2/aws/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-## Tema 3 - Servidores de transferencia de archivos<a href="Tema3/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+## Práctica Docker<a href="Tema2/aws/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+
+

@@ -13,4 +13,4 @@ Subject: `Servicios de Red e Internet`
 
 ---
 
-# Práctica 1: Amazon Web Services (AWS)
+# Práctica 2: DOCKER
