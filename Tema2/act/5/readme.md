@@ -19,7 +19,6 @@ BIND9 (Berkeley Internet Name Domain) es uno de los servidores DNS más utilizad
 - [Guía de DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-configure-bind-as-a-caching-or-forwarding-dns-server-on-ubuntu-16-04)
 - [Documentación de Zytrax](http://www.zytrax.com/books/dns/ch4/)
 - [Guía de Ubuntu](https://help.ubuntu.com/community/BIND9ServerHowto)
-- [Libro Pro DNS and BIND (Capítulo 4)](http://it-ebooks.info/book/5022/)
 
 ---
 
