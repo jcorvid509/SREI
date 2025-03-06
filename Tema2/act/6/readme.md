@@ -7,24 +7,8 @@
 
 # Configuración de un Servidor DNS Maestro en Ubuntu
 
-> [digitalocean](https://www.digitalocean.com/community/tutorials/how-to-configure-bind-as-an-authoritative-only-dns-server-on-ubuntu-14-04)
-> 
-> [zytrax](http://www.zytrax.com/books/dns/ch6/)
-> 
-> [help.ubuntu](https://help.ubuntu.com/community/BIND9ServerHowto)
-> 
-> [askubuntu](http://askubuntu.com/questions/81797/nslookup-finds-ip-but-ping-doesnt)
-> 
-> [netroby](https://www.netroby.com/view/3630#.U2mTfHVdUc0)
-
 ## Introducción
 En esta actividad, configuraremos un servidor DNS maestro utilizando BIND en Ubuntu. Crearemos zonas directa e inversa para el dominio **marisma.intranet** e incluiremos los registros necesarios para servidores DNS, FTP, correo y web. Posteriormente, modificaremos la configuración del cliente para emplear el nuevo servidor DNS y realizaremos pruebas de resolución.
-
-## Requisitos previos
-Antes de comenzar, asegúrate de:
-- Tener acceso a un servidor Ubuntu.
-- Tener privilegios de superusuario.
-- Tener instalado BIND9 (`sudo apt install bind9`).
 
 ## Paso 1: Configurar la Zona Directa
 Editamos el archivo de configuración de BIND para añadir la zona directa.
@@ -41,12 +25,16 @@ zone "marisma.intranet" {
 };
 ```
 
+![alt text](image.png)
+
 Creamos el archivo de zona:
 
 ```bash
 sudo cp /etc/bind/db.local /etc/bind/db.marisma
 sudo nano /etc/bind/db.marisma
 ```
+
+![alt text](image-1.png)
 
 Editamos su contenido:
 
@@ -73,6 +61,7 @@ departamentos IN A      192.168.1.6
 @       IN      MX 20   mail2.marisma.intranet.
 ```
 
+![alt text](image-2.png)
 ## Paso 2: Configurar la Zona Inversa
 Editamos el archivo de configuración de BIND:
 
@@ -89,12 +78,16 @@ zone "1.168.192.in-addr.arpa" {
 };
 ```
 
+![alt text](image-3.png)
+
 Creamos el archivo de zona inversa:
 
 ```bash
 sudo cp /etc/bind/db.127 /etc/bind/db.192
 sudo nano /etc/bind/db.192
 ```
+
+![alt text](image-4.png)
 
 Editamos su contenido:
 
@@ -119,11 +112,16 @@ $TTL    604800
 6       IN      PTR     departamentos.marisma.intranet.
 ```
 
+![alt text](image-5.png)
+
 ## Paso 3: Reiniciar el Servidor DNS
 
 ```bash
 sudo systemctl restart bind9
 ```
+
+![alt text](image-6.png)
+
 Verificamos la configuración:
 
 ```bash
@@ -131,6 +129,8 @@ sudo named-checkconf
 sudo named-checkzone marisma.intranet /etc/bind/db.marisma
 sudo named-checkzone 1.168.192.in-addr.arpa /etc/bind/db.192
 ```
+
+![alt text](image-7.png)
 
 ## Paso 4: Configurar el Cliente DNS
 Editamos el archivo de resolución DNS:
@@ -145,6 +145,8 @@ Agregamos la siguiente línea:
 nameserver 192.168.1.1
 ```
 
+![alt text](image-8.png)
+
 Para hacer esta configuración persistente, editamos:
 
 ```bash
@@ -158,11 +160,15 @@ DNS=192.168.1.1
 Domains=marisma.intranet
 ```
 
+![alt text](image-9.png)
+
 Reiniciamos el servicio:
 
 ```bash
 sudo systemctl restart systemd-resolved
 ```
+
+![alt text](image-10.png)
 
 ## Paso 5: Pruebas de Resolución de Nombres
 Realizamos consultas para comprobar la configuración:
@@ -174,26 +180,26 @@ dig @192.168.1.1 NS marisma.intranet
 dig @192.168.1.1 MX marisma.intranet
 ```
 
-Si `ping` o `firefox` no resuelven correctamente, revisamos:
+![alt text](image-11.png)
 
-```bash
-cat /etc/nsswitch.conf
-```
+![alt text](image-12.png)
 
-Si la línea `hosts:` contiene `mdns4_minimal`, la cambiamos por:
+![alt text](image-13.png)
 
-```plaintext
-hosts: files dns
-```
-
-Opcionalmente, eliminamos `mdns`:
-
-```bash
-sudo apt-get remove libnss-mdns
-```
+![alt text](image-14.png)
 
 ## Conclusión
 Con esta configuración, hemos implementado un servidor DNS maestro en Ubuntu, definiendo registros esenciales y asegurando su correcta resolución en los clientes. Además, verificamos el funcionamiento del servidor y corregimos posibles problemas de resolución.
 
+## Enlaces
 
+- [digitalocean](https://www.digitalocean.com/community/tutorials/how-to-configure-bind-as-an-authoritative-only-dns-server-on-ubuntu-14-04)
+
+- [zytrax](http://www.zytrax.com/books/dns/ch6/)
+
+- [help.ubuntu](https://help.ubuntu.com/community/BIND9ServerHowto)
+
+- [askubuntu](http://askubuntu.com/questions/81797/nslookup-finds-ip-but-ping-doesnt)
+
+- [netroby](https://www.netroby.com/view/3630#.U2mTfHVdUc0)
 
