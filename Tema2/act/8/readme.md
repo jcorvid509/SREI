@@ -211,11 +211,15 @@ ip = "192.168.2.1"
 create_subdomain(domain, subdomain, ip)
 ```
 
+![alt text](image-9.png)
+
 ### 3. Asignar permisos de ejecución
 Guarda el archivo y asigna permisos de ejecución:
 ```bash
 sudo chmod +x /usr/local/bin/create_subdomain.py
 ```
+
+![alt text](image-10.png)
 
 ### 4. Ejecutar el script
 Ejecuta el script con permisos de superusuario:
@@ -223,11 +227,16 @@ Ejecuta el script con permisos de superusuario:
 sudo python3 /usr/local/bin/create_subdomain.py
 ```
 
+![alt text](image-11.png)
+
 ### 5. Verificar la configuración
 Para asegurarte de que el subdominio ha sido creado correctamente, usa:
 ```bash
 dig @localhost informatica.iesmarisma.intranet
 ```
+
+![alt text](image-12.png)
+
 Si el subdominio responde con la dirección IP configurada, la automatización ha sido exitosa.
 
 ## Recursos
