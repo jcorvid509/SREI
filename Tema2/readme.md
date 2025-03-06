@@ -17,13 +17,13 @@ Subject: `Servicios de Red e Internet`
 
 ## Prácticas de DNS:
 
-### Introducción I          <a href="act/1.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
-### Introducción II         <a href="act/2.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
-### Nslookup                <a href="act/3.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
-### Dig                     <a href="act/4.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Introducción I          <a href="readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Introducción II         <a href="readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Nslookup                <a href="readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Dig                     <a href="readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 ### Caching & Fordwarding   <a href="act/5.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 ### Master DNS              <a href="act/6.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
-### Slave DNS               <a href="act/7.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### Slave DNS               <a href="readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 ### Subdominio              <a href="act/8.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
 ## Amazon Web Services (AWS)<a href="aws/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
