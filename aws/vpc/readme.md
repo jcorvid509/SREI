@@ -47,7 +47,7 @@ Siguiendo estos pasos, configurarás una VPC con subredes públicas y privadas, 
 | ![alt text](image-2.png) | ![alt text](image-3.png) | ![alt text](image-4.png) |
 |:-----------------------:|:-----------------------:|:-----------------------:|
 
-4. Haz clic en **Create VPC**.
+1. Haz clic en **Create VPC**.
 
 ---
 
