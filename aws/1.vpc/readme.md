@@ -44,3 +44,18 @@ El primer paso es crear una VPC. Una VPC es una red virtual que permite a los us
     -  **Bloque de CIDR de la subred privada en us-east-1b**: `10.0.4.0/24`
 
 ![alt text](image-4.png)
+
+  - **Gateways NAT**: `Ninguna`
+  - **Puntos de enlace de la VPC**: `Ninguno`
+  - **Opciones de DNS**
+    - **Habilitar nombres de host DNS**: ✅
+    - **Habilitar resolución de nombres DNS**: ✅
+
+![alt text](image-5.png)
+
+  - Creamos la VPC pulsando en el botón **Crear VPC**
+
+![alt text](image-6.png)
+
+ 
+![alt text](image-7.png)
