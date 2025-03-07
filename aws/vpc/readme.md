@@ -22,11 +22,6 @@
   - [Creación de Tablas de Rutas](#creación-de-tablas-de-rutas)
   - [Creación de Grupos de Seguridad](#creación-de-grupos-de-seguridad)
   - [Lanzamiento de Instancias EC2](#lanzamiento-de-instancias-ec2)
-  - [Conexión a las Instancias EC2](#conexión-a-las-instancias-ec2)
-    - [Conexión SSH a la Instancia Pública](#conexión-ssh-a-la-instancia-pública)
-    - [Conexión desde la Instancia Pública a la Privada](#conexión-desde-la-instancia-pública-a-la-privada)
-    - [Conexión Directa a la Instancia Privada con Port Forwarding](#conexión-directa-a-la-instancia-privada-con-port-forwarding)
-  - [Limpieza de Recursos](#limpieza-de-recursos)
   - [Conclusión](#conclusión)
 
 ## Introducción
@@ -245,60 +240,38 @@ Siguiendo estos pasos, configurarás una VPC con subredes públicas y privadas, 
 ![alt text](image-48.png)
 
 2. Configura las siguientes opciones:
-- **AMI**: `Amazon Linux 2023`
+- **AMI**: `Ubuntu Server 24.04 LTS`
 
 ![alt text](image-56.png)
 ![alt text](image-57.png)
-
 
 - **Tipo de instancia**: `t2.medium`
 
 ![alt text](image-58.png)
 
-- **VPC**: `custom-vpc`
+- **Par de claves**: `vokey`
 
+![alt text](image-59.png)
 
+- **Configuraciones de red**:
 
-- **Subred**:
-    - `custom-subnet-public1-us-east-1a` (pública)
-    - `custom-subnet-private2-us-east-1b` (privada)
-- **Grupos de seguridad**:
-    - `ssh-sg` para acceso SSH desde fuera
-    - `default` para comunicación interna
-1. Asigna una IP pública a la instancia pública.
-2. Lanza las instancias.
+  - VPC: `custom-vpc`
 
----
+  - Subred: `proyecto-subnet-public1-us-east-1a`
 
-## Conexión a las Instancias EC2
+![alt text](image-60.png)
 
-### Conexión SSH a la Instancia Pública
-```sh
-ssh -i <clave-privada> ec2-user@<ip-publica>
-```
+- **Creamos una nueva regla del grupo de seguridad**
 
-### Conexión desde la Instancia Pública a la Privada
-```sh
-ssh ec2-user@<ip-privada>
-```
+![alt text](image-61.png)
 
-### Conexión Directa a la Instancia Privada con Port Forwarding
-1. En la máquina local, ejecuta:
-```sh
-ssh -i <clave-privada> -L 2022:<ip-privada>:22 ec2-user@<ip-publica>
-```
-2. En una nueva terminal, conéctate a la instancia privada:
-```sh
-ssh -i <clave-privada> ec2-user@localhost -p 2022
-```
+![alt text](image-62.png)
 
----
+![alt text](image-63.png)
 
-## Limpieza de Recursos
-1. **Eliminar instancias EC2**:
-   - Accede a **Amazon EC2** y termina las instancias.
-2. **Eliminar la VPC** (opcional):
-   - Accede a **Amazon VPC**, selecciona la VPC y elige **Delete VPC**.
+![alt text](image-64.png)
+
+![alt text](image-65.png)
 
 ---
 
