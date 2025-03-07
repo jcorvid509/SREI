@@ -14,3 +14,7 @@ Subject: `Servicios de Red e Internet`
 ---
 
 # Práctica 1: Amazon Web Services (AWS)
+
+## Virtual Private Cloud    <a href="vpc/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+
+## Elastic File System      <a href="efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
