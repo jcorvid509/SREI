@@ -59,3 +59,5 @@ El primer paso es crear una VPC. Una VPC es una red virtual que permite a los us
 
  
 ![alt text](image-7.png)
+
+## Elastic File System <a href="../2.efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
