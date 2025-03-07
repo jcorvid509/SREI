@@ -14,7 +14,7 @@
   - [1. Crear una VPC](#1-crear-una-vpc)
   - [2. Crear una instancia EC2](#2-crear-una-instancia-ec2)
   - [3. Instalación de WordPress en la instancia EC2](#3-instalación-de-wordpress-en-la-instancia-ec2)
-  - [](#)
+  - [4. Creación de la base de datos](#4-creación-de-la-base-de-datos)
   - [EFS ](#efs-)
 
 
@@ -221,6 +221,29 @@ php -v
 
 ---
 
-## 
+## 4. Creación de la base de datos
+
+- Vamos al **menú de AWS** y buscamos **Aurora and RDS** y entramos en el servicio.
+
+![alt text](image-32.png)
+
+- En el menú, buscaremos **Bases de datos** y seleccionaremos **Crear base de datos**
+
+| ![alt text](image-33.png) | ![alt text](image-34.png) |
+| --- | --- |
+
+- En el menú de **Crear base de datos**, configuraremos los siguientes parámetros:
+  - **Método de creación de base de datos**: `Creación estándar`
+
+![alt text](image-35.png)
+
+  - **Opciones del motor**
+    - **Tipo de motor**: `MySQL`
+
+![alt text](image-36.png)
+
+    - Dejamos el resto por defecto.
+
+![alt text](image-37.png)
 
 ## EFS <a href="../2.efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
