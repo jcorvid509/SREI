@@ -14,6 +14,7 @@
   - [1. Crear una VPC](#1-crear-una-vpc)
   - [2. Crear una instancia EC2](#2-crear-una-instancia-ec2)
   - [3. Instalación de WordPress en la instancia EC2](#3-instalación-de-wordpress-en-la-instancia-ec2)
+  - [](#)
   - [EFS ](#efs-)
 
 
@@ -152,11 +153,74 @@ El primer paso es crear una VPC. Una VPC es una red virtual que permite a los us
 
 - **Actualizamos el sistema**
 
-```
-  sudo apt update && sudo apt upgrade -y
+```bash
+sudo apt update && sudo apt upgrade -y
 ```
 
 ![alt text](image-23.png)
 
+- **Instalamos Apache2**
+
+```bash
+sudo apt install apache2 -y
+```
+
+![alt text](image-24.png)
+
+- **Activamos el servicio Apache2**
+
+```bash
+sudo systemctl start apache2 && sudo systemctl enable apache2
+```
+
+![alt text](image-25.png)
+
+Comprobamos que todo esta correctamente configurado y que el servicio Apache2 se encuentra en ejecución, para ello, verificamos el servidor poniendo la dirección IP de la instancia EC2 en el navegador.
+
+![alt text](image-26.png)
+
+- **Añadimos el repositorio de PHP**
+
+```bash
+sudo add-apt-repository ppa:ondrej/php -y
+```
+
+![alt text](image-27.png)
+
+- **Instalamos PHP**
+
+```bash
+sudo apt install php7.4 libapache2-mod-php7.4 php7.4-cli -y
+```
+
+![alt text](image-28.png)
+
+- **Instalamos MySQL**
+
+```bash
+sudo apt install php7.4-mysql -y
+```
+
+![alt text](image-29.png)
+
+- **Reiniciamos el servicio Apache2**
+
+```bash
+sudo systemctl restart apache2
+```
+
+![alt text](image-30.png)
+
+- **Comprobamos que PHP esta correctamente instalado**
+
+```bash
+php -v
+```
+
+![alt text](image-31.png)
+
+---
+
+## 
 
 ## EFS <a href="../2.efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
