@@ -150,6 +150,11 @@ El primer paso es crear una VPC. Una VPC es una red virtual que permite a los us
 
 ## 3. Instalación de WordPress en la instancia EC2
 
+- **Actualizamos el sistema**
+  - `sudo apt update`
+  - `sudo apt upgrade -y`
+
+![alt text](image-23.png)
 
 
 ## EFS <a href="../2.efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
