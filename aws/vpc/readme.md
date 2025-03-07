@@ -235,9 +235,11 @@ Siguiendo estos pasos, configurarás una VPC con subredes públicas y privadas, 
 ![alt text](image-54.png)
 
 ## Lanzamiento de Instancias EC2
-1. Accede a **Amazon EC2 > Instances** y selecciona **Launch Instance**.
 
 ![alt text](image-55.png)
+
+1. Accede a **Amazon EC2 > Instances** y selecciona **Launch Instance**.
+
 ![alt text](image-48.png)
 
 2. Configura las siguientes opciones:
@@ -256,7 +258,7 @@ Siguiendo estos pasos, configurarás una VPC con subredes públicas y privadas, 
 
 - **Configuraciones de red**:
 
-  - VPC: `custom-vpc`
+  - VPC: `proyecto-vpc`
 
   - Subred: `proyecto-subnet-public1-us-east-1a`
 
