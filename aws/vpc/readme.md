@@ -7,6 +7,27 @@
 
 # Virtual Private Cloud (VPC)
 
+## Indice
+
+## Indice
+- [Virtual Private Cloud (VPC)](#virtual-private-cloud-vpc)
+  - [Indice](#indice)
+  - [Indice](#indice-1)
+  - [Introducción](#introducción)
+  - [Requisitos](#requisitos)
+  - [Creación de una VPC con el asistente](#creación-de-una-vpc-con-el-asistente)
+  - [Creación de una VPC personalizada](#creación-de-una-vpc-personalizada)
+  - [Creación de un Internet Gateway](#creación-de-un-internet-gateway)
+  - [Creación de Subredes](#creación-de-subredes)
+  - [Creación de Tablas de Rutas](#creación-de-tablas-de-rutas)
+  - [Lanzamiento de Instancias EC2](#lanzamiento-de-instancias-ec2)
+  - [Conexión a las Instancias EC2](#conexión-a-las-instancias-ec2)
+    - [Conexión SSH a la Instancia Pública](#conexión-ssh-a-la-instancia-pública)
+    - [Conexión desde la Instancia Pública a la Privada](#conexión-desde-la-instancia-pública-a-la-privada)
+    - [Conexión Directa a la Instancia Privada con Port Forwarding](#conexión-directa-a-la-instancia-privada-con-port-forwarding)
+  - [Limpieza de Recursos](#limpieza-de-recursos)
+  - [Conclusión](#conclusión)
+
 ## Introducción
 En esta guía, aprenderás a configurar una infraestructura de red segura y escalable utilizando Amazon Virtual Private Cloud (Amazon VPC). Amazon VPC permite la creación de redes privadas dentro de AWS, proporcionando control total sobre la conectividad y seguridad de los recursos en la nube. 
 
@@ -181,32 +202,39 @@ Siguiendo estos pasos, configurarás una VPC con subredes públicas y privadas, 
 ![alt text](image-45.png)
 ![alt text](image-46.png)
 
-1. Asocia **custom-rtb-public** a las subredes públicas.
+3. Asocia **custom-rtb-public** a las subredes públicas.
 
 ![alt text](image-37.png)
 ![alt text](image-38.png)
 ![alt text](image-40.png)
 
+
+![alt text](image-47.png)
+
 ---
 
 ## Lanzamiento de Instancias EC2
 1. Accede a **Amazon EC2 > Instances** y selecciona **Launch Instance**.
+
+![alt text](image-48.png)
+
 2. Configura las siguientes opciones:
-   - **AMI**: `Amazon Linux 2023`
-   - **Tipo de instancia**: `t4g.micro`
-   - **VPC**: `custom-vpc`
-   - **Subred**:
-     - `custom-subnet-public1-us-east-1a` (pública)
-     - `custom-subnet-private2-us-east-1b` (privada)
-   - **Grupos de seguridad**:
-     - `ssh-sg` para acceso SSH desde fuera
-     - `default` para comunicación interna
-3. Asigna una IP pública a la instancia pública.
-4. Lanza las instancias.
+- **AMI**: `Amazon Linux 2023`
+- **Tipo de instancia**: `t4g.micro`
+- **VPC**: `custom-vpc`
+- **Subred**:
+    - `custom-subnet-public1-us-east-1a` (pública)
+    - `custom-subnet-private2-us-east-1b` (privada)
+- **Grupos de seguridad**:
+    - `ssh-sg` para acceso SSH desde fuera
+    - `default` para comunicación interna
+1. Asigna una IP pública a la instancia pública.
+2. Lanza las instancias.
 
 ---
 
 ## Conexión a las Instancias EC2
+
 ### Conexión SSH a la Instancia Pública
 ```sh
 ssh -i <clave-privada> ec2-user@<ip-publica>
