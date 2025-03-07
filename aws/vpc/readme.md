@@ -20,9 +20,11 @@ Siguiendo estos pasos, configurarás una VPC con subredes públicas y privadas, 
 ## Creación de una VPC con el asistente
 
 1. Accede a la consola de **Amazon VPC** y selecciona **Create VPC**.
+
 ![alt text](image.png)
 
 2. En **Resources to create**, elige **VPC and more**.
+
 ![alt text](image-1.png)
 
 3. Configura los siguientes parámetros:
