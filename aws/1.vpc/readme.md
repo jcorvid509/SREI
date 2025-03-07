@@ -291,4 +291,45 @@ php -v
   
   ![alt text](image-46.png)
 
+
+  - **Crear base de datos**
+  
+  ![alt text](image-47.png)
+
+  ![alt text](image-48.png)
+
+- Configuramos la **base de datos** en nuestra maquina **EC2**
+
+  - Entramos a la base de datos **acciones > Configurar la conexión EC"**
+  
+  ![alt text](image-49.png)
+
+  - Elegimos nuestra **instancia EC2** `serverwp` y damos en **Continuar**
+  
+  ![alt text](image-50.png)
+
+  - Revisamos la configuración y damos en **Configurar**
+  
+  ![alt text](image-51.png)
+
+![alt text](image-52.png)
+
+- Actualizamos mysql
+
+```bash
+sudo apt install mysql-client-core-8.0
+```
+
+- Comprobamos que funciona usando el siguiente comando en la terminal de nuestra **instancia EC2**
+
+```bash
+mysql -h puerto_de_enlace_BD -u admin -p
+```
+
+> Donde `puerto_de_enlace_BD` es el puerto de enlace de nuestra base de datos y `admin` es el usuario de la base de datos.
+> 
+> ![alt text](image-53.png)
+
+![alt text](image-54.png)
+
 ## EFS <a href="../2.efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>

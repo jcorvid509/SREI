@@ -6,3 +6,9 @@
 ---
 
 # Elastic File System (EFS)
+
+EFS es un servicio de almacenamiento de archivos en la nube que permite a los usuarios almacenar y compartir archivos de manera segura y escalable.
+
+- Para crear un EFS, 
+
+![alt text](image.png)
