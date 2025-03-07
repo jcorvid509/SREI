@@ -22,6 +22,7 @@
   - [Creación de Tablas de Rutas](#creación-de-tablas-de-rutas)
   - [Creación de Grupos de Seguridad](#creación-de-grupos-de-seguridad)
   - [Lanzamiento de Instancias EC2](#lanzamiento-de-instancias-ec2)
+  - [Conexión a las Instancias EC2](#conexión-a-las-instancias-ec2)
   - [Conclusión](#conclusión)
 
 ## Introducción
@@ -274,6 +275,18 @@ Siguiendo estos pasos, configurarás una VPC con subredes públicas y privadas, 
 ![alt text](image-65.png)
 
 ---
+
+## Conexión a las Instancias EC2
+
+![alt text](image-66.png)
+
+![alt text](image-67.png)
+
+![alt text](image-68.png)
+
+---
+
+
 
 ## Conclusión
 Esta guía proporciona una estructura sólida para configurar redes privadas con Amazon VPC, asegurando conectividad eficiente y segura en AWS.

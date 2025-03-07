@@ -6,3 +6,12 @@
 ---
 
 # Elastic File System (EFS)
+
+## Creación de EFS
+
+- Accedemos a la consola de **Amazon EFS** y **Crear un nuevo EFS**.
+
+![alt text](image.png)
+
+
+![alt text](image-1.png)
