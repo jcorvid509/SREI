@@ -20,6 +20,7 @@
   - [Creación de un Internet Gateway](#creación-de-un-internet-gateway)
   - [Creación de Subredes](#creación-de-subredes)
   - [Creación de Tablas de Rutas](#creación-de-tablas-de-rutas)
+  - [Creación de Grupos de Seguridad](#creación-de-grupos-de-seguridad)
   - [Lanzamiento de Instancias EC2](#lanzamiento-de-instancias-ec2)
   - [Conexión a las Instancias EC2](#conexión-a-las-instancias-ec2)
     - [Conexión SSH a la Instancia Pública](#conexión-ssh-a-la-instancia-pública)
@@ -212,6 +213,22 @@ Siguiendo estos pasos, configurarás una VPC con subredes públicas y privadas, 
 ![alt text](image-47.png)
 
 ---
+
+## Creación de Grupos de Seguridad
+1. Accede a **Amazon VPC > Security Groups** y haz clic en **Create Security Group**.
+
+![alt text](image-49.png)
+
+2. Configura los siguientes valores:
+   - **Name**: `ssh-sg`
+   - **Description**: `Grupo de seguridad para acceso SSH`
+   - **VPC**: `custom-vpc`
+3. En **Inbound Rules**, agrega una regla:
+   - **Tipo**: SSH
+   - **Protocolo**: TCP
+   - **Puerto**: 22
+   - **Origen**: `MyIP` (o el rango de IP permitido)
+4. Guarda los cambios y asocia este grupo de seguridad a las instancias.
 
 ## Lanzamiento de Instancias EC2
 1. Accede a **Amazon EC2 > Instances** y selecciona **Launch Instance**.
