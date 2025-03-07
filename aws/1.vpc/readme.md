@@ -235,15 +235,60 @@ php -v
 - En el menú de **Crear base de datos**, configuraremos los siguientes parámetros:
   - **Método de creación de base de datos**: `Creación estándar`
 
-![alt text](image-35.png)
+  ![alt text](image-35.png)
 
   - **Opciones del motor**
     - **Tipo de motor**: `MySQL`
 
-![alt text](image-36.png)
+    ![alt text](image-36.png)
 
     - Dejamos el resto por defecto.
 
-![alt text](image-37.png)
+    ![alt text](image-37.png)
+
+  - **Plantillas**: `Capa gratuita`
+  
+  ![alt text](image-38.png)
+
+  - **Disponibilidad y durabilidad**: `Implementación de una instancia de base de datos de zona de disponibilidad única`
+
+  ![alt text](image-39.png)
+
+  - **Configuración**
+    - **Identificador de instancias de bases de datos**: `serverwp-db`
+    - **Nombre de usuario maestro**: `admin`
+    - **Administración de credenciales**: `Autoadministrado`
+    - **Contraseña maestra**
+  
+  ![alt text](image-40.png)
+
+  - **Configuración de la instancia**
+  
+  ![alt text](image-42.png)
+
+  - **Almacenamiento**
+  
+  ![alt text](image-41.png)
+
+  - **Conectividad**
+    - **Recurso de computación**: `No se conecte a un recurso informático EC2`
+    - **Nube privada virtual (VPC)**: `proyecto-vpc`
+    - **Acceso público**: `No`
+
+  ![alt text](image-43.png)
+
+    - **Grupo de seguridad de VPC (firewall)**: `Crear nuevo`
+    - **Nuevo nombre del grupo de seguridad de VPC**: `serverwp-db-sg`
+  
+  ![alt text](image-44.png)
+
+    - **Proxy de RDS**
+
+  ![alt text](image-45.png)
+
+  - Bajamos hasta la pestaña **Configuración adicional** y configuramos:
+    - **Nombre de base de datos inicial**: `serverwpdb`
+  
+  ![alt text](image-46.png)
 
 ## EFS <a href="../2.efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
