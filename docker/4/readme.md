@@ -38,7 +38,11 @@
     - [3️⃣ Desplegar el Contenedor de WordPress](#3️⃣-desplegar-el-contenedor-de-wordpress)
     - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue-2)
     - [🔍 Observaciones](#-observaciones)
-  - [🚀 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
+  - [🐱‍💻 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
+    - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker-3)
+    - [2️⃣ Desplegar Tomcat](#2️⃣-desplegar-tomcat)
+    - [3️⃣ Desplegar Nginx como Proxy Inverso](#3️⃣-desplegar-nginx-como-proxy-inverso)
+    - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue-3)
 
 </details>
 
@@ -214,7 +218,7 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 
 ---
 
-## 🚀 Ejemplo 4: Despliegue de Tomcat + Nginx
+## 🐱‍💻 Ejemplo 4: Despliegue de Tomcat + Nginx
 
 > [!IMPORTANT]  
 > Antes de realizar este ejemplo, deberemos de cerrar las aplicaciones Guestbook y Redis que se ejecutaron en el ejemplo anterior.
@@ -223,3 +227,75 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 sudo docker stop $(sudo docker ps -aq)
 ```
 
+### 1️⃣ Crear una red Docker
+
+```bash
+$ docker network create red_tomcat
+```
+
+### 2️⃣ Desplegar Tomcat
+
+Antes de desplegar Tomcat, asegurémonos de tener el archivo de la aplicación (`sample.war`) en un directorio específico:
+
+```bash
+$ cd tomcat
+$ ls
+# Deberíamos ver los siguientes archivos:
+default.conf  sample.war
+```
+
+Creamos el contenedor Tomcat y montamos el archivo WAR en el directorio de despliegue:
+
+```bash
+$ docker run -d --name aplicacionjava \
+                --network red_tomcat \
+                -v /home/vagrant/tomcat/sample.war:/usr/local/tomcat/webapps/sample.war:ro \
+                tomcat:9.0
+```
+
+### 3️⃣ Desplegar Nginx como Proxy Inverso
+
+Tenemos el siguiente archivo de configuración `default.conf` para Nginx:
+
+```nginx
+server {
+    listen       80;
+    listen  [::]:80;
+    server_name  localhost;
+
+    location / {
+        root   /usr/share/nginx/html;
+        proxy_pass http://aplicacionjava:8080/sample/;
+    }
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}
+```
+
+Ahora creamos el contenedor Nginx y montamos el archivo de configuración:
+
+```bash
+$ docker run -d --name proxy \
+                -p 80:80 \
+                --network red_tomcat \
+                -v /home/vagrant/tomcat/default.conf:/etc/nginx/conf.d/default.conf:ro \
+                nginx
+```
+
+### 4️⃣ Verificar el Despliegue
+
+Para comprobar que los contenedores están corriendo, usamos:
+
+```bash
+sudo docker ps
+```
+
+Si todo está configurado correctamente, deberíamos ver los contenedores `servidor_wp` y `servidor_mysql` en ejecución.
+
+![alt text](image-13.png)
+
+Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:80`:
+
+![alt text](image-14.png)
