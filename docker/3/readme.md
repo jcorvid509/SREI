@@ -11,3 +11,100 @@
 ---
 
 # 📦 Gestion de imágenes y contenedores Docker
+
+<details>
+
+<summary>
+
+## 📌 Indice
+
+</summary>
+
+- [📦 Gestion de imágenes y contenedores Docker](#-gestion-de-imágenes-y-contenedores-docker)
+  - [📌 Indice](#-indice)
+  - [🐧 1. Descarga la imagen de Ubuntu](#-1-descarga-la-imagen-de-ubuntu)
+  - [🌍 2. Descarga la imagen de hello-world](#-2-descarga-la-imagen-de-hello-world)
+  - [🚀 3. Descarga la imagen de Nginx](#-3-descarga-la-imagen-de-nginx)
+  - [📸 4. Muestra un listado de todas las imágenes](#-4-muestra-un-listado-de-todas-las-imágenes)
+  - [🔄 5. Ejecuta un contenedor hello-world y dale nombre "myhello1"](#-5-ejecuta-un-contenedor-hello-world-y-dale-nombre-myhello1)
+  - [🔄 6. Ejecuta un contenedor hello-world y dale nombre "myhello2"](#-6-ejecuta-un-contenedor-hello-world-y-dale-nombre-myhello2)
+  - [🔄 7. Ejecuta un contenedor hello-world y dale nombre "myhello3"](#-7-ejecuta-un-contenedor-hello-world-y-dale-nombre-myhello3)
+  - [📋 8. Muestra los contenedores que se están ejecutando](#-8-muestra-los-contenedores-que-se-están-ejecutando)
+  - [⏹️ 9. Para el contenedor "myhello1"](#️-9-para-el-contenedor-myhello1)
+  - [⏹️ 10. Para el contenedor "myhello2"](#️-10-para-el-contenedor-myhello2)
+  - [🗑️ 11. Borra el contenedor "myhello1"](#️-11-borra-el-contenedor-myhello1)
+  - [📋 12. Muestra los contenedores que se están ejecutando](#-12-muestra-los-contenedores-que-se-están-ejecutando)
+  - [🧹 13. Borra todos los contenedores](#-13-borra-todos-los-contenedores)
+- [📚 Recursos](#-recursos)
+
+</details>.
+
+## 🐧 1. Descarga la imagen de Ubuntu
+```bash
+docker pull ubuntu
+```
+
+## 🌍 2. Descarga la imagen de hello-world
+```bash
+docker pull hello-world
+```
+
+## 🚀 3. Descarga la imagen de Nginx
+```bash
+docker pull nginx
+```
+
+## 📸 4. Muestra un listado de todas las imágenes
+```bash
+docker images
+```
+
+## 🔄 5. Ejecuta un contenedor hello-world y dale nombre "myhello1"
+```bash
+docker run --name myhello1 hello-world
+```
+
+## 🔄 6. Ejecuta un contenedor hello-world y dale nombre "myhello2"
+```bash
+docker run --name myhello2 hello-world
+```
+
+## 🔄 7. Ejecuta un contenedor hello-world y dale nombre "myhello3"
+```bash
+docker run --name myhello3 hello-world
+```
+
+## 📋 8. Muestra los contenedores que se están ejecutando
+```bash
+docker ps
+```
+
+## ⏹️ 9. Para el contenedor "myhello1"
+```bash
+docker stop myhello1
+```
+
+## ⏹️ 10. Para el contenedor "myhello2"
+```bash
+docker stop myhello2
+```
+
+## 🗑️ 11. Borra el contenedor "myhello1"
+```bash
+docker rm myhello1
+```
+
+## 📋 12. Muestra los contenedores que se están ejecutando
+```bash
+docker ps
+```
+
+## 🧹 13. Borra todos los contenedores
+```bash
+docker rm $(docker ps -aq)
+```
+# 📚 Recursos
+- [Pull Docker images & run Docker containers](http://www.servermom.org/pull-docker-images-run-docker-containers/3225/)
+- [Borrar imágenes y contenedores Docker](https://www.tecmint.com/remove-docker-images-containers-and-volumes/)
+- [Dar nombre a contenedores Docker](https://www.tecmint.com/name-docker-containers/)
+- [Ejercicio recomendado - Play with Docker](https://training.play-with-docker.com/ops-s1-hello/)
