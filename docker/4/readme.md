@@ -31,6 +31,7 @@
     - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker-1)
     - [2️⃣ Desplegar el Backend](#2️⃣-desplegar-el-backend)
     - [3️⃣ Desplegar el Frontend](#3️⃣-desplegar-el-frontend)
+    - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue-1)
   - [🌐 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
   - [🚀 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
 
@@ -74,9 +75,9 @@ Para comprobar que los contenedores están corriendo, usamos:
 sudo docker ps
 ```
 
-![alt text](image-3.png)
-
 Si todo está configurado correctamente, deberíamos ver los contenedores `redis` y `guestbook` en ejecución.
+
+![alt text](image-3.png)
 
 Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:80`:
 
@@ -115,6 +116,23 @@ sudo docker run -d --name temperaturas-backend --network red_temperaturas iesgn/
 ```bash
 sudo docker run -d -p 80:3000 --name temperaturas-frontend --network red_temperaturas iesgn/temperaturas_frontend
 ```
+
+![alt text](image-7.png)
+
+### 4️⃣ Verificar el Despliegue
+Para comprobar que los contenedores están corriendo, usamos:
+
+```bash
+sudo docker ps
+```
+
+Si todo está configurado correctamente, deberíamos ver el contendor `temperaturas-frontend` en la lista de contenedores en ejecución.
+
+![alt text](image-8.png)
+
+Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:80`:
+
+![alt text](image-9.png)
 
 ---
 
