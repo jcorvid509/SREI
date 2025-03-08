@@ -12,6 +12,22 @@
 
 # 🗂️ Gestión de Almacenamiento y Redes en Docker
 
+
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]  
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]  
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+
 <details>
 
 <summary>
@@ -20,23 +36,21 @@
 
 </summary>
 
-- [�️ Gestión de Almacenamiento y Redes en Docker](#️-gestión-de-almacenamiento-y-redes-en-docker)
+- [🗂️ Gestión de Almacenamiento y Redes en Docker](#️-gestión-de-almacenamiento-y-redes-en-docker)
   - [📌 Indice](#-indice)
   - [📖 Introducción](#-introducción)
-  - [📂 Ejemplo 1: Volúmenes en Docker](#-ejemplo-1-volúmenes-en-docker)
-    - [✅ Paso 1: Crear un volumen](#-paso-1-crear-un-volumen)
-    - [✅ Paso 2: Usar el volumen en un contenedor](#-paso-2-usar-el-volumen-en-un-contenedor)
-    - [✅ Paso 3: Acceder al volumen desde el contenedor](#-paso-3-acceder-al-volumen-desde-el-contenedor)
+  - [🗃️ Ejemplo 1: Volúmenes Docker y Bind Mount](#️-ejemplo-1-volúmenes-docker-y-bind-mount)
+    - [✅ Paso 1: Crear un volumen Docker](#-paso-1-crear-un-volumen-docker)
+    - [✅ Paso 2: Crear un contenedor con un volumen](#-paso-2-crear-un-contenedor-con-un-volumen)
+    - [✅ Paso 3: Bind Mount](#-paso-3-bind-mount)
   - [🌐 Ejemplo 2: Redes en Docker](#-ejemplo-2-redes-en-docker)
-    - [✅ Paso 1: Crear una red personalizada](#-paso-1-crear-una-red-personalizada)
+    - [✅ Paso 1: Crear una red definida por el usuario](#-paso-1-crear-una-red-definida-por-el-usuario)
     - [✅ Paso 2: Ejecutar contenedores en la misma red](#-paso-2-ejecutar-contenedores-en-la-misma-red)
     - [✅ Paso 3: Comunicación entre contenedores](#-paso-3-comunicación-entre-contenedores)
-  - [🗃️ Ejemplo 3: Bind Mounts](#️-ejemplo-3-bind-mounts)
-    - [✅ Paso 1: Crear un directorio en el host](#-paso-1-crear-un-directorio-en-el-host)
-    - [✅ Paso 2: Ejecutar un contenedor con Bind Mount](#-paso-2-ejecutar-un-contenedor-con-bind-mount)
-    - [✅ Paso 3: Crear un archivo desde el host](#-paso-3-crear-un-archivo-desde-el-host)
-  - [📸 Capturas de pantalla](#-capturas-de-pantalla)
-  - [🎯 Conclusión](#-conclusión)
+  - [📦 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
+    - [✅ Paso 1: Crear una red para la aplicación](#-paso-1-crear-una-red-para-la-aplicación)
+    - [✅ Paso 2: Desplegar el contenedor de MariaDB](#-paso-2-desplegar-el-contenedor-de-mariadb)
+    - [✅ Paso 3: Desplegar el contenedor de Wordpress](#-paso-3-desplegar-el-contenedor-de-wordpress)
 
 </details>
 
@@ -45,9 +59,9 @@ En esta práctica, exploraremos el uso del almacenamiento y redes en Docker, sig
 
 ---
 
-## 📂 Ejemplo 1: Volúmenes en Docker
+## 🗃️ Ejemplo 1: Volúmenes Docker y Bind Mount
 
-### ✅ Paso 1: Crear un volumen
+### ✅ Paso 1: Crear un volumen Docker
 Ejecutamos el siguiente comando para crear un volumen:
 
 ```sh
@@ -60,7 +74,7 @@ Podemos verificar la creación del volumen con:
 docker volume ls
 ```
 
-### ✅ Paso 2: Usar el volumen en un contenedor
+### ✅ Paso 2: Crear un contenedor con un volumen
 Ejecutamos un contenedor que monte el volumen:
 
 ```sh
@@ -73,24 +87,35 @@ Verificamos que el contenedor esté corriendo:
 docker ps
 ```
 
-### ✅ Paso 3: Acceder al volumen desde el contenedor
-Entramos en el contenedor y creamos un archivo dentro del volumen:
+### ✅ Paso 3: Bind Mount
+Para utilizar bind mount, primero creamos un directorio en el host:
 
 ```sh
-docker exec -it contenedor_volumen sh
-cd /data
-echo "Hola desde Docker Volumes" > archivo.txt
-exit
+mkdir -p ~/docker_data
 ```
 
-Podemos verificar que el archivo persiste incluso si eliminamos y volvemos a ejecutar un contenedor con el mismo volumen.
+Luego ejecutamos un contenedor con bind mount:
+
+```sh
+docker run -d --name contenedor_bind -v ~/docker_data:/app busybox tail -f /dev/null
+```
+
+Para verificarlo, creamos un archivo desde el host y lo revisamos dentro del contenedor:
+
+```sh
+echo "Este archivo está en el host" > ~/docker_data/archivo_host.txt
+
+docker exec -it contenedor_bind sh
+ls /app
+cat /app/archivo_host.txt
+```
 
 ---
 
 ## 🌐 Ejemplo 2: Redes en Docker
 
-### ✅ Paso 1: Crear una red personalizada
-Ejecutamos el siguiente comando para crear una red:
+### ✅ Paso 1: Crear una red definida por el usuario
+Ejecutamos el siguiente comando para crear una red personalizada:
 
 ```sh
 docker network create mi_red
@@ -128,48 +153,34 @@ Si todo está configurado correctamente, deberíamos ver respuestas del ping.
 
 ---
 
-## 🗃️ Ejemplo 3: Bind Mounts
+## 📦 Ejemplo 3: Despliegue de Wordpress + MariaDB
 
-### ✅ Paso 1: Crear un directorio en el host
-
+### ✅ Paso 1: Crear una red para la aplicación
 ```sh
-mkdir -p ~/docker_data
+docker network create wordpress_net
 ```
 
-### ✅ Paso 2: Ejecutar un contenedor con Bind Mount
+### ✅ Paso 2: Desplegar el contenedor de MariaDB
 
 ```sh
-docker run -d --name contenedor_bind -v ~/docker_data:/app busybox tail -f /dev/null
+docker run -d --name mariadb --network wordpress_net \
+  -e MYSQL_ROOT_PASSWORD=rootpass \
+  -e MYSQL_DATABASE=wordpress \
+  -e MYSQL_USER=wp_user \
+  -e MYSQL_PASSWORD=wp_pass \
+  mariadb
 ```
 
-### ✅ Paso 3: Crear un archivo desde el host
+### ✅ Paso 3: Desplegar el contenedor de Wordpress
 
 ```sh
-echo "Este archivo está en el host" > ~/docker_data/archivo_host.txt
+docker run -d --name wordpress --network wordpress_net \
+  -e WORDPRESS_DB_HOST=mariadb \
+  -e WORDPRESS_DB_USER=wp_user \
+  -e WORDPRESS_DB_PASSWORD=wp_pass \
+  -e WORDPRESS_DB_NAME=wordpress \
+  -p 8080:80 \
+  wordpress
 ```
 
-Verificamos dentro del contenedor:
-
-```sh
-docker exec -it contenedor_bind sh
-ls /app
-cat /app/archivo_host.txt
-```
-
-Si todo está correcto, deberíamos ver el archivo dentro del contenedor.
-
----
-
-## 📸 Capturas de pantalla
-Para documentar esta práctica, se deben incluir capturas de pantalla de:
-- La lista de volúmenes (`docker volume ls`)
-- La inspección de la red (`docker network inspect mi_red`)
-- El contenido del bind mount desde dentro del contenedor (`cat /app/archivo_host.txt`)
-
----
-
-## 🎯 Conclusión
-En esta práctica hemos aprendido a:
-- 🗂️ Usar volúmenes en Docker para almacenamiento persistente.
-- 🌍 Configurar redes personalizadas y conectar contenedores.
-- 📂 Utilizar Bind Mounts para compartir archivos entre el host y el contenedor.
+Accedemos a `http://localhost:8080` para completar la instalación de Wordpress.
