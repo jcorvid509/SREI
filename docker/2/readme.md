@@ -137,14 +137,22 @@ sudo docker ps
 
 Abre un navegador y ve a `http://localhost:3000` para comprobar que el servidor está funcionando.
 
+![alt text](image-9.png)
+
+Comprobamos que el servidor está funcionando correctamente, podemos acceder a la aplicación desde el navegador y añadir items a la lista.
+
+![alt text](image-10.png)
+
 ### 🔑 4. Crear una cuenta en Docker Hub
 
 - Ve a [hub.docker.com](https://hub.docker.com/)
 - Regístrate y verifica tu cuenta
 - Inicia sesión en Docker desde la terminal:
 
+![alt text](image-11.png)
+
 ```sh
-sudo docker login
+sudo docker login -u <usuario>
 ```
 
 Introduce tus credenciales cuando se te solicite.
