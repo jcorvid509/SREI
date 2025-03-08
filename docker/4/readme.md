@@ -247,7 +247,7 @@ sudo cp Descargas/sample.war /home/vagrant/tomcat/sample.war
 Hacemos lo mismo con el archivo [`default.conf`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo3/ejemplo4/default.conf):
 
 ```bash
-sudo cp Descargas/default.conf /etc/nginx/sites-available/default
+sudo cp Descargas/default.conf /home/vagrant/tomcat/defaults.conf
 ```
 
 ```bash
