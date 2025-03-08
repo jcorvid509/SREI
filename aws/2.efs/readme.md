@@ -57,7 +57,7 @@ EFS es un servicio de almacenamiento de archivos en la nube que permite a los us
 
 - Sellecionamos `Montaje a traves de IP` y `us-east-1a` y copiamos el código que nos aparece.
 
-```
+```bash
 sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 10.0.143.226:/ efs
 ```
 
@@ -67,7 +67,7 @@ sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,ret
 
 - Volvemos a nuestra **instancia EC2** e instalamos **NFS**
 
-```
+```bash
 sudo apt install nfs-common -y
 ```
 
@@ -75,7 +75,7 @@ sudo apt install nfs-common -y
 
 - Creamos un directorio para montar el sistema de archivos.
 
-```
+```bash
 sudo mkdir -p efs
 ```
 
@@ -87,9 +87,9 @@ sudo mkdir -p efs
 
 # Instalación de Wordpress
 
-- Descargamos el archivo de instalación de Wordpress.
+- Descargamos el archivo de instalación de Wordpress en la ruta `/var/www/html`.
 
-```
+```bash
 sudo wget http://wordpress.org/latest.tar.gz
 ```
 
@@ -97,7 +97,7 @@ sudo wget http://wordpress.org/latest.tar.gz
 
 - Descomprimimos el archivo.
 
-```
+```bash
 sudo tar -xvzf latest.tar.gz
 ```
 
@@ -105,7 +105,7 @@ sudo tar -xvzf latest.tar.gz
 
 - Creamos un cliente de MySQL para la base de datos de Wordpress.
 
-```
+```bash
 sudo apt install mysql-client -y
 ```
 
@@ -113,11 +113,11 @@ sudo apt install mysql-client -y
 
 - Entramos en MySQL.
 
-```
+```bash
 mysql -h serverwp-db.cg8gix3k6fvc.us-east-1.rds.amazonaws.com -u admin -p
 ```
 
-> Donde "serverwp-db.cg8gix3k6fvc.us-east-1.rds.amazonaws.com" es el nombre del servidor de la base de datos, "admin" es el nombre del usuario y "password" es la contraseña.
+> Donde `serverwp-db.cg8gix3k6fvc.us-east-1.rds.amazonaws.com` es el nombre del servidor de la base de datos, `admin` es el nombre del usuario y `password` es la contraseña.
 
 ![alt text](image-18.png)
 
