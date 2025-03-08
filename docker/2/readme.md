@@ -12,10 +12,16 @@
 
 # 🔨 Construcción y Publicación de Imágenes Docker
 
-## 📌 Indice
+<details>
+
+<summary>
+
+# 📌 Indice
+
+</summary>
 
 - [🔨 Construcción y Publicación de Imágenes Docker](#-construcción-y-publicación-de-imágenes-docker)
-  - [📌 Indice](#-indice)
+- [📌 Indice](#-indice)
   - [🏗️ Primeros pasos con Docker](#️-primeros-pasos-con-docker)
     - [✅ 1. Ejecutar la imagen "hello-world"](#-1-ejecutar-la-imagen-hello-world)
     - [📸 2. Mostrar las imágenes de Docker instaladas](#-2-mostrar-las-imágenes-de-docker-instaladas)
@@ -30,6 +36,7 @@
   - [🎯 Conclusión](#-conclusión)
 - [📚 Recursos](#-recursos)
 
+</details>
 
 ## 🏗️ Primeros pasos con Docker
 
@@ -37,27 +44,33 @@
 Ejecuta el siguiente comando para descargar y correr la imagen oficial de "hello-world":
 
 ```sh
-docker run hello-world
+sudo docker run hello-world
 ```
+
+![alt text](image.png)
 
 ### 📸 2. Mostrar las imágenes de Docker instaladas
 Para listar las imágenes instaladas en tu sistema, usa:
 
 ```sh
-docker images
+sudo docker images
 ```
+
+![alt text](image-1.png)
 
 ### 📦 3. Mostrar los contenedores Docker
 Para ver los contenedores en ejecución, usa:
 
 ```sh
-docker ps
+sudo docker ps
 ```
+
+
 
 Si deseas ver todos los contenedores, incluidos los detenidos, ejecuta:
 
 ```sh
-docker ps -a
+sudo docker ps -a
 ```
 
 ---
@@ -68,8 +81,8 @@ docker ps -a
 Crea un directorio y navega a él:
 
 ```sh
-mkdir miapp-docker
-cd miapp-docker
+sudo mkdir miapp-docker
+sudo cd miapp-docker
 ```
 
 Crea un archivo `Dockerfile` dentro del directorio con el siguiente contenido:
@@ -92,20 +105,20 @@ CMD ["python", "-m", "http.server", "8000"]
 Ejecuta el siguiente comando para construir la imagen Docker:
 
 ```sh
-docker build -t miapp .
+sudo docker build -t miapp .
 ```
 
 ### ▶️ 3. Ejecutar el contenedor
 Ejecuta el contenedor con el siguiente comando:
 
 ```sh
-docker run -d -p 8000:8000 miapp
+sudo docker run -d -p 8000:8000 miapp
 ```
 
 Verifica que esté en ejecución:
 
 ```sh
-docker ps
+sudo docker ps
 ```
 
 Abre un navegador y ve a `http://localhost:8000` para comprobar que el servidor está funcionando.
@@ -117,7 +130,7 @@ Abre un navegador y ve a `http://localhost:8000` para comprobar que el servidor 
 - Inicia sesión en Docker desde la terminal:
 
 ```sh
-docker login
+sudo docker login
 ```
 
 Introduce tus credenciales cuando se te solicite.
@@ -127,13 +140,13 @@ Introduce tus credenciales cuando se te solicite.
 1. Etiqueta la imagen con tu usuario de Docker Hub:
 
 ```sh
-docker tag miapp tu_usuario/miapp
+sudo docker tag miapp tu_usuario/miapp
 ```
 
 2. Sube la imagen a Docker Hub:
 
 ```sh
-docker push tu_usuario/miapp
+sudo docker push tu_usuario/miapp
 ```
 
 3. Para verificar que la imagen se subió correctamente, ve a [hub.docker.com](https://hub.docker.com/) y busca en tu repositorio.
@@ -143,7 +156,7 @@ docker push tu_usuario/miapp
 Desde cualquier otra máquina con Docker instalado, puedes ejecutar:
 
 ```sh
-docker run -d -p 8000:8000 tu_usuario/miapp
+sudo docker run -d -p 8000:8000 tu_usuario/miapp
 ```
 
 Esto descargará la imagen de Docker Hub y la ejecutará.
