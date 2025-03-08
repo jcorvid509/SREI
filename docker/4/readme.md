@@ -40,28 +40,30 @@
 Para que los contenedores se comuniquen entre sí, creamos una red llamada `red_guestbook`:
 
 ```bash
-$ docker network create red_guestbook
+sudo docker network create red_guestbook
 ```
+
+![alt text](image.png)
 
 ### 2️⃣ Desplegar la Base de Datos Redis
 Ejecutamos el contenedor de Redis asegurándonos de que los datos se almacenen de forma persistente en `/opt/redis`:
 
 ```bash
-$ docker run -d --name redis --network red_guestbook -v /opt/redis:/data redis redis-server --appendonly yes
+sudo docker run -d --name redis --network red_guestbook -v /opt/redis:/data redis redis-server --appendonly yes
 ```
 
 ### 3️⃣ Desplegar la Aplicación Guestbook
 Ejecutamos el contenedor de la aplicación Guestbook y lo exponemos en el puerto 80:
 
 ```bash
-$ docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/guestbook
+sudo docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/guestbook
 ```
 
 ### 4️⃣ Verificar el Despliegue
 Para comprobar que los contenedores están corriendo, usamos:
 
 ```bash
-$ docker ps
+sudo docker ps
 ```
 
 Si todo está configurado correctamente, deberíamos ver los contenedores `redis` y `guestbook` en ejecución.
@@ -71,15 +73,15 @@ Si por alguna razón deseas utilizar un nombre diferente para el contenedor Redi
 
 1. Crea el contenedor con un nombre distinto (ejemplo: `contenedor_redis`):
 
-   ```bash
-   $ docker run -d --name contenedor_redis --network red_guestbook -v /opt/redis:/data redis redis-server --appendonly yes
-   ```
+```bash
+sudo docker run -d --name contenedor_redis --network red_guestbook -v /opt/redis:/data redis redis-server --appendonly yes
+```
 
 2. Ejecuta la aplicación Guestbook configurando la variable de entorno `REDIS_SERVER`:
 
-   ```bash
-   $ docker run -d -p 80:5000 --name guestbook -e REDIS_SERVER=contenedor_redis --network red_guestbook iesgn/guestbook
-   ```
+```bash
+sudo docker run -d -p 80:5000 --name guestbook -e REDIS_SERVER=contenedor_redis --network red_guestbook iesgn/guestbook
+```
 
 ---
 
