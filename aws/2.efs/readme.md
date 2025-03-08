@@ -138,4 +138,4 @@ FLUSH PRIVILEGES;
 
 ![alt text](image-21.png)
 
-## <a href="../2.efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="left"></a> <p style="text-align: center;">VPC</p>
+## <a href="../2.efs/readme.md"><img src="/.resGen/_arrow_r.svg" width="30" align="left"></a> <p style="text-align: center;">VPC</p>
