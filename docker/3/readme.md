@@ -44,30 +44,58 @@
 sudo docker pull ubuntu
 ```
 
+![alt text](image.png)
+
 ## 🌍 2. Descarga la imagen de hello-world
 ```bash
 sudo docker pull hello-world
 ```
+
+![alt text](image-1.png)
 
 ## 🚀 3. Descarga la imagen de Nginx
 ```bash
 sudo docker pull nginx
 ```
 
+![alt text](image-2.png)
+
 ## 📸 4. Muestra un listado de todas las imágenes
 ```bash
 sudo docker images
 ```
+
+![alt text](image-3.png)
 
 ## 🔄 5. Ejecuta un contenedor hello-world y dale nombre "myhello1"
 ```bash
 sudo docker run --name myhello1 hello-world
 ```
 
+![alt text](image-4.png)
+
+Comprobamos que el contenedor se ha creado correctamente con el comando
+
+```bash
+sudo docker ps -a
+```
+
+![alt text](image-5.png)
+
 ## 🔄 6. Ejecuta un contenedor hello-world y dale nombre "myhello2"
 ```bash
 sudo docker run --name myhello2 hello-world
 ```
+
+![alt text](image-6.png)
+
+Comprobamos que el contenedor se ha creado correctamente con el comando
+
+```bash
+sudo docker ps -a
+```
+
+![alt text](image-7.png)
 
 ## 🔄 7. Ejecuta un contenedor hello-world y dale nombre "myhello3"
 ```bash
