@@ -285,6 +285,8 @@ sudo docker run -d --name proxy \
                 nginx
 ```
 
+![alt text](image-18.png)
+
 ### 4️⃣ Verificar el Despliegue
 
 Para comprobar que los contenedores están corriendo, usamos:
@@ -293,10 +295,6 @@ Para comprobar que los contenedores están corriendo, usamos:
 sudo docker ps
 ```
 
-Si todo está configurado correctamente, deberíamos ver los contenedores `servidor_wp` y `servidor_mysql` en ejecución.
+Si todo está configurado correctamente, deberíamos ver los contenedores `proxy` y `aplicaciónjava` en ejecución.
 
-![alt text](image-13.png)
-
-Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:80`:
-
-![alt text](image-14.png)
+![alt text](image-19.png)
