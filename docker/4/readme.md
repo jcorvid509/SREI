@@ -27,8 +27,10 @@
     - [2️⃣ Desplegar la Base de Datos Redis](#2️⃣-desplegar-la-base-de-datos-redis)
     - [3️⃣ Desplegar la Aplicación Guestbook](#3️⃣-desplegar-la-aplicación-guestbook)
     - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue)
-    - [🔄 Configuración Alternativa: Cambio de Nombre del Contenedor Redis](#-configuración-alternativa-cambio-de-nombre-del-contenedor-redis)
   - [🌡️ Ejemplo 2: Despliegue de la aplicación Temperaturas](#️-ejemplo-2-despliegue-de-la-aplicación-temperaturas)
+    - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker-1)
+    - [2️⃣ Desplegar el Backend](#2️⃣-desplegar-el-backend)
+    - [3️⃣ Desplegar el Frontend](#3️⃣-desplegar-el-frontend)
   - [🌐 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
   - [🚀 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
 
@@ -52,12 +54,16 @@ Ejecutamos el contenedor de Redis asegurándonos de que los datos se almacenen d
 sudo docker run -d --name redis --network red_guestbook -v /opt/redis:/data redis redis-server --appendonly yes
 ```
 
+![alt text](image-1.png)
+
 ### 3️⃣ Desplegar la Aplicación Guestbook
 Ejecutamos el contenedor de la aplicación Guestbook y lo exponemos en el puerto 80:
 
 ```bash
 sudo docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/guestbook
 ```
+
+![alt text](image-2.png)
 
 ### 4️⃣ Verificar el Despliegue
 Para comprobar que los contenedores están corriendo, usamos:
@@ -66,28 +72,35 @@ Para comprobar que los contenedores están corriendo, usamos:
 sudo docker ps
 ```
 
+![alt text](image-3.png)
+
 Si todo está configurado correctamente, deberíamos ver los contenedores `redis` y `guestbook` en ejecución.
 
-### 🔄 Configuración Alternativa: Cambio de Nombre del Contenedor Redis
-Si por alguna razón deseas utilizar un nombre diferente para el contenedor Redis, sigue estos pasos:
+Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:80`:
 
-1. Crea el contenedor con un nombre distinto (ejemplo: `contenedor_redis`):
-
-```bash
-sudo docker run -d --name contenedor_redis --network red_guestbook -v /opt/redis:/data redis redis-server --appendonly yes
-```
-
-2. Ejecuta la aplicación Guestbook configurando la variable de entorno `REDIS_SERVER`:
-
-```bash
-sudo docker run -d -p 80:5000 --name guestbook -e REDIS_SERVER=contenedor_redis --network red_guestbook iesgn/guestbook
-```
+![alt text](image-4.png)
 
 ---
 
 ## 🌡️ Ejemplo 2: Despliegue de la aplicación Temperaturas
 
+### 1️⃣ Crear una red Docker
 
+```bash
+$ docker network create red_temperaturas
+```
+
+### 2️⃣ Desplegar el Backend
+
+```bash
+$ docker run -d --name temperaturas-backend --network red_temperaturas iesgn/temperaturas_backend
+```
+
+### 3️⃣ Desplegar el Frontend
+
+```bash
+$ docker run -d -p 80:3000 --name temperaturas-frontend --network red_temperaturas iesgn/temperaturas_frontend
+```
 
 ## 🌐 Ejemplo 3: Despliegue de Wordpress + MariaDB
 
