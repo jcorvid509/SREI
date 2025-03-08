@@ -114,5 +114,26 @@ sudo apt install mysql-client -y
 - Entramos en MySQL.
 
 ```
-mysql -h bdwordpress.chn38fhjqphr.us-east-1.rds.amazonaws.com -u admin -p
+mysql -h serverwp-db.cg8gix3k6fvc.us-east-1.rds.amazonaws.com -u admin -p
 ```
+
+> Donde "serverwp-db.cg8gix3k6fvc.us-east-1.rds.amazonaws.com" es el nombre del servidor de la base de datos, "admin" es el nombre del usuario y "password" es la contraseña.
+
+![alt text](image-18.png)
+
+- Creamos una nueva base de datos para Wordpress.
+
+```sql
+CREATE DATABASE wordpress;
+CREATE USER 'wordpress_user'@'%' IDENTIFIED BY 'password123';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress_user'@'%';
+FLUSH PRIVILEGES;
+```
+
+![alt text](image-19.png)
+
+- Si accedemos a la tuta `http://server_ip/wordpress/wp-admin/setup-config.php`, veremos la siguiente pantalla:
+
+![alt text](image-20.png)
+
+![alt text](image-21.png)
