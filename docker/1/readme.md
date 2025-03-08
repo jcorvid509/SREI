@@ -41,11 +41,15 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 ```
 
+![alt text](image-1.png)
+
 ## 🔑 Agregar la clave GPG de Docker
 
 ```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
+
+![alt text](image-2.png)
 
 ## 📦 Agregar el repositorio de Docker
 
@@ -53,11 +57,15 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 ```
 
+![alt text](image-3.png)
+
 ## 🔄 Actualizar la lista de paquetes
 
 ```bash
 sudo apt update
 ```
+
+![alt text](image-4.png)
 
 ## 🔍 Descargamos las politicas de Docker
 
@@ -65,11 +73,15 @@ sudo apt update
 apt-cache policy docker-ce
 ```
 
+![alt text](image-5.png)
+
 ## 🐳 Instalar Docker
 
 ```bash
 sudo apt install docker-ce -y
 ```
+
+![alt text](image-6.png)
 
 ## ✅ Verificar la instalación de Docker
 
