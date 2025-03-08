@@ -89,6 +89,8 @@ sudo apt install docker-ce -y
 docker --version
 ```
 
+![alt text](image-7.png)
+
 ## 🚀 Habilitar y arrancar Docker
 
 ```bash
@@ -96,10 +98,15 @@ sudo systemctl enable docker
 sudo systemctl start docker
 ```
 
+![alt text](image-8.png)
+![alt text](image-9.png)
+
 ## 🏗️ Probar Docker con un contenedor de prueba
 ```bash
 sudo docker run hello-world
 ```
+
+![alt text](image-10.png)
 
 # 📚 Recursos
 
