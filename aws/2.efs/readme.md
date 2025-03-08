@@ -86,3 +86,33 @@ sudo mkdir -p efs
 ![alt text](image-14.png)
 
 # Instalación de Wordpress
+
+- Descargamos el archivo de instalación de Wordpress.
+
+```
+sudo wget http://wordpress.org/latest.tar.gz
+```
+
+![alt text](image-15.png)
+
+- Descomprimimos el archivo.
+
+```
+sudo tar -xvzf latest.tar.gz
+```
+
+![alt text](image-16.png)
+
+- Creamos un cliente de MySQL para la base de datos de Wordpress.
+
+```
+sudo apt install mysql-client -y
+```
+
+![alt text](image-17.png)
+
+- Entramos en MySQL.
+
+```
+mysql -h bdwordpress.chn38fhjqphr.us-east-1.rds.amazonaws.com -u admin -p
+```
