@@ -89,19 +89,19 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 ### 1️⃣ Crear una red Docker
 
 ```bash
-$ docker network create red_temperaturas
+sudo docker network create red_temperaturas
 ```
 
 ### 2️⃣ Desplegar el Backend
 
 ```bash
-$ docker run -d --name temperaturas-backend --network red_temperaturas iesgn/temperaturas_backend
+sudo docker run -d --name temperaturas-backend --network red_temperaturas iesgn/temperaturas_backend
 ```
 
 ### 3️⃣ Desplegar el Frontend
 
 ```bash
-$ docker run -d -p 80:3000 --name temperaturas-frontend --network red_temperaturas iesgn/temperaturas_frontend
+sudo docker run -d -p 80:3000 --name temperaturas-frontend --network red_temperaturas iesgn/temperaturas_frontend
 ```
 
 ---
