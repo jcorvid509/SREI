@@ -246,9 +246,15 @@ sudo docker run -d --name aplicacionjava \
                 tomcat:9.0
 ```
 
+![alt text](image-16.png)
+
 ### 3️⃣ Desplegar Nginx como Proxy Inverso
 
 Tenemos el siguiente archivo de configuración `default.conf` para Nginx:
+
+```bash
+sudo nano /home/vagrant/tomcat/default.conf
+```
 
 ```nginx
 server {
@@ -266,6 +272,8 @@ server {
     }
 }
 ```
+
+![alt text](image-17.png)
 
 Ahora creamos el contenedor Nginx y montamos el archivo de configuración:
 
