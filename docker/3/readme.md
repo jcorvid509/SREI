@@ -35,7 +35,7 @@
   - [🗑️ 11. Borra el contenedor "myhello1"](#️-11-borra-el-contenedor-myhello1)
   - [📋 12. Muestra los contenedores que se están ejecutando](#-12-muestra-los-contenedores-que-se-están-ejecutando)
   - [🧹 13. Borra todos los contenedores](#-13-borra-todos-los-contenedores)
-- [📚 Recursos](#-recursos)
+  - [📚 Recursos](#-recursos)
 
 </details>.
 
@@ -154,7 +154,7 @@ sudo docker rm $(docker ps -aq)
 
 ![alt text](image-15.png)
 
-# 📚 Recursos
+## 📚 Recursos
 - [Pull Docker images & run Docker containers](http://www.servermom.org/pull-docker-images-run-docker-containers/3225/)
 - [Borrar imágenes y contenedores Docker](https://www.tecmint.com/remove-docker-images-containers-and-volumes/)
 - [Dar nombre a contenedores Docker](https://www.tecmint.com/name-docker-containers/)

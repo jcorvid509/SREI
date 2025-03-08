@@ -34,7 +34,7 @@
     - [☁️ 5. Publicar la imagen en Docker Hub](#️-5-publicar-la-imagen-en-docker-hub)
     - [🌍 6. Probar la imagen desde Docker Hub](#-6-probar-la-imagen-desde-docker-hub)
   - [🎯 Conclusión](#-conclusión)
-- [📚 Recursos](#-recursos)
+  - [📚 Recursos](#-recursos)
 
 </details>
 
@@ -200,7 +200,7 @@ En esta práctica aprendimos a:
 - ▶️ Ejecutar un contenedor basado en nuestra imagen
 - ☁️ Publicar una imagen en Docker Hub
 
-# 📚 Recursos
+## 📚 Recursos
 
 - [Docker Docs](https://docs.docker.com/get-started/)
 - [Docker Docs](https://docs.docker.com/get-started/part2/)

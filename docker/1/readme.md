@@ -31,7 +31,7 @@
   - [✅ Verificar la instalación de Docker](#-verificar-la-instalación-de-docker)
   - [🚀 Habilitar y arrancar Docker](#-habilitar-y-arrancar-docker)
   - [🏗️ Probar Docker con un contenedor de prueba](#️-probar-docker-con-un-contenedor-de-prueba)
-- [📚 Recursos](#-recursos)
+  - [📚 Recursos](#-recursos)
 
 </details>
 
@@ -116,7 +116,7 @@ sudo docker run hello-world
 
 ![alt text](image-10.png)
 
-# 📚 Recursos
+## 📚 Recursos
 
 - [Docker Docs](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 - [Medium Article](https://medium.com/@Grigorkh/how-to-install-docker-on-ubuntu-16-04-3f509070d29c)
