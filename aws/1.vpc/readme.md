@@ -15,7 +15,6 @@
   - [2. Crear una instancia EC2](#2-crear-una-instancia-ec2)
   - [3. Instalación de WordPress en la instancia EC2](#3-instalación-de-wordpress-en-la-instancia-ec2)
   - [4. Creación de la base de datos](#4-creación-de-la-base-de-datos)
-  - [  \< **EFS** \> ](#---efs--)
   - [EFS ](#efs-)
 
 
@@ -333,7 +332,4 @@ mysql -h puerto_de_enlace_BD -u admin -p
 
 ![alt text](image-54.png)
 
-
-## <table style="width:100%;text-align:center;"> <tr> <th style="width:25%;"><</th> <th style="width:50%;">**EFS**</th> <th style="width:25%;">></th> </tr></table>
-
-## <p style="text-align: center;">EFS</p> <a href="../2.efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+## EFS <a href="../2.efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
