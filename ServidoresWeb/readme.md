@@ -33,7 +33,7 @@ Vamos a instalar un servidor web interno para un instituto. Se Pide:
 
 ### 📊 Instalar y configurar awstat<a href="md/7.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-### 🖧 Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”<a href="md/8.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### 🖧 Instalar servidor2.centro.intranet<a href="md/8.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
 
 > A la finalización del trabajo se procederá a una exposición de la presentación
