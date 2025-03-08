@@ -332,4 +332,4 @@ mysql -h puerto_de_enlace_BD -u admin -p
 
 ![alt text](image-54.png)
 
-## EFS <a href="../2.efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+## <p style="text-align: center;">EFS</p> <a href="../2.efs/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
