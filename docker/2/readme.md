@@ -27,7 +27,7 @@
     - [📸 2. Mostrar las imágenes de Docker instaladas](#-2-mostrar-las-imágenes-de-docker-instaladas)
     - [📦 3. Mostrar los contenedores Docker](#-3-mostrar-los-contenedores-docker)
   - [🏗️ Construcción y publicación de una imagen Docker](#️-construcción-y-publicación-de-una-imagen-docker)
-    - [📂 1. Crear un directorio y un archivo `Dockerfile`](#-1-crear-un-directorio-y-un-archivo-dockerfile)
+    - [📂 1. Clonamos el repositorio de ejemplo](#-1-clonamos-el-repositorio-de-ejemplo)
     - [🔨 2. Construir el contenedor](#-2-construir-el-contenedor)
     - [▶️ 3. Ejecutar el contenedor](#️-3-ejecutar-el-contenedor)
     - [🔑 4. Crear una cuenta en Docker Hub](#-4-crear-una-cuenta-en-docker-hub)
@@ -65,7 +65,7 @@ Para ver los contenedores en ejecución, usa:
 sudo docker ps
 ```
 
-
+![alt text](image-2.png)
 
 Si deseas ver todos los contenedores, incluidos los detenidos, ejecuta:
 
@@ -73,19 +73,26 @@ Si deseas ver todos los contenedores, incluidos los detenidos, ejecuta:
 sudo docker ps -a
 ```
 
+![alt text](image-3.png)
+
 ---
 
 ## 🏗️ Construcción y publicación de una imagen Docker
 
-### 📂 1. Crear un directorio y un archivo `Dockerfile`
-Crea un directorio y navega a él:
+### 📂 1. Clonamos el repositorio de ejemplo
+Antes de poder ejecutar la aplicación, debe obtener el código fuente de la aplicación en su máquina.
 
 ```sh
-sudo mkdir miapp-docker
-sudo cd miapp-docker
+ git clone https://github.com/docker/getting-started-app.git
 ```
 
+
+
 Crea un archivo `Dockerfile` dentro del directorio con el siguiente contenido:
+
+```bash
+sudo nano Dockerfile
+```
 
 ```Dockerfile
 # Usar una imagen base de Python
@@ -100,6 +107,8 @@ COPY . /app
 # Comando por defecto al ejecutar el contenedor
 CMD ["python", "-m", "http.server", "8000"]
 ```
+
+![alt text](image-5.png)
 
 ### 🔨 2. Construir el contenedor
 Ejecuta el siguiente comando para construir la imagen Docker:
