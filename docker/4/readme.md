@@ -37,7 +37,7 @@
     - [2️⃣ Desplegar el Contenedor de Base de Datos MariaDB](#2️⃣-desplegar-el-contenedor-de-base-de-datos-mariadb)
     - [3️⃣ Desplegar el Contenedor de WordPress](#3️⃣-desplegar-el-contenedor-de-wordpress)
     - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue-2)
-  - [🔍 Observaciones](#-observaciones)
+    - [🔍 Observaciones](#-observaciones)
   - [🚀 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
 
 </details>
@@ -156,6 +156,8 @@ sudo docker stop $(sudo docker ps -aq)
 sudo docker network create red_wp
 ```
 
+![alt text](image-10.png)
+
 ### 2️⃣ Desplegar el Contenedor de Base de Datos MariaDB
 
 ```bash
@@ -168,6 +170,8 @@ sudo docker run -d --name servidor_mysql \
                 -e MYSQL_ROOT_PASSWORD=asdasd \
                 mariadb
 ```
+
+![alt text](image-11.png)
 
 ### 3️⃣ Desplegar el Contenedor de WordPress
 
@@ -183,13 +187,25 @@ sudo docker run -d --name servidor_wp \
                 wordpress
 ```
 
+![alt text](image-12.png)
+
 ### 4️⃣ Verificar el Despliegue
+
+Para comprobar que los contenedores están corriendo, usamos:
 
 ```bash
 sudo docker ps
 ```
 
-## 🔍 Observaciones
+Si todo está configurado correctamente, deberíamos ver los contenedores `servidor_wp` y `servidor_mysql` en ejecución.
+
+![alt text](image-13.png)
+
+Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:80`:
+
+![alt text](image-14.png)
+
+### 🔍 Observaciones
 
 - **MariaDB** ejecuta un script `docker-entrypoint.sh` que configura la base de datos según las variables de entorno proporcionadas.
 - **WordPress** también ejecuta su propio script `docker-entrypoint.sh`, que genera el archivo `wp-config.php` automáticamente.
