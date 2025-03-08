@@ -82,9 +82,17 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 
 ![alt text](image-4.png)
 
+
 ---
 
 ## 🌡️ Ejemplo 2: Despliegue de la aplicación Temperaturas
+
+> [!IMPORTANT]  
+> Antes de realizar este ejemplo, deberemos de cerrar las aplicaciones Guestbook y Redis que se ejecutaron en el ejemplo anterior.
+
+```bash
+sudo docker stop $(sudo docker ps -aq)
+```
 
 ### 1️⃣ Crear una red Docker
 
@@ -92,11 +100,15 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 sudo docker network create red_temperaturas
 ```
 
+![alt text](image-5.png)
+
 ### 2️⃣ Desplegar el Backend
 
 ```bash
 sudo docker run -d --name temperaturas-backend --network red_temperaturas iesgn/temperaturas_backend
 ```
+
+![alt text](image-6.png)
 
 ### 3️⃣ Desplegar el Frontend
 
@@ -108,7 +120,20 @@ sudo docker run -d -p 80:3000 --name temperaturas-frontend --network red_tempera
 
 ## 🌐 Ejemplo 3: Despliegue de Wordpress + MariaDB
 
+> [!IMPORTANT]  
+> Antes de realizar este ejemplo, deberemos de cerrar las aplicaciones Guestbook y Redis que se ejecutaron en el ejemplo anterior.
+
+```bash
+sudo docker stop $(sudo docker ps -aq)
+```
 
 
 ## 🚀 Ejemplo 4: Despliegue de Tomcat + Nginx
+
+> [!IMPORTANT]  
+> Antes de realizar este ejemplo, deberemos de cerrar las aplicaciones Guestbook y Redis que se ejecutaron en el ejemplo anterior.
+
+```bash
+sudo docker stop $(sudo docker ps -aq)
+```
 
