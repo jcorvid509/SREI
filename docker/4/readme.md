@@ -230,7 +230,7 @@ sudo docker stop $(sudo docker ps -aq)
 ### 1️⃣ Crear una red Docker
 
 ```bash
-$ docker network create red_tomcat
+sudo docker network create red_tomcat
 ```
 
 ### 2️⃣ Desplegar Tomcat
@@ -238,8 +238,8 @@ $ docker network create red_tomcat
 Antes de desplegar Tomcat, asegurémonos de tener el archivo de la aplicación (`sample.war`) en un directorio específico:
 
 ```bash
-$ cd tomcat
-$ ls
+sudo cd tomcat
+ls
 # Deberíamos ver los siguientes archivos:
 default.conf  sample.war
 ```
@@ -247,7 +247,7 @@ default.conf  sample.war
 Creamos el contenedor Tomcat y montamos el archivo WAR en el directorio de despliegue:
 
 ```bash
-$ docker run -d --name aplicacionjava \
+sudo docker run -d --name aplicacionjava \
                 --network red_tomcat \
                 -v /home/vagrant/tomcat/sample.war:/usr/local/tomcat/webapps/sample.war:ro \
                 tomcat:9.0
@@ -277,7 +277,7 @@ server {
 Ahora creamos el contenedor Nginx y montamos el archivo de configuración:
 
 ```bash
-$ docker run -d --name proxy \
+sudo docker run -d --name proxy \
                 -p 80:80 \
                 --network red_tomcat \
                 -v /home/vagrant/tomcat/default.conf:/etc/nginx/conf.d/default.conf:ro \
