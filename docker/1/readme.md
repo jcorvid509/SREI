@@ -5,6 +5,8 @@
 
 <a href="../2/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
+<br>
+
 ---
 
 # ⚙️ Instalación de Docker

@@ -3,6 +3,11 @@
 
 <a href="../readme.md"><img src="/.resGen/_back.svg" width="52.5"></a>
 
+<a href="../2/readme.md"><img src="/.resGen/_arrow_r.svg" width="30" align="left"></a>
+<a href="../4/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+
+<br>
+
 ---
 
 # 📦 Gestion de imágenes y contenedores Docker
