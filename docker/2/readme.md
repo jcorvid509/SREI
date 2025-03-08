@@ -122,8 +122,10 @@ sudo docker build -t miapp .
 Ejecuta el contenedor con el siguiente comando:
 
 ```sh
-sudo docker run -d -p 8000:8000 miapp
+sudo docker run -d -p 3000:3000 miapp
 ```
+
+![alt text](image-7.png)
 
 Verifica que esté en ejecución:
 
@@ -131,7 +133,9 @@ Verifica que esté en ejecución:
 sudo docker ps
 ```
 
-Abre un navegador y ve a `http://localhost:8000` para comprobar que el servidor está funcionando.
+![alt text](image-8.png)
+
+Abre un navegador y ve a `http://localhost:3000` para comprobar que el servidor está funcionando.
 
 ### 🔑 4. Crear una cuenta en Docker Hub
 
