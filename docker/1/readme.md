@@ -12,9 +12,10 @@
 # ⚙️ Instalación de Docker
 
 <details>
-<summary><b>📌 Indice</b></summary>
+## <summary>📌 Indice</summary>
 
 - [⚙️ Instalación de Docker](#️-instalación-de-docker)
+  - [📌 Indice](#-indice)
   - [⚡ Actualizar el sistema](#-actualizar-el-sistema)
   - [🔧 Instalar paquetes necesarios](#-instalar-paquetes-necesarios)
   - [🔑 Agregar la clave GPG de Docker](#-agregar-la-clave-gpg-de-docker)
