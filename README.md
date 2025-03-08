@@ -4,7 +4,10 @@
 
 ---
 
-![Alt](https://repobeats.axiom.co/api/embed/adbbf1fad6962aec4e9693569154091cc38ed570.svg "Repobeats analytics image")
+<div style="text-align: center;">
+  <img src="https://repobeats.axiom.co/api/embed/adbbf1fad6962aec4e9693569154091cc38ed570.svg" alt="Repobeats analytics image" />
+</div>
+
 
 ---
 
