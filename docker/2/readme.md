@@ -108,12 +108,15 @@ EXPOSE 3000
 
 ![alt text](image-5.png)
 
+
 ### 🔨 2. Construir el contenedor
 Ejecuta el siguiente comando para construir la imagen Docker:
 
 ```sh
-sudo docker build -t miapp .
+sudo docker build -t migetting-startedapp .
 ```
+
+![alt text](image-6.png)
 
 ### ▶️ 3. Ejecutar el contenedor
 Ejecuta el contenedor con el siguiente comando:
