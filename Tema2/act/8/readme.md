@@ -5,7 +5,7 @@
 
 ---
 
-# Configuración de un DNS Primario y Creación de Subdominios
+# 📂 Configuración de un DNS Primario y Creación de Subdominios
 
 ## Introducción
 En este documento se detallará el proceso de configuración de un servidor DNS primario para el dominio `iesmarisma.intranet`, así como la creación y delegación del subdominio `informatica.iesmarisma.intranet`. Además, se incluirá un script en Bash para automatizar la creación de subdominios y se explorará una alternativa en Python usando `subprocess.Popen`.
