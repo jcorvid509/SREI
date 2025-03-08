@@ -17,8 +17,6 @@
 
 ## 📌 Indice
 
----
-
 </summary>
 
 - [⚙️ Instalación de Docker](#️-instalación-de-docker)
