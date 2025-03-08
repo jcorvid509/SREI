@@ -173,7 +173,11 @@ sudo docker tag miapp tu_usuario/miapp
 sudo docker push tu_usuario/miapp
 ```
 
+![alt text](image-13.png)
+
 3. Para verificar que la imagen se subió correctamente, ve a [hub.docker.com](https://hub.docker.com/) y busca en tu repositorio.
+
+![alt text](image-14.png)
 
 ### 🌍 6. Probar la imagen desde Docker Hub
 
