@@ -238,10 +238,20 @@ sudo docker network create red_tomcat
 ### 2️⃣ Desplegar Tomcat
 Antes de desplegar Tomcat, asegurémonos de tener el archivo de la aplicación (sample.war) en un directorio específico: `/usr/local/tomcat/webapps/`:
 
-Descargamos el archivo [`sample.war`](https://github.com/josedom24/curso_docker_ies/raw/refs/heads/main/ejemplos/modulo3/ejemplo4/sample.war)
+Descargamos el archivo [`sample.war`](https://github.com/josedom24/curso_docker_ies/raw/refs/heads/main/ejemplos/modulo3/ejemplo4/sample.war), y lo copiamos a `/usr/local/tomcat/webapps/`:
 
 ```bash
-cd /usr/local/tomcat/webapps/
+sudo cp /descargas/sample.war /home/vagrant/tomcat/sample.war
+```
+
+Hacemos lo mismo con el archivo [`default.conf`](https://github.com/josedom24/curso_docker_ies/raw/refs/heads/main/ejemplos/modulo3/ejemplo4/sample.war):
+
+```bash
+sudo cp /descargas/default.conf /etc/nginx/sites-available/default
+```
+
+```bash
+cd /home/vagrant/tomcat/
 ls
 # Deberíamos ver los siguientes archivos:
 default.conf  sample.war
