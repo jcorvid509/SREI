@@ -12,22 +12,6 @@
 
 # 🗂️ Gestión de Almacenamiento y Redes en Docker
 
-
-> [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]  
-> Crucial information necessary for users to succeed.
-
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
-
 <details>
 
 <summary>
@@ -38,149 +22,87 @@
 
 - [🗂️ Gestión de Almacenamiento y Redes en Docker](#️-gestión-de-almacenamiento-y-redes-en-docker)
   - [📌 Indice](#-indice)
-  - [📖 Introducción](#-introducción)
-  - [🗃️ Ejemplo 1: Volúmenes Docker y Bind Mount](#️-ejemplo-1-volúmenes-docker-y-bind-mount)
-    - [✅ Paso 1: Crear un volumen Docker](#-paso-1-crear-un-volumen-docker)
-    - [✅ Paso 2: Crear un contenedor con un volumen](#-paso-2-crear-un-contenedor-con-un-volumen)
-    - [✅ Paso 3: Bind Mount](#-paso-3-bind-mount)
-  - [🌐 Ejemplo 2: Redes en Docker](#-ejemplo-2-redes-en-docker)
-    - [✅ Paso 1: Crear una red definida por el usuario](#-paso-1-crear-una-red-definida-por-el-usuario)
-    - [✅ Paso 2: Ejecutar contenedores en la misma red](#-paso-2-ejecutar-contenedores-en-la-misma-red)
-    - [✅ Paso 3: Comunicación entre contenedores](#-paso-3-comunicación-entre-contenedores)
-  - [📦 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
-    - [✅ Paso 1: Crear una red para la aplicación](#-paso-1-crear-una-red-para-la-aplicación)
-    - [✅ Paso 2: Desplegar el contenedor de MariaDB](#-paso-2-desplegar-el-contenedor-de-mariadb)
-    - [✅ Paso 3: Desplegar el contenedor de Wordpress](#-paso-3-desplegar-el-contenedor-de-wordpress)
+  - [🚀 Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
+    - [📝 Introducción](#-introducción)
+    - [⚙️ Prerrequisitos](#️-prerrequisitos)
+    - [📌 Paso a Paso](#-paso-a-paso)
+    - [🔄 Configuración Alternativa: Cambio de Nombre del Contenedor Redis](#-configuración-alternativa-cambio-de-nombre-del-contenedor-redis)
+  - [🌡️ Ejemplo 2: Despliegue de la aplicación Temperaturas](#️-ejemplo-2-despliegue-de-la-aplicación-temperaturas)
+  - [🌐 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
+  - [🚀 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
 
 </details>
 
-## 📖 Introducción
-En esta práctica, exploraremos el uso del almacenamiento y redes en Docker, siguiendo la documentación del módulo 3 del curso: [Almacenamiento y redes Docker](https://github.com/josedom24/curso_docker_ies). Se llevarán a cabo tres ejemplos y se documentará el proceso con capturas de pantalla.
+## 🚀 Ejemplo 1: Despliegue de la aplicación Guestbook
+
+### 📝 Introducción
+En este documento se describe el proceso paso a paso para desplegar la aplicación web Guestbook utilizando Docker. La aplicación requiere dos servicios:
+
+1. **Servicio Web**: Aplicación Guestbook basada en Python, que escucha en el puerto `5000/tcp`.
+2. **Servicio de Base de Datos**: Base de datos Redis que funciona en el puerto `6379/tcp`.
+
+### ⚙️ Prerrequisitos
+Antes de comenzar, asegúrate de tener instalados los siguientes componentes en tu sistema:
+
+- Docker
+- Docker Compose (opcional pero recomendado)
+
+### 📌 Paso a Paso
+
+- **1️⃣ Crear una red Docker**
+Para que los contenedores se comuniquen entre sí, creamos una red llamada `red_guestbook`:
+
+```bash
+$ docker network create red_guestbook
+```
+
+- **2️⃣ Desplegar la Base de Datos Redis**
+Ejecutamos el contenedor de Redis asegurándonos de que los datos se almacenen de forma persistente en `/opt/redis`:
+
+```bash
+$ docker run -d --name redis --network red_guestbook -v /opt/redis:/data redis redis-server --appendonly yes
+```
+
+- **3️⃣ Desplegar la Aplicación Guestbook**
+Ejecutamos el contenedor de la aplicación Guestbook y lo exponemos en el puerto 80:
+
+```bash
+$ docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/guestbook
+```
+
+- **4️⃣ Verificar el Despliegue**
+Para comprobar que los contenedores están corriendo, usamos:
+
+```bash
+$ docker ps
+```
+
+Si todo está configurado correctamente, deberíamos ver los contenedores `redis` y `guestbook` en ejecución.
+
+### 🔄 Configuración Alternativa: Cambio de Nombre del Contenedor Redis
+Si por alguna razón deseas utilizar un nombre diferente para el contenedor Redis, sigue estos pasos:
+
+1. Crea el contenedor con un nombre distinto (ejemplo: `contenedor_redis`):
+
+   ```bash
+   $ docker run -d --name contenedor_redis --network red_guestbook -v /opt/redis:/data redis redis-server --appendonly yes
+   ```
+
+2. Ejecuta la aplicación Guestbook configurando la variable de entorno `REDIS_SERVER`:
+
+   ```bash
+   $ docker run -d -p 80:5000 --name guestbook -e REDIS_SERVER=contenedor_redis --network red_guestbook iesgn/guestbook
+   ```
 
 ---
 
-## 🗃️ Ejemplo 1: Volúmenes Docker y Bind Mount
+## 🌡️ Ejemplo 2: Despliegue de la aplicación Temperaturas
 
-### ✅ Paso 1: Crear un volumen Docker
-Ejecutamos el siguiente comando para crear un volumen:
 
-```sh
-docker volume create mi_volumen
-```
 
-Podemos verificar la creación del volumen con:
+## 🌐 Ejemplo 3: Despliegue de Wordpress + MariaDB
 
-```sh
-docker volume ls
-```
 
-### ✅ Paso 2: Crear un contenedor con un volumen
-Ejecutamos un contenedor que monte el volumen:
 
-```sh
-docker run -d --name contenedor_volumen -v mi_volumen:/data busybox tail -f /dev/null
-```
+## 🚀 Ejemplo 4: Despliegue de Tomcat + Nginx
 
-Verificamos que el contenedor esté corriendo:
-
-```sh
-docker ps
-```
-
-### ✅ Paso 3: Bind Mount
-Para utilizar bind mount, primero creamos un directorio en el host:
-
-```sh
-mkdir -p ~/docker_data
-```
-
-Luego ejecutamos un contenedor con bind mount:
-
-```sh
-docker run -d --name contenedor_bind -v ~/docker_data:/app busybox tail -f /dev/null
-```
-
-Para verificarlo, creamos un archivo desde el host y lo revisamos dentro del contenedor:
-
-```sh
-echo "Este archivo está en el host" > ~/docker_data/archivo_host.txt
-
-docker exec -it contenedor_bind sh
-ls /app
-cat /app/archivo_host.txt
-```
-
----
-
-## 🌐 Ejemplo 2: Redes en Docker
-
-### ✅ Paso 1: Crear una red definida por el usuario
-Ejecutamos el siguiente comando para crear una red personalizada:
-
-```sh
-docker network create mi_red
-```
-
-Verificamos la red creada:
-
-```sh
-docker network ls
-```
-
-### ✅ Paso 2: Ejecutar contenedores en la misma red
-Creamos dos contenedores dentro de esta red:
-
-```sh
-docker run -d --name contenedor1 --network mi_red busybox tail -f /dev/null
-docker run -d --name contenedor2 --network mi_red busybox tail -f /dev/null
-```
-
-Verificamos que ambos contenedores están en la misma red:
-
-```sh
-docker network inspect mi_red
-```
-
-### ✅ Paso 3: Comunicación entre contenedores
-Accedemos al primer contenedor y verificamos que puede hacer ping al segundo:
-
-```sh
-docker exec -it contenedor1 sh
-ping contenedor2
-```
-
-Si todo está configurado correctamente, deberíamos ver respuestas del ping.
-
----
-
-## 📦 Ejemplo 3: Despliegue de Wordpress + MariaDB
-
-### ✅ Paso 1: Crear una red para la aplicación
-```sh
-docker network create wordpress_net
-```
-
-### ✅ Paso 2: Desplegar el contenedor de MariaDB
-
-```sh
-docker run -d --name mariadb --network wordpress_net \
-  -e MYSQL_ROOT_PASSWORD=rootpass \
-  -e MYSQL_DATABASE=wordpress \
-  -e MYSQL_USER=wp_user \
-  -e MYSQL_PASSWORD=wp_pass \
-  mariadb
-```
-
-### ✅ Paso 3: Desplegar el contenedor de Wordpress
-
-```sh
-docker run -d --name wordpress --network wordpress_net \
-  -e WORDPRESS_DB_HOST=mariadb \
-  -e WORDPRESS_DB_USER=wp_user \
-  -e WORDPRESS_DB_PASSWORD=wp_pass \
-  -e WORDPRESS_DB_NAME=wordpress \
-  -p 8080:80 \
-  wordpress
-```
-
-Accedemos a `http://localhost:8080` para completar la instalación de Wordpress.
