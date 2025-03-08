@@ -15,12 +15,12 @@
 
 <summary>
 
-## 📌 Indice
+# 📌 Indice
 
 </summary>
 
 - [⚙️ Instalación de Docker](#️-instalación-de-docker)
-  - [📌 Indice](#-indice)
+- [📌 Indice](#-indice)
   - [⚡ Actualizar el sistema](#-actualizar-el-sistema)
   - [🔧 Instalar paquetes necesarios](#-instalar-paquetes-necesarios)
   - [🔑 Agregar la clave GPG de Docker](#-agregar-la-clave-gpg-de-docker)
