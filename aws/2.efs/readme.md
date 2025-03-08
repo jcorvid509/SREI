@@ -37,3 +37,52 @@ EFS es un servicio de almacenamiento de archivos en la nube que permite a los us
 
 ![alt text](image-5.png)
 
+- En el menú de **EFS** entramos en nuestro sistema de archivos.
+
+![alt text](image-6.png)
+
+![alt text](image-7.png)
+
+- Una vez dentro, bajamos y seleccionamos la pestaña **Red > Administrar**
+
+![alt text](image-8.png)
+
+- Cambiamos la VPC por la nuestra.
+
+![alt text](image-9.png)
+
+- Volvemos a la página del sistema **EFS** y pulsamos en **Asociar**
+
+![alt text](image-10.png)
+
+- Sellecionamos `Montaje a traves de IP` y `us-east-1a` y copiamos el código que nos aparece.
+
+```
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 10.0.143.226:/ efs
+```
+
+![alt text](image-11.png)
+
+# Montar EFS en nuestro servidor
+
+- Volvemos a nuestra **instancia EC2** e instalamos **NFS**
+
+```
+sudo apt install nfs-common -y
+```
+
+![alt text](image-12.png)
+
+- Creamos un directorio para montar el sistema de archivos.
+
+```
+sudo mkdir -p efs
+```
+
+![alt text](image-13.png)
+
+- Montamos el sistema de archivos con el comando que copiamos anteriormente.
+
+![alt text](image-14.png)
+
+# Instalación de Wordpress
