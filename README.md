@@ -1,6 +1,13 @@
 
 ![](/.resGen/_bannerD.png#gh-dark-mode-only)
 ![](/.resGen/_bannerL.png#gh-light-mode-only)
+---
+
+Author: `Javier Coronel Vides`
+
+Course: `2º ASIR`
+
+Subject: `Servicios de Red e Internet`
 
 ---
 
@@ -25,3 +32,5 @@ Este repositorio incluye actividades llevadas a cabo en el módulo Servicios de 
 ## ☁️ Práctica AWS<a href="aws/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
 ## 🐳 Práctica Docker<a href="docker/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+
+![Alt](https://repobeats.axiom.co/api/embed/adbbf1fad6962aec4e9693569154091cc38ed570.svg "Repobeats analytics image")
