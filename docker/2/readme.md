@@ -16,12 +16,12 @@
 
 <summary>
 
-# 📌 Indice
+## 📌 Indice
 
 </summary>
 
 - [🔨 Construcción y Publicación de Imágenes Docker](#-construcción-y-publicación-de-imágenes-docker)
-- [📌 Indice](#-indice)
+  - [📌 Indice](#-indice)
   - [🏗️ Primeros pasos con Docker](#️-primeros-pasos-con-docker)
     - [✅ 1. Ejecutar la imagen "hello-world"](#-1-ejecutar-la-imagen-hello-world)
     - [📸 2. Mostrar las imágenes de Docker instaladas](#-2-mostrar-las-imágenes-de-docker-instaladas)
