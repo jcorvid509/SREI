@@ -13,7 +13,7 @@ Subject: `Servicios de Red e Internet`
 
 ---
 
-# Práctica 1: Amazon Web Services (AWS)
+# ☁️  Práctica 1: Amazon Web Services (AWS)
 
 ## 🛡 Virtual Private Cloud    <a href="1.vpc/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
