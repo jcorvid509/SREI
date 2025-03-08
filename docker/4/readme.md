@@ -36,6 +36,8 @@
 
 </details>
 
+---
+
 ## 🚀 Ejemplo 1: Despliegue de la aplicación Guestbook
 
 ### 1️⃣ Crear una red Docker
@@ -101,6 +103,8 @@ $ docker run -d --name temperaturas-backend --network red_temperaturas iesgn/tem
 ```bash
 $ docker run -d -p 80:3000 --name temperaturas-frontend --network red_temperaturas iesgn/temperaturas_frontend
 ```
+
+---
 
 ## 🌐 Ejemplo 3: Despliegue de Wordpress + MariaDB
 
