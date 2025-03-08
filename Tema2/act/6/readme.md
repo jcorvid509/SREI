@@ -5,7 +5,7 @@
 
 ---
 
-# Configuración de un Servidor DNS Maestro en Ubuntu
+# 🏗 Configuración de un Servidor DNS Maestro en Ubuntu
 
 ## Introducción
 En esta actividad, configuraremos un servidor DNS maestro utilizando BIND en Ubuntu. Crearemos zonas directa e inversa para el dominio **marisma.intranet** e incluiremos los registros necesarios para servidores DNS, FTP, correo y web. Posteriormente, modificaremos la configuración del cliente para emplear el nuevo servidor DNS y realizaremos pruebas de resolución.

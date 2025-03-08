@@ -5,7 +5,7 @@
 
 ---
 
-# Configuración de BIND9 como Servidor Caché y Forwarding
+# ⚙️ Configuración de BIND9 como Servidor Caché y Forwarding
 
 ## Introducción
 BIND9 (Berkeley Internet Name Domain) es uno de los servidores DNS más utilizados en sistemas Linux. Se puede configurar para trabajar como un **servidor caché** (almacena respuestas de consultas para mejorar el rendimiento) o como un **servidor forwarding** (reenvía las consultas a otros servidores DNS). En este documento, aprenderás cómo instalar y configurar BIND9 en Ubuntu.
