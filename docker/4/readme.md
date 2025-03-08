@@ -23,9 +23,10 @@
 - [🗂️ Gestión de Almacenamiento y Redes en Docker](#️-gestión-de-almacenamiento-y-redes-en-docker)
   - [📌 Indice](#-indice)
   - [🚀 Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
-    - [📝 Introducción](#-introducción)
-    - [⚙️ Prerrequisitos](#️-prerrequisitos)
-    - [📌 Paso a Paso](#-paso-a-paso)
+    - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker)
+    - [2️⃣ Desplegar la Base de Datos Redis](#2️⃣-desplegar-la-base-de-datos-redis)
+    - [3️⃣ Desplegar la Aplicación Guestbook](#3️⃣-desplegar-la-aplicación-guestbook)
+    - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue)
     - [🔄 Configuración Alternativa: Cambio de Nombre del Contenedor Redis](#-configuración-alternativa-cambio-de-nombre-del-contenedor-redis)
   - [🌡️ Ejemplo 2: Despliegue de la aplicación Temperaturas](#️-ejemplo-2-despliegue-de-la-aplicación-temperaturas)
   - [🌐 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
@@ -35,42 +36,28 @@
 
 ## 🚀 Ejemplo 1: Despliegue de la aplicación Guestbook
 
-### 📝 Introducción
-En este documento se describe el proceso paso a paso para desplegar la aplicación web Guestbook utilizando Docker. La aplicación requiere dos servicios:
-
-1. **Servicio Web**: Aplicación Guestbook basada en Python, que escucha en el puerto `5000/tcp`.
-2. **Servicio de Base de Datos**: Base de datos Redis que funciona en el puerto `6379/tcp`.
-
-### ⚙️ Prerrequisitos
-Antes de comenzar, asegúrate de tener instalados los siguientes componentes en tu sistema:
-
-- Docker
-- Docker Compose (opcional pero recomendado)
-
-### 📌 Paso a Paso
-
-- **1️⃣ Crear una red Docker**
+### 1️⃣ Crear una red Docker
 Para que los contenedores se comuniquen entre sí, creamos una red llamada `red_guestbook`:
 
 ```bash
 $ docker network create red_guestbook
 ```
 
-- **2️⃣ Desplegar la Base de Datos Redis**
+### 2️⃣ Desplegar la Base de Datos Redis
 Ejecutamos el contenedor de Redis asegurándonos de que los datos se almacenen de forma persistente en `/opt/redis`:
 
 ```bash
 $ docker run -d --name redis --network red_guestbook -v /opt/redis:/data redis redis-server --appendonly yes
 ```
 
-- **3️⃣ Desplegar la Aplicación Guestbook**
+### 3️⃣ Desplegar la Aplicación Guestbook
 Ejecutamos el contenedor de la aplicación Guestbook y lo exponemos en el puerto 80:
 
 ```bash
 $ docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/guestbook
 ```
 
-- **4️⃣ Verificar el Despliegue**
+### 4️⃣ Verificar el Despliegue
 Para comprobar que los contenedores están corriendo, usamos:
 
 ```bash

@@ -37,7 +37,7 @@
   - [🧹 13. Borra todos los contenedores](#-13-borra-todos-los-contenedores)
   - [📚 Recursos](#-recursos)
 
-</details>.
+</details>
 
 ## 🐧 1. Descarga la imagen de Ubuntu
 ```bash
