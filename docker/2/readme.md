@@ -152,10 +152,12 @@ Comprobamos que el servidor está funcionando correctamente, podemos acceder a l
 ![alt text](image-11.png)
 
 ```sh
-sudo docker login -u <usuario>
+sudo docker login -u tu_usuario
 ```
 
 Introduce tus credenciales cuando se te solicite.
+
+![alt text](image-12.png)
 
 ### ☁️ 5. Publicar la imagen en Docker Hub
 
