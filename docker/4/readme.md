@@ -233,14 +233,22 @@ sudo docker stop $(sudo docker ps -aq)
 sudo docker network create red_tomcat
 ```
 
+![alt text](image-15.png)
+
 ### 2️⃣ Desplegar Tomcat
 
 Antes de desplegar Tomcat, asegurémonos de tener el archivo de la aplicación (`sample.war`) en un directorio específico:
 
 ```bash
 sudo cd tomcat
+```
+```bash
 ls
-# Deberíamos ver los siguientes archivos:
+```
+
+Deberíamos ver los siguientes archivos:
+
+```bash
 default.conf  sample.war
 ```
 
