@@ -19,29 +19,21 @@ Subject: `Servicios de Red e Internet`
 
 Vamos a instalar un servidor web interno para un instituto. Se Pide:
 
-### 🔧 Instalación del servidor web apache
-<a href="md/1.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### 🔧 Instalación del servidor web apache<a href="md/1.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-### ⚙️ Activar los módulos necesarios para ejecutar php y acceder a mysql
-<a href="md/2.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### ⚙️ Activar los módulos necesarios para ejecutar php y acceder a mysql<a href="md/2.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-### 🌐 Instala y configura wordpress
-<a href="md/3.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### 🌐 Instala y configura wordpress<a href="md/3.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-### 🐍 Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python
-<a href="md/4.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### 🐍 Activar el módulo “wsgi” para permitir la ejecución de aplicaciones Python<a href="md/4.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-### 🖥️ Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente
-<a href="md/5.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### 🖥️ Crea y despliega una pequeña aplicación python para comprobar que funciona correctamente<a href="md/5.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-### 🔒 Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación
-<a href="md/6.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### 🔒 Adicionalmente protegeremos el acceso a la aplicación python mediante autenticación<a href="md/6.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-### 📊 Instala y configura awstat
-<a href="md/7.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### 📊 Instala y configura awstat<a href="md/7.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-### 🖧 Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”
-<a href="md/8.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+### 🖧 Instala un segundo servidor de tu elección (nginx, lighttpd) bajo el dominio “servidor2.centro.intranet”<a href="md/8.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
 
 > A la finalización del trabajo se procederá a una exposición de la presentación
