@@ -244,7 +244,7 @@ Descargamos el archivo [`sample.war`](https://github.com/josedom24/curso_docker_
 sudo cp /descargas/sample.war /home/vagrant/tomcat/sample.war
 ```
 
-Hacemos lo mismo con el archivo [`default.conf`](https://github.com/josedom24/curso_docker_ies/raw/refs/heads/main/ejemplos/modulo3/ejemplo4/default.conf):
+Hacemos lo mismo con el archivo [`default.conf`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo3/ejemplo4/default.conf):
 
 ```bash
 sudo cp /descargas/default.conf /etc/nginx/sites-available/default
