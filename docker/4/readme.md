@@ -32,7 +32,12 @@
     - [2️⃣ Desplegar el Backend](#2️⃣-desplegar-el-backend)
     - [3️⃣ Desplegar el Frontend](#3️⃣-desplegar-el-frontend)
     - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue-1)
-  - [🌐 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
+  - [🌍 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
+    - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker-2)
+    - [2️⃣ Desplegar el Contenedor de Base de Datos MariaDB](#2️⃣-desplegar-el-contenedor-de-base-de-datos-mariadb)
+    - [3️⃣ Desplegar el Contenedor de WordPress](#3️⃣-desplegar-el-contenedor-de-wordpress)
+    - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue-2)
+  - [🔍 Observaciones](#-observaciones)
   - [🚀 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
 
 </details>
@@ -136,7 +141,7 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 
 ---
 
-## 🌐 Ejemplo 3: Despliegue de Wordpress + MariaDB
+## 🌍 Ejemplo 3: Despliegue de Wordpress + MariaDB
 
 > [!IMPORTANT]  
 > Antes de realizar este ejemplo, deberemos de cerrar las aplicaciones Guestbook y Redis que se ejecutaron en el ejemplo anterior.
@@ -145,6 +150,53 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 sudo docker stop $(sudo docker ps -aq)
 ```
 
+### 1️⃣ Crear una red Docker
+
+```bash
+sudo docker network create red_wp
+```
+
+### 2️⃣ Desplegar el Contenedor de Base de Datos MariaDB
+
+```bash
+sudo docker run -d --name servidor_mysql \
+                --network red_wp \
+                -v /opt/mysql_wp:/var/lib/mysql \
+                -e MYSQL_DATABASE=bd_wp \
+                -e MYSQL_USER=user_wp \
+                -e MYSQL_PASSWORD=asdasd \
+                -e MYSQL_ROOT_PASSWORD=asdasd \
+                mariadb
+```
+
+### 3️⃣ Desplegar el Contenedor de WordPress
+
+```bash
+sudo docker run -d --name servidor_wp \
+                --network red_wp \
+                -v /opt/wordpress:/var/www/html/wp-content \
+                -e WORDPRESS_DB_HOST=servidor_mysql \
+                -e WORDPRESS_DB_USER=user_wp \
+                -e WORDPRESS_DB_PASSWORD=asdasd \
+                -e WORDPRESS_DB_NAME=bd_wp \
+                -p 80:80 \
+                wordpress
+```
+
+### 4️⃣ Verificar el Despliegue
+
+```bash
+sudo docker ps
+```
+
+## 🔍 Observaciones
+
+- **MariaDB** ejecuta un script `docker-entrypoint.sh` que configura la base de datos según las variables de entorno proporcionadas.
+- **WordPress** también ejecuta su propio script `docker-entrypoint.sh`, que genera el archivo `wp-config.php` automáticamente.
+- La variable `WORDPRESS_DB_HOST` se configura con el nombre del contenedor de la base de datos (`servidor_mysql`).
+- Solo se expone el puerto del contenedor de **WordPress** (`80`), ya que la base de datos solo necesita ser accesible dentro de la red Docker.
+
+---
 
 ## 🚀 Ejemplo 4: Despliegue de Tomcat + Nginx
 
