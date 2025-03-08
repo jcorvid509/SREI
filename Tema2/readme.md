@@ -25,16 +25,3 @@ Subject: `Servicios de Red e Internet`
 ### 🏗 Master DNS              <a href="act/6/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 ### 🧩 Slave DNS
 ### 📂 Subdominio              <a href="act/8/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
-
-
-
-# 🌐 Tema 2: Domain Name System (DNS)
-##  Prácticas de DNS
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
