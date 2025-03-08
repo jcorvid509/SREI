@@ -113,7 +113,7 @@ EXPOSE 3000
 Ejecuta el siguiente comando para construir la imagen Docker:
 
 ```sh
-sudo docker build -t migetting-startedapp .
+sudo docker build -t miapp .
 ```
 
 ![alt text](image-6.png)
