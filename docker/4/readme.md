@@ -252,10 +252,14 @@ sudo cp Descargas/default.conf /home/vagrant/tomcat/defaults.conf
 
 ```bash
 cd /home/vagrant/tomcat/
+```
+```bash
 ls
 # Deberíamos ver los siguientes archivos:
 default.conf  sample.war
 ```
+
+![alt text](image-20.png)
 
 Creamos el contenedor Tomcat y montamos el archivo WAR en el directorio de despliegue:
 
