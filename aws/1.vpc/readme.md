@@ -5,11 +5,11 @@
 
 ---
 
-# Virtual Private Cloud (VPC)
+# 🛡 Virtual Private Cloud (VPC)
 
 ## Índice
 
-- [Virtual Private Cloud (VPC)](#virtual-private-cloud-vpc)
+- [🛡 Virtual Private Cloud (VPC)](#-virtual-private-cloud-vpc)
   - [Índice](#índice)
   - [1. Crear una VPC](#1-crear-una-vpc)
   - [2. Crear una instancia EC2](#2-crear-una-instancia-ec2)

@@ -5,7 +5,7 @@
 
 ---
 
-# Elastic File System (EFS)
+# 📂 Elastic File System (EFS)
 
 EFS es un servicio de almacenamiento de archivos en la nube que permite a los usuarios almacenar y compartir archivos de manera segura y escalable.
 
