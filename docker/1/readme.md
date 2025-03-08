@@ -30,7 +30,7 @@
 ## ⚡ Actualizar el sistema
 
 ```bash
-sudo apt update
+sudo apt update && sudo apt upgrade -y
 ```
 
 ![alt text](image.png)
