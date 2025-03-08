@@ -86,7 +86,7 @@ Antes de poder ejecutar la aplicación, debe obtener el código fuente de la apl
  git clone https://github.com/docker/getting-started-app.git
 ```
 
-
+![alt text](image-4.png)
 
 Crea un archivo `Dockerfile` dentro del directorio con el siguiente contenido:
 
@@ -96,16 +96,14 @@ sudo nano Dockerfile
 
 ```Dockerfile
 # Usar una imagen base de Python
-FROM python:3.9
+# syntax=docker/dockerfile:1
 
-# Establecer el directorio de trabajo
+FROM node:lts-alpine
 WORKDIR /app
-
-# Copiar los archivos al contenedor
-COPY . /app
-
-# Comando por defecto al ejecutar el contenedor
-CMD ["python", "-m", "http.server", "8000"]
+COPY . .
+RUN yarn install --production
+CMD ["node", "src/index.js"]
+EXPOSE 3000
 ```
 
 ![alt text](image-5.png)
