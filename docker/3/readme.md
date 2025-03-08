@@ -74,13 +74,13 @@ sudo docker run --name myhello1 hello-world
 
 ![alt text](image-4.png)
 
-Comprobamos que el contenedor se ha creado correctamente con el comando
+<!-- Comprobamos que el contenedor se ha creado correctamente con el comando
 
 ```bash
 sudo docker ps -a
 ```
 
-![alt text](image-5.png)
+![alt text](image-5.png) -->
 
 ## 🔄 6. Ejecuta un contenedor hello-world y dale nombre "myhello2"
 ```bash
@@ -89,48 +89,71 @@ sudo docker run --name myhello2 hello-world
 
 ![alt text](image-6.png)
 
-Comprobamos que el contenedor se ha creado correctamente con el comando
+<!-- Comprobamos que el contenedor se ha creado correctamente con el comando
 
 ```bash
 sudo docker ps -a
 ```
 
-![alt text](image-7.png)
+![alt text](image-7.png) -->
 
 ## 🔄 7. Ejecuta un contenedor hello-world y dale nombre "myhello3"
 ```bash
 sudo docker run --name myhello3 hello-world
 ```
 
+![alt text](image-8.png)
+
+<!-- Comprobamos que el contenedor se ha creado correctamente con el comando
+
+```bash
+sudo docker ps -a
+```
+
+![alt text](image-9.png) -->
+
+
 ## 📋 8. Muestra los contenedores que se están ejecutando
 ```bash
-sudo docker ps
+sudo docker ps -a
 ```
+
+![alt text](image-10.png)
 
 ## ⏹️ 9. Para el contenedor "myhello1"
 ```bash
 sudo docker stop myhello1
 ```
 
+![alt text](image-11.png)
+
 ## ⏹️ 10. Para el contenedor "myhello2"
 ```bash
 sudo docker stop myhello2
 ```
+![alt text](image-12.png)
 
 ## 🗑️ 11. Borra el contenedor "myhello1"
 ```bash
 sudo docker rm myhello1
 ```
 
+![alt text](image-13.png)
+
 ## 📋 12. Muestra los contenedores que se están ejecutando
 ```bash
-sudo docker ps
+sudo docker ps -a
 ```
+
+![alt text](image-14.png)
 
 ## 🧹 13. Borra todos los contenedores
 ```bash
 sudo docker rm $(docker ps -aq)
 ```
+
+![alt text](image-15.png)
+
 # 📚 Recursos
 - [Pull Docker images & run Docker containers](http://www.servermom.org/pull-docker-images-run-docker-containers/3225/)
 - [Borrar imágenes y contenedores Docker](https://www.tecmint.com/remove-docker-images-containers-and-volumes/)
