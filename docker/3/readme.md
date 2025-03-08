@@ -41,67 +41,67 @@
 
 ## 🐧 1. Descarga la imagen de Ubuntu
 ```bash
-docker pull ubuntu
+sudo docker pull ubuntu
 ```
 
 ## 🌍 2. Descarga la imagen de hello-world
 ```bash
-docker pull hello-world
+sudo docker pull hello-world
 ```
 
 ## 🚀 3. Descarga la imagen de Nginx
 ```bash
-docker pull nginx
+sudo docker pull nginx
 ```
 
 ## 📸 4. Muestra un listado de todas las imágenes
 ```bash
-docker images
+sudo docker images
 ```
 
 ## 🔄 5. Ejecuta un contenedor hello-world y dale nombre "myhello1"
 ```bash
-docker run --name myhello1 hello-world
+sudo docker run --name myhello1 hello-world
 ```
 
 ## 🔄 6. Ejecuta un contenedor hello-world y dale nombre "myhello2"
 ```bash
-docker run --name myhello2 hello-world
+sudo docker run --name myhello2 hello-world
 ```
 
 ## 🔄 7. Ejecuta un contenedor hello-world y dale nombre "myhello3"
 ```bash
-docker run --name myhello3 hello-world
+sudo docker run --name myhello3 hello-world
 ```
 
 ## 📋 8. Muestra los contenedores que se están ejecutando
 ```bash
-docker ps
+sudo docker ps
 ```
 
 ## ⏹️ 9. Para el contenedor "myhello1"
 ```bash
-docker stop myhello1
+sudo docker stop myhello1
 ```
 
 ## ⏹️ 10. Para el contenedor "myhello2"
 ```bash
-docker stop myhello2
+sudo docker stop myhello2
 ```
 
 ## 🗑️ 11. Borra el contenedor "myhello1"
 ```bash
-docker rm myhello1
+sudo docker rm myhello1
 ```
 
 ## 📋 12. Muestra los contenedores que se están ejecutando
 ```bash
-docker ps
+sudo docker ps
 ```
 
 ## 🧹 13. Borra todos los contenedores
 ```bash
-docker rm $(docker ps -aq)
+sudo docker rm $(docker ps -aq)
 ```
 # 📚 Recursos
 - [Pull Docker images & run Docker containers](http://www.servermom.org/pull-docker-images-run-docker-containers/3225/)
