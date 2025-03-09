@@ -40,12 +40,13 @@
     - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación-2)
     - [📊 Verificación del Despliegue](#-verificación-del-despliegue)
     - [🌍 Acceder a WordPress](#-acceder-a-wordpress)
+    - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-2)
   - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.](#-ejemplo-4-despliegue-de-tomcat--nginx)
     - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-2)
     - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación-3)
     - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-2)
     - [🌍 Prueba de Acceso](#-prueba-de-acceso-2)
-    - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-2)
+    - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-3)
 
 </details>
 
@@ -396,8 +397,13 @@ NAME             IMAGE       COMMAND                                     SERVICE
 servidor_mysql   mariadb     "docker-entrypoint.sh mariadbd"             db          21 seconds ago   Up 19 seconds   3306/tcp
 servidor_wp      wordpress   "docker-entrypoint.sh apache2-foreground"   wordpress   21 seconds ago   Up 19 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp
 ```
+- Usando volumenes Docker
 
 ![alt text](image-16.png)
+
+- Usando Bind Mounts
+
+
 
 ### 🌍 Acceder a WordPress
 
@@ -407,9 +413,52 @@ Una vez desplegado el entorno, podemos acceder a **WordPress** a través del nav
 http://localhost
 ```
 
+- Usando volumenes Docker
+
+![alt text](image-17.png)
+
+- Usando Bind Mounts
+
+### 🛑 Detener y Eliminar Contenedores
+
+Para detener los contenedores sin eliminarlos:
+
+```bash
+sudo docker compose stop
+```
+
+Salida esperada:
+
+```bash
+[+] Stopping 2/2  
+ ✔ Container temperaturas-frontend  Stopped  
+ ✔ Container temperaturas-backend   Stopped  
+```
+
+- Usando volumenes Docker
 
 
+- Usando Bind Mounts
 
+Para eliminar completamente los contenedores y la red:
+
+```bash
+sudo docker compose down
+```
+
+Salida esperada:
+
+```bash
+[+] Running 3/3  
+ ✔ Container temperaturas-frontend  Removed  
+ ✔ Container temperaturas-backend   Removed  
+ ✔ Network temperaturas_default     Removed  
+```
+
+- Usando volumenes Docker
+
+
+- Usando Bind Mounts
 
 ## 🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.
 
