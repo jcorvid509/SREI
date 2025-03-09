@@ -177,6 +177,8 @@ ls
 Dockerfile  public_html
 ```
 
+![alt text](image-9.png)
+
 `Dockerfile` para esta versión:
 
 ```dockerfile
