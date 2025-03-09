@@ -153,6 +153,8 @@ sudo docker build -t josedom24/ejemplo1:v2 .
 sudo docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v2
 ```
 
+![alt text](image-7.png)
+
 ### 🌍 Versión 3: Desde una Imagen con Nginx
 Descargamos los siguientes [archivos](https://downgit.github.io/#/home?url=https://github.com/josedom24/curso_docker_ies/tree/main/ejemplos/modulo5/ejemplo1/version3), estos contienen el fichero `Dockerfile` y un directorio `public_html` con la página web:
 
