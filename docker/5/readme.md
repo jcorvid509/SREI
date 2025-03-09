@@ -12,6 +12,25 @@
 
 # 📋 Docker-Compose
 
+<details>
+
+<summary>
+
+## 📌 Indice
+
+</summary>
+
+- [📋 Docker-Compose](#-docker-compose)
+  - [📌 Indice](#-indice)
+  - [� Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
+    - [🛠️ Configuración con Docker Compose](#️-configuración-con-docker-compose)
+    - [🚀 Despliegue de la Aplicación](#-despliegue-de-la-aplicación)
+    - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores)
+    - [🌍 Prueba de Acceso](#-prueba-de-acceso)
+    - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores)
+
+</details>
+
 > [!TIP]
 > Para volver a desplegar una aplicación de Docker, primero hemos de eliminar **todos** los contenedores existentes y volverlos a desplegar:
 > 
@@ -25,7 +44,7 @@
 > sudo docker rm tu_contenedor
 > ```
 
-## 📌 Ejemplo 1: Despliegue de la aplicación Guestbook
+## 📖 Ejemplo 1: Despliegue de la aplicación Guestbook
 
 ### 🛠️ Configuración con Docker Compose
 
@@ -73,6 +92,8 @@ Esto creará la red por defecto, los volúmenes necesarios y levantará los cont
  ✔ Container guestbook        Started
 ```
 
+![alt text](image.png)
+
 ### 📊 Verificar el Estado de los Contenedores
 
 Para listar los contenedores en ejecución:
@@ -88,6 +109,17 @@ NAME        IMAGE             COMMAND                                           
 guestbook   iesgn/guestbook   "python3 app.py"                                       app       18 seconds ago   Up 16 seconds   0.0.0.0:8080->5000/tcp, :::8080->5000/tcp
 redis       redis             "docker-entrypoint.sh redis-server --appendonly yes"   db        18 seconds ago   Up 16 seconds   6379/tcp
 ```
+
+![alt text](image-1.png)
+
+### 🌍 Prueba de Acceso
+
+Podemos acceder a la aplicación a través del navegador ingresando:
+
+```
+http://localhost:8080
+```
+![alt text](image-4.png)
 
 ### 🛑 Detener y Eliminar Contenedores
 
@@ -105,6 +137,8 @@ Salida esperada:
  ✔ Container redis      Stopped  
 ```
 
+![alt text](image-2.png)
+
 Para eliminar completamente los contenedores, la red y los volúmenes:
 
 ```bash
@@ -120,12 +154,8 @@ Salida esperada:
  ✔ Network guestbook_default  Removed  
 ```
 
-### 🌍 Prueba de Acceso
+![alt text](image-3.png)
 
-Podemos acceder a la aplicación a través del navegador ingresando:
 
-```
-http://localhost:8080
-```
 
 
