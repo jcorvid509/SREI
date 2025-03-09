@@ -32,9 +32,12 @@
 
 > [!TIP]
 > Para borrar todas las imagenes de Docker, puedes utilizar el comando
-> 
+>
 > ```bash
-> sudo docker rmi -f $(sudo docker images -a)
+> sudo docker ps -aq | xargs sudo docker stop
+> ```
+> ```bash
+> sudo docker ps -aq | xargs sudo docker rm
 > ```
 
 
@@ -197,9 +200,11 @@ Construcción y ejecución:
 sudo docker build -t josedom24/ejemplo1:v3 .
 ```
 
-
+![alt text](image-10.png)
 
 ```bash
 sudo docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v3
 ```
+
+
 
