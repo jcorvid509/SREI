@@ -115,6 +115,8 @@ Comprobamos `http://localhost:80`
 
 ![alt text](image-4.png)
 
+Borramos las imagenes de Docker<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="left"></a>
+
 ---
 
 ### 🪶 Versión 2: Desde una Imagen con Apache2
@@ -168,6 +170,10 @@ Comprobamos `http://localhost:80`
 
 ![alt text](image-8.png)
 
+Borramos las imagenes de Docker<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="left"></a>
+
+---
+
 ### 🌍 Versión 3: Desde una Imagen con Nginx
 Descargamos los siguientes [archivos](https://downgit.github.io/#/home?url=https://github.com/josedom24/curso_docker_ies/tree/main/ejemplos/modulo5/ejemplo1/version3), estos contienen el fichero `Dockerfile` y un directorio `public_html` con la página web:
 
@@ -214,7 +220,10 @@ sudo docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v3
 
 ![alt text](image-11.png)
 
+Borramos las imagenes de Docker<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="left"></a>
 
+---
+---
 
 ## 🏗️ Construcción de Imágenes Docker con una Aplicación PHP
 
@@ -285,6 +294,8 @@ $ docker run -d -p 80:80 --name ejemplo2 josedom24/ejemplo2:v1
 Ahora podemos acceder a nuestra página en el navegador.
 
 La aplicación incluye un archivo `info.php` que nos proporciona información sobre PHP. En esta versión, observamos que estamos usando **PHP 7.4**.
+
+Borramos las imagenes de Docker<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="left"></a>
 
 ---
 
