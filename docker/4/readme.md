@@ -251,10 +251,9 @@ sudo cp Descargas/default.conf /home/vagrant/tomcat/defaults.conf
 ```
 
 ```bash
-cd /home/vagrant/tomcat/
+ls /home/vagrant/tomcat/
 ```
 ```bash
-ls
 # Deberíamos ver los siguientes archivos:
 default.conf  sample.war
 ```
@@ -275,10 +274,6 @@ sudo docker run -d --name aplicacionjava \
 ### 3️⃣ Desplegar Nginx como Proxy Inverso
 
 Tenemos el siguiente archivo de configuración `default.conf` para Nginx:
-
-```bash
-sudo nano /home/vagrant/tomcat/default.conf
-```
 
 ```nginx
 server {
