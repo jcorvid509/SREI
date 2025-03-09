@@ -194,7 +194,8 @@ services:
 
 ### 🚀 Despliegue de la Aplicación
 
-Para desplegar la aplicación, ejecutamos el siguiente comando en el directorio donde se encuentra el archivo `docker-compose.yaml`:
+> [!IMPORTANT]  
+> Para desplegar la aplicación, ejecutamos el siguiente comando en el directorio donde se encuentra el archivo `docker-compose.yaml`:
 
 ```bash
 $ docker compose up -d
