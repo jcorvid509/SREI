@@ -115,7 +115,7 @@ Comprobamos `http://localhost:80`
 
 ![alt text](image-4.png)
 
-Borramos las imagenes de Docker<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="left"></a>
+🗑️ **Borramos las imagenes de Docker**<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="right"></a>
 
 ---
 
@@ -170,7 +170,7 @@ Comprobamos `http://localhost:80`
 
 ![alt text](image-8.png)
 
-Borramos las imagenes de Docker<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="left"></a>
+🗑️ **Borramos las imagenes de Docker**<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="right"></a>
 
 ---
 
@@ -220,7 +220,7 @@ sudo docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v3
 
 ![alt text](image-11.png)
 
-Borramos las imagenes de Docker<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="left"></a>
+🗑️ **Borramos las imagenes de Docker**s<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="right"></a>
 
 ---
 ---
@@ -295,7 +295,7 @@ Ahora podemos acceder a nuestra página en el navegador.
 
 La aplicación incluye un archivo `info.php` que nos proporciona información sobre PHP. En esta versión, observamos que estamos usando **PHP 7.4**.
 
-Borramos las imagenes de Docker<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="left"></a>
+🗑️ **Borramos las imagenes de Docker**<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="right"></a>
 
 ---
 
@@ -317,7 +317,6 @@ ls
 ```bash
 Dockerfile  public_html
 ```
-
 
 En este caso, utilizamos una imagen de Docker que ya incluye **Apache y PHP**. El `Dockerfile` es más simple:
 
@@ -344,3 +343,7 @@ $ docker run -d -p 80:80 --name ejemplo2 josedom24/ejemplo2:v2
 
 Podemos acceder al archivo `info.php` para comprobar la versión de PHP en uso.
 
+🗑️ **Borramos las imagenes de Docker**<a href="#️-borrar-imágenes-docker"><img src="/.resGen/_arrow_r.svg" width="30" align="right"></a>
+
+---
+---
