@@ -329,12 +329,12 @@ Esto creará la red por defecto y levantará los contenedores:
 
 ```bash
 [+] Running 3/3  
- ✔ Network temperaturas_default     Created  
- ✔ Container temperaturas-backend   Started  
- ✔ Container temperaturas-frontend  Started  
+ ✔ Network     descargas_default   Created  
+ ✔ Container   tomcat              Started  
+ ✔ Container   nginx               Started  
 ```
 
-![alt text](image-5.png)
+![alt text](image-10.png)
 
 ### 📊 Verificar el Estado de los Contenedores
 
@@ -347,10 +347,12 @@ sudo docker compose ps
 Salida esperada:
 
 ```bash
-NAME                    IMAGE                         COMMAND            SERVICE    CREATED          STATUS          PORTS  
-temperaturas-backend    iesgn/temperaturas_backend    "python3 app.py"   backend    20 seconds ago   Up 18 seconds   5000/tcp  
-temperaturas-frontend   iesgn/temperaturas_frontend   "python3 app.py"   frontend   20 seconds ago   Up 17 seconds   0.0.0.0:8081->3000/tcp, :::8081->3000/tcp  
+NAME    IMAGE       COMMAND                 SERVICE         CREATED             STATUS              PORTS  
+nginx   nginx       "/docker-entrypoint.…"  proxy           About a minute ago  Up About a minute   0.0.0.0:80->80/tcp, [::]:80->80/tcp
+tomcat  tomcat:9.0  "catalina.sh run"       aplicacionjava  About a minute ago  Up About a minute   8080/tcp
 ```
+
+![alt text](image-11.png)
 
 ### 🌍 Prueba de Acceso
 
