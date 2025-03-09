@@ -23,26 +23,26 @@
 - [🗂️ Gestión de Almacenamiento y Redes en Docker](#️-gestión-de-almacenamiento-y-redes-en-docker)
   - [📌 Indice](#-indice)
   - [📖 Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
-    - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker)
-    - [2️⃣ Desplegar la Base de Datos Redis](#2️⃣-desplegar-la-base-de-datos-redis)
-    - [3️⃣ Desplegar la Aplicación Guestbook](#3️⃣-desplegar-la-aplicación-guestbook)
-    - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue)
+    - [🔗 Crear una red Docker](#-crear-una-red-docker)
+    - [🛢️ Desplegar la Base de Datos Redis](#️-desplegar-la-base-de-datos-redis)
+    - [📟 Desplegar la Aplicación Guestbook](#-desplegar-la-aplicación-guestbook)
+    - [🔍 Verificar el Despliegue](#-verificar-el-despliegue)
   - [🌡️ Ejemplo 2: Despliegue de la aplicación Temperaturas](#️-ejemplo-2-despliegue-de-la-aplicación-temperaturas)
-    - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker-1)
-    - [2️⃣ Desplegar el Backend](#2️⃣-desplegar-el-backend)
-    - [3️⃣ Desplegar el Frontend](#3️⃣-desplegar-el-frontend)
-    - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue-1)
+    - [🔗 Crear una red Docker](#-crear-una-red-docker-1)
+    - [🛢️ Desplegar el Backend](#️-desplegar-el-backend)
+    - [📟 Desplegar el Frontend](#-desplegar-el-frontend)
+    - [🔍 Verificar el Despliegue](#-verificar-el-despliegue-1)
   - [🌍 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
-    - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker-2)
-    - [2️⃣ Desplegar el Contenedor de Base de Datos MariaDB](#2️⃣-desplegar-el-contenedor-de-base-de-datos-mariadb)
-    - [3️⃣ Desplegar el Contenedor de WordPress](#3️⃣-desplegar-el-contenedor-de-wordpress)
-    - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue-2)
-    - [🔍 Observaciones](#-observaciones)
+    - [🔗 Crear una red Docker](#-crear-una-red-docker-2)
+    - [🛢️ Desplegar el Contenedor de Base de Datos MariaDB](#️-desplegar-el-contenedor-de-base-de-datos-mariadb)
+    - [📟 Desplegar el Contenedor de WordPress](#-desplegar-el-contenedor-de-wordpress)
+    - [🔍 Verificar el Despliegue](#-verificar-el-despliegue-2)
+    - [👀 Observaciones](#-observaciones)
   - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
-    - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker-3)
-    - [2️⃣ Desplegar Tomcat](#2️⃣-desplegar-tomcat)
-    - [3️⃣ Desplegar Nginx como Proxy Inverso](#3️⃣-desplegar-nginx-como-proxy-inverso)
-    - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue-3)
+    - [🔗 Crear una red Docker](#-crear-una-red-docker-3)
+    - [🛢️ Desplegar Tomcat](#️-desplegar-tomcat)
+    - [📟 Desplegar Nginx como Proxy Inverso](#-desplegar-nginx-como-proxy-inverso)
+    - [🔍 Verificar el Despliegue](#-verificar-el-despliegue-3)
 
 </details>
 
@@ -50,7 +50,7 @@
 
 ## 📖 Ejemplo 1: Despliegue de la aplicación Guestbook
 
-### 1️⃣ Crear una red Docker
+### 🔗 Crear una red Docker
 Para que los contenedores se comuniquen entre sí, creamos una red llamada `red_guestbook`:
 
 ```bash
@@ -59,7 +59,7 @@ sudo docker network create red_guestbook
 
 ![alt text](image.png)
 
-### 2️⃣ Desplegar la Base de Datos Redis
+### 🛢️ Desplegar la Base de Datos Redis
 Ejecutamos el contenedor de Redis asegurándonos de que los datos se almacenen de forma persistente en `/opt/redis`:
 
 ```bash
@@ -68,7 +68,7 @@ sudo docker run -d --name redis --network red_guestbook -v /opt/redis:/data redi
 
 ![alt text](image-1.png)
 
-### 3️⃣ Desplegar la Aplicación Guestbook
+### 📟 Desplegar la Aplicación Guestbook
 Ejecutamos el contenedor de la aplicación Guestbook y lo exponemos en el puerto 80:
 
 ```bash
@@ -77,7 +77,7 @@ sudo docker run -d -p 80:5000 --name guestbook --network red_guestbook iesgn/gue
 
 ![alt text](image-2.png)
 
-### 4️⃣ Verificar el Despliegue
+### 🔍 Verificar el Despliegue
 Para comprobar que los contenedores están corriendo, usamos:
 
 ```bash
@@ -104,7 +104,7 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 sudo docker stop $(sudo docker ps -aq)
 ```
 
-### 1️⃣ Crear una red Docker
+### 🔗 Crear una red Docker
 
 ```bash
 sudo docker network create red_temperaturas
@@ -112,7 +112,7 @@ sudo docker network create red_temperaturas
 
 ![alt text](image-5.png)
 
-### 2️⃣ Desplegar el Backend
+### 🛢️ Desplegar el Backend
 
 ```bash
 sudo docker run -d --name temperaturas-backend --network red_temperaturas iesgn/temperaturas_backend
@@ -120,7 +120,7 @@ sudo docker run -d --name temperaturas-backend --network red_temperaturas iesgn/
 
 ![alt text](image-6.png)
 
-### 3️⃣ Desplegar el Frontend
+### 📟 Desplegar el Frontend
 
 ```bash
 sudo docker run -d -p 80:3000 --name temperaturas-frontend --network red_temperaturas iesgn/temperaturas_frontend
@@ -128,7 +128,7 @@ sudo docker run -d -p 80:3000 --name temperaturas-frontend --network red_tempera
 
 ![alt text](image-7.png)
 
-### 4️⃣ Verificar el Despliegue
+### 🔍 Verificar el Despliegue
 Para comprobar que los contenedores están corriendo, usamos:
 
 ```bash
@@ -154,7 +154,7 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 sudo docker stop $(sudo docker ps -aq)
 ```
 
-### 1️⃣ Crear una red Docker
+### 🔗 Crear una red Docker
 
 ```bash
 sudo docker network create red_wp
@@ -162,7 +162,7 @@ sudo docker network create red_wp
 
 ![alt text](image-10.png)
 
-### 2️⃣ Desplegar el Contenedor de Base de Datos MariaDB
+### 🛢️ Desplegar el Contenedor de Base de Datos MariaDB
 
 ```bash
 sudo docker run -d --name servidor_mysql \
@@ -177,7 +177,7 @@ sudo docker run -d --name servidor_mysql \
 
 ![alt text](image-11.png)
 
-### 3️⃣ Desplegar el Contenedor de WordPress
+### 📟 Desplegar el Contenedor de WordPress
 
 ```bash
 sudo docker run -d --name servidor_wp \
@@ -193,7 +193,7 @@ sudo docker run -d --name servidor_wp \
 
 ![alt text](image-12.png)
 
-### 4️⃣ Verificar el Despliegue
+### 🔍 Verificar el Despliegue
 
 Para comprobar que los contenedores están corriendo, usamos:
 
@@ -209,7 +209,7 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 
 ![alt text](image-14.png)
 
-### 🔍 Observaciones
+### 👀 Observaciones
 
 - **MariaDB** ejecuta un script `docker-entrypoint.sh` que configura la base de datos según las variables de entorno proporcionadas.
 - **WordPress** también ejecuta su propio script `docker-entrypoint.sh`, que genera el archivo `wp-config.php` automáticamente.
@@ -227,7 +227,7 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 sudo docker stop $(sudo docker ps -aq)
 ```
 
-### 1️⃣ Crear una red Docker
+### 🔗 Crear una red Docker
 
 ```bash
 sudo docker network create red_tomcat
@@ -235,7 +235,7 @@ sudo docker network create red_tomcat
 
 ![alt text](image-15.png)
 
-### 2️⃣ Desplegar Tomcat
+### 🛢️ Desplegar Tomcat
 Antes de desplegar Tomcat, asegurémonos de tener el archivo de la aplicación (sample.war) en un directorio específico: `/usr/local/tomcat/webapps/`:
 
 Descargamos el archivo [`sample.war`](https://github.com/josedom24/curso_docker_ies/raw/refs/heads/main/ejemplos/modulo3/ejemplo4/sample.war), y lo copiamos a `/usr/local/tomcat/webapps/`:
@@ -271,7 +271,7 @@ sudo docker run -d --name aplicacionjava \
 
 ![alt text](image-16.png)
 
-### 3️⃣ Desplegar Nginx como Proxy Inverso
+### 📟 Desplegar Nginx como Proxy Inverso
 
 Tenemos el siguiente archivo de configuración `default.conf` para Nginx:
 
@@ -306,7 +306,7 @@ sudo docker run -d --name proxy \
 
 ![alt text](image-18.png)
 
-### 4️⃣ Verificar el Despliegue
+### 🔍 Verificar el Despliegue
 
 Para comprobar que los contenedores están corriendo, usamos:
 
