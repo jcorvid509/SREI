@@ -24,30 +24,28 @@
   - [📌 Indice](#-indice)
   - [📖 Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
     - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose)
-    - [🚀 Despliegue de la Aplicación](#-despliegue-de-la-aplicación)
+    - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación)
     - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores)
     - [🌍 Prueba de Acceso](#-prueba-de-acceso)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores)
   - [🌡️ Ejemplo 2: Despliegue de la aplicación Temperaturas](#️-ejemplo-2-despliegue-de-la-aplicación-temperaturas)
     - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-1)
-    - [🚀 Despliegue de la Aplicación](#-despliegue-de-la-aplicación-1)
+    - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación-1)
     - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-1)
     - [🌍 Prueba de Acceso](#-prueba-de-acceso-1)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-1)
-  - [📦 Ejemplo 3.1: Despliegue de Wordpress + MariaDB usando volumenes Docker](#-ejemplo-31-despliegue-de-wordpress--mariadb-usando-volumenes-docker)
-    - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-2)
-        - [🚀 Configuración con Docker Compose](#-configuración-con-docker-compose)
-    - [📂 Utilizando Volúmenes Docker](#-utilizando-volúmenes-docker)
-    - [📂 Utilizando Bind Mounts](#-utilizando-bind-mounts)
-    - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación)
-    - [🔎 Verificación del Despliegue](#-verificación-del-despliegue)
+  - [✒️ Ejemplo 3: Despliegue de Wordpress + MariaDB](#️-ejemplo-3-despliegue-de-wordpress--mariadb)
+    - [⚙️📦 Configuración con Docker Compose usando volumenes Docker](#️-configuración-con-docker-compose-usando-volumenes-docker)
+    - [⚙️🔗 Configuración con Docker Compose usando Bind Mounts](#️-configuración-con-docker-compose-usando-bind-mounts)
+    - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación-2)
+    - [� Verificación del Despliegue](#-verificación-del-despliegue)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-2)
     - [🌍 Acceder a WordPress](#-acceder-a-wordpress)
     - [🎯 Conclusión](#-conclusión)
   - [🔗 Ejemplo 3.2: Despliegue de Wordpress + MariaDB usando bind-mount](#-ejemplo-32-despliegue-de-wordpress--mariadb-usando-bind-mount)
   - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.](#-ejemplo-4-despliegue-de-tomcat--nginx)
-    - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-3)
-    - [🚀 Despliegue de la Aplicación](#-despliegue-de-la-aplicación-2)
+    - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-2)
+    - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación-3)
     - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-2)
     - [🌍 Prueba de Acceso](#-prueba-de-acceso-2)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-3)
@@ -96,7 +94,7 @@ volumes:
   redis:
 ```
 
-### 🚀 Despliegue de la Aplicación
+### 🏗️ Despliegue de la Aplicación
 
 > [!IMPORTANT]  
 > Para desplegar la aplicación, ejecutamos el siguiente comando en el directorio donde se encuentra el archivo `docker-compose.yaml`:
@@ -209,7 +207,7 @@ services:
     restart: always
 ```
 
-### 🚀 Despliegue de la Aplicación
+### 🏗️ Despliegue de la Aplicación
 
 > [!IMPORTANT]  
 > Para desplegar la aplicación, ejecutamos el siguiente comando en el directorio donde se encuentra el archivo `docker-compose.yaml`:
@@ -292,38 +290,12 @@ Salida esperada:
 
 ![alt text](image-9.png)
 
-## 📦 Ejemplo 3.1: Despliegue de Wordpress + MariaDB usando volumenes Docker
+## ✒️ Ejemplo 3: Despliegue de Wordpress + MariaDB
 
-### ⚙️ Configuración con Docker Compose
+### ⚙️📦 Configuración con Docker Compose usando volumenes Docker
 
-Para definir y gestionar el despliegue de los servicios, utilizaremos el siguiente archivo [`docker-compose.yaml`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo4/ejemplo2/docker-compose.yaml):
+Para definir y gestionar el despliegue de los servicios, utilizaremos el siguiente archivo [`docker-compose.yaml`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo4/ejemplo2/docker-compose.yaml), este método garantiza que los datos persistan entre reinicios sin necesidad de gestionar manualmente los archivos del sistema host.
 
-```yaml
-version: '3.1'
-services:
-  frontend:
-    container_name: temperaturas-frontend
-    image: iesgn/temperaturas_frontend
-    restart: always
-    ports:
-      - "8081:3000"
-    environment:
-      TEMP_SERVER: temperaturas-backend:5000
-    depends_on:
-      - backend
-  backend:
-    container_name: temperaturas-backend
-    image: iesgn/temperaturas_backend
-    restart: always
-```
-
-##### 🚀 Configuración con Docker Compose
-
-Podemos definir el despliegue en el siguiente archivo `docker-compose.yaml`.
-
-### 📂 Utilizando Volúmenes Docker
-
-Este método garantiza que los datos persistan entre reinicios sin necesidad de gestionar manualmente los archivos del sistema host.
 
 ```yaml
 version: '3.1'
@@ -338,7 +310,7 @@ services:
       WORDPRESS_DB_PASSWORD: asdasd
       WORDPRESS_DB_NAME: bd_wp
     ports:
-      - "80:80"
+      - 80:80
     volumes:
       - wordpress_data:/var/www/html/wp-content
   db:
@@ -353,13 +325,13 @@ services:
     volumes:
       - mariadb_data:/var/lib/mysql
 volumes:
-  wordpress_data:
-  mariadb_data:
+    wordpress_data:
+    mariadb_data:
 ```
 
-### 📂 Utilizando Bind Mounts
+### ⚙️🔗 Configuración con Docker Compose usando Bind Mounts
 
-Este método permite gestionar los datos directamente desde el sistema de archivos del host.
+Para definir y gestionar el despliegue de los servicios, utilizaremos el siguiente archivo [`docker-compose.yaml`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo4/ejemplo2/docker-compose.yaml), este método permite gestionar los datos directamente desde el sistema de archivos del host.
 
 ```yaml
 version: '3.1'
@@ -392,7 +364,8 @@ services:
 
 ### 🏗️ Despliegue de la Aplicación
 
-Para desplegar el entorno, ejecutamos:
+> [!IMPORTANT]  
+> Para desplegar la aplicación, ejecutamos el siguiente comando en el directorio donde se encuentra el archivo `docker-compose.yaml`:
 
 ```bash
 $ docker compose up -d
@@ -409,7 +382,7 @@ Salida esperada:
  ✔ Container servidor_wp              Started   
 ```
 
-### 🔎 Verificación del Despliegue
+### 📊 Verificación del Despliegue
 
 Para listar los contenedores en ejecución:
 
@@ -472,7 +445,7 @@ http://localhost
 
 ### 🎯 Conclusión
 
-Siguiendo estos pasos, hemos desplegado con éxito **WordPress + MariaDB** utilizando **Docker Compose**, asegurando persistencia de datos y facilidad de gestión. 🚀
+Siguiendo estos pasos, hemos desplegado con éxito **WordPress + MariaDB** utilizando **Docker Compose**, asegurando persistencia de datos y facilidad de gestión. 🏗️
 
 
 
@@ -485,7 +458,6 @@ Siguiendo estos pasos, hemos desplegado con éxito **WordPress + MariaDB** utili
 ## 🔗 Ejemplo 3.2: Despliegue de Wordpress + MariaDB usando bind-mount
 
 ## 🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.
-
 
 ### ⚙️ Configuración con Docker Compose
 
@@ -514,7 +486,7 @@ services:
 > - [`default.conf`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo4/ejemplo4/default.conf)
 > - [`sample.war`](https://github.com/josedom24/curso_docker_ies/raw/refs/heads/main/ejemplos/modulo4/ejemplo4/sample.war)
 
-### 🚀 Despliegue de la Aplicación
+### 🏗️ Despliegue de la Aplicación
 
 > [!IMPORTANT]  
 > Para desplegar la aplicación, ejecutamos el siguiente comando en el directorio donde se encuentra el archivo `docker-compose.yaml`:
