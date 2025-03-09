@@ -38,7 +38,7 @@
     - [⚙️📦 Configuración con Docker Compose usando volumenes Docker](#️-configuración-con-docker-compose-usando-volumenes-docker)
     - [⚙️🔗 Configuración con Docker Compose usando Bind Mounts](#️-configuración-con-docker-compose-usando-bind-mounts)
     - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación-2)
-    - [� Verificación del Despliegue](#-verificación-del-despliegue)
+    - [📊 Verificación del Despliegue](#-verificación-del-despliegue)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-2)
     - [🌍 Acceder a WordPress](#-acceder-a-wordpress)
     - [🎯 Conclusión](#-conclusión)
@@ -331,7 +331,7 @@ volumes:
 
 ### ⚙️🔗 Configuración con Docker Compose usando Bind Mounts
 
-Para definir y gestionar el despliegue de los servicios, utilizaremos el siguiente archivo [`docker-compose.yaml`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo4/ejemplo2/docker-compose.yaml), este método permite gestionar los datos directamente desde el sistema de archivos del host.
+Para definir y gestionar el despliegue de los servicios, utilizaremos el siguiente archivo [`docker-compose.yaml`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo4/ejemplo3/bindmount/docker-compose.yaml), este método permite gestionar los datos directamente desde el sistema de archivos del host.
 
 ```yaml
 version: '3.1'
