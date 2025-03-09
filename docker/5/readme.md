@@ -198,7 +198,7 @@ services:
 > Para desplegar la aplicación, ejecutamos el siguiente comando en el directorio donde se encuentra el archivo `docker-compose.yaml`:
 
 ```bash
-$ docker compose up -d
+sudo docker compose up -d
 ```
 
 Esto creará la red por defecto y levantará los contenedores:
@@ -215,7 +215,7 @@ Esto creará la red por defecto y levantará los contenedores:
 Para listar los contenedores en ejecución:
 
 ```bash
-$ docker compose ps
+sudo docker compose ps
 ```
 
 Salida esperada:
@@ -228,12 +228,18 @@ temperaturas-frontend   iesgn/temperaturas_frontend   "python3 app.py"   fronten
 
 ### 🌍 Prueba de Acceso
 
+Podemos acceder a la aplicación a través del navegador ingresando:
+
+```
+http://localhost:8081
+```
+
 ### 🛑 Detener y Eliminar Contenedores
 
 Para detener los contenedores sin eliminarlos:
 
 ```bash
-$ docker compose stop
+sudo docker compose stop
 ```
 
 Salida esperada:
@@ -247,7 +253,7 @@ Salida esperada:
 Para eliminar completamente los contenedores y la red:
 
 ```bash
-$ docker compose down
+sudo docker compose down
 ```
 
 Salida esperada:
@@ -257,12 +263,4 @@ Salida esperada:
  ✔ Container temperaturas-frontend  Removed  
  ✔ Container temperaturas-backend   Removed  
  ✔ Network temperaturas_default     Removed  
-```
-
-
-
-Podemos acceder a la aplicación a través del navegador ingresando:
-
-```
-http://localhost:8081
 ```
