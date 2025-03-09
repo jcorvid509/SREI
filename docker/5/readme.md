@@ -28,12 +28,14 @@
     - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores)
     - [🌍 Prueba de Acceso](#-prueba-de-acceso)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores)
-  - [🌡️ Despliegue de la Aplicación Temperaturas con Docker Compose](#️-despliegue-de-la-aplicación-temperaturas-con-docker-compose)
+  - [🌡️ Ejemplo 2: Despliegue de la aplicación Temperaturas](#️-ejemplo-2-despliegue-de-la-aplicación-temperaturas)
     - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-1)
     - [🚀 Despliegue de la Aplicación](#-despliegue-de-la-aplicación-1)
     - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-1)
     - [🌍 Prueba de Acceso](#-prueba-de-acceso-1)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-1)
+  - [🌍 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
+  - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
 
 </details>
 
@@ -167,7 +169,7 @@ Salida esperada:
 
 
 
-## 🌡️ Despliegue de la Aplicación Temperaturas con Docker Compose
+## 🌡️ Ejemplo 2: Despliegue de la aplicación Temperaturas
 
 ### ⚙️ Configuración con Docker Compose
 
@@ -274,3 +276,7 @@ Salida esperada:
 ```
 
 ![alt text](image-9.png)
+
+## 🌍 Ejemplo 3: Despliegue de Wordpress + MariaDB
+
+## 🐱 Ejemplo 4: Despliegue de Tomcat + Nginx

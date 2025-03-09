@@ -22,7 +22,7 @@
 
 - [🗂️ Gestión de Almacenamiento y Redes en Docker](#️-gestión-de-almacenamiento-y-redes-en-docker)
   - [📌 Indice](#-indice)
-  - [� Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
+  - [📖 Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
     - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker)
     - [2️⃣ Desplegar la Base de Datos Redis](#2️⃣-desplegar-la-base-de-datos-redis)
     - [3️⃣ Desplegar la Aplicación Guestbook](#3️⃣-desplegar-la-aplicación-guestbook)
@@ -38,7 +38,7 @@
     - [3️⃣ Desplegar el Contenedor de WordPress](#3️⃣-desplegar-el-contenedor-de-wordpress)
     - [4️⃣ Verificar el Despliegue](#4️⃣-verificar-el-despliegue-2)
     - [🔍 Observaciones](#-observaciones)
-  - [🐱‍💻 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
+  - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
     - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker-3)
     - [2️⃣ Desplegar Tomcat](#2️⃣-desplegar-tomcat)
     - [3️⃣ Desplegar Nginx como Proxy Inverso](#3️⃣-desplegar-nginx-como-proxy-inverso)
@@ -218,7 +218,7 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 
 ---
 
-## 🐱‍💻 Ejemplo 4: Despliegue de Tomcat + Nginx
+## 🐱 Ejemplo 4: Despliegue de Tomcat + Nginx
 
 > [!IMPORTANT]  
 > Antes de realizar este ejemplo, deberemos de cerrar las aplicaciones Guestbook y Redis que se ejecutaron en el ejemplo anterior.
