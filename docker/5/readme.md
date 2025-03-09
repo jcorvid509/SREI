@@ -13,10 +13,15 @@
 # 📋 Docker-Compose
 
 > [!TIP]
-> Para volver a desplegar una aplicación de Docker, primero hemos de eliminar los contenedores existentes y volverlos a desplegar:
+> Para volver a desplegar una aplicación de Docker, primero hemos de eliminar **todos** los contenedores existentes y volverlos a desplegar:
+> 
 > ```
-> sudo docker tu_contenedor
-> ``` 
+> sudo docker stop tu_contenedor
+> ```
+>
+> ```
+> sudo docker rm tu_contenedor
+> ```
 
 ## 📌 Ejemplo 1: Despliegue de la aplicación Guestbook
 
