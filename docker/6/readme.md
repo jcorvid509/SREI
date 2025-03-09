@@ -102,9 +102,30 @@ sudo docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v1
 
 ![alt text](image-3.png)
 
+Comprobamos `http://localhost:80`
+
+![alt text](image-4.png)
+
 ---
 
 ### 🪶 Versión 2: Desde una Imagen con Apache2
+
+Descargamos los siguientes [archivos](https://downgit.github.io/#/home?url=https://github.com/josedom24/curso_docker_ies/tree/main/ejemplos/modulo5/ejemplo1/version2), estos contienen el fichero `Dockerfile` y un directorio `public_html` con la página web:
+
+Descomprimos el archivo `version2.zip`.
+
+```bash
+sudo unzip Descargas/version2.zip
+```
+
+```bash
+cd version2
+ls
+```
+
+```bash
+Dockerfile  public_html
+```
 
 `Dockerfile` para esta versión:
 
@@ -123,6 +144,24 @@ $ docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v2
 ```
 
 ### 🌍 Versión 3: Desde una Imagen con Nginx
+Descargamos los siguientes [archivos](https://downgit.github.io/#/home?url=https://github.com/josedom24/curso_docker_ies/tree/main/ejemplos/modulo5/ejemplo1/version3), estos contienen el fichero `Dockerfile` y un directorio `public_html` con la página web:
+
+Descomprimos el archivo `version2.zip`.
+
+```bash
+sudo unzip Descargas/version3.zip
+```
+
+```bash
+cd version3
+ls
+```
+
+```bash
+Dockerfile  public_html
+```
+
+
 
 `Dockerfile` para esta versión:
 
