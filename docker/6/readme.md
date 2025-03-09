@@ -28,6 +28,8 @@
 
 </details>
 
+---
+
 ## 🏗️ Ejemplo 1: Construcción de imágenes con una página estática
 
 ### 🛠️ Versión 1: Desde una Imagen Base
