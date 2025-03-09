@@ -34,13 +34,23 @@
     - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-1)
     - [🌍 Prueba de Acceso](#-prueba-de-acceso-1)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-1)
-  - [✒️ Ejemplo 3: Despliegue de Wordpress + MariaDB](#️-ejemplo-3-despliegue-de-wordpress--mariadb)
-  - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.](#-ejemplo-4-despliegue-de-tomcat--nginx)
+  - [📦 Ejemplo 3.1: Despliegue de Wordpress + MariaDB usando volumenes Docker](#-ejemplo-31-despliegue-de-wordpress--mariadb-usando-volumenes-docker)
     - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-2)
+        - [🚀 Configuración con Docker Compose](#-configuración-con-docker-compose)
+    - [📂 Utilizando Volúmenes Docker](#-utilizando-volúmenes-docker)
+    - [📂 Utilizando Bind Mounts](#-utilizando-bind-mounts)
+    - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación)
+    - [🔎 Verificación del Despliegue](#-verificación-del-despliegue)
+    - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-2)
+    - [🌍 Acceder a WordPress](#-acceder-a-wordpress)
+    - [🎯 Conclusión](#-conclusión)
+  - [🔗 Ejemplo 3.2: Despliegue de Wordpress + MariaDB usando bind-mount](#-ejemplo-32-despliegue-de-wordpress--mariadb-usando-bind-mount)
+  - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.](#-ejemplo-4-despliegue-de-tomcat--nginx)
+    - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-3)
     - [🚀 Despliegue de la Aplicación](#-despliegue-de-la-aplicación-2)
     - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-2)
     - [🌍 Prueba de Acceso](#-prueba-de-acceso-2)
-    - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-2)
+    - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-3)
 
 </details>
 
@@ -282,9 +292,197 @@ Salida esperada:
 
 ![alt text](image-9.png)
 
-## ✒️ Ejemplo 3: Despliegue de Wordpress + MariaDB
+## 📦 Ejemplo 3.1: Despliegue de Wordpress + MariaDB usando volumenes Docker
+
+### ⚙️ Configuración con Docker Compose
+
+Para definir y gestionar el despliegue de los servicios, utilizaremos el siguiente archivo [`docker-compose.yaml`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo4/ejemplo2/docker-compose.yaml):
+
+```yaml
+version: '3.1'
+services:
+  frontend:
+    container_name: temperaturas-frontend
+    image: iesgn/temperaturas_frontend
+    restart: always
+    ports:
+      - "8081:3000"
+    environment:
+      TEMP_SERVER: temperaturas-backend:5000
+    depends_on:
+      - backend
+  backend:
+    container_name: temperaturas-backend
+    image: iesgn/temperaturas_backend
+    restart: always
+```
+
+##### 🚀 Configuración con Docker Compose
+
+Podemos definir el despliegue en el siguiente archivo `docker-compose.yaml`.
+
+### 📂 Utilizando Volúmenes Docker
+
+Este método garantiza que los datos persistan entre reinicios sin necesidad de gestionar manualmente los archivos del sistema host.
+
+```yaml
+version: '3.1'
+services:
+  wordpress:
+    container_name: servidor_wp
+    image: wordpress
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: user_wp
+      WORDPRESS_DB_PASSWORD: asdasd
+      WORDPRESS_DB_NAME: bd_wp
+    ports:
+      - "80:80"
+    volumes:
+      - wordpress_data:/var/www/html/wp-content
+  db:
+    container_name: servidor_mysql
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_DATABASE: bd_wp
+      MYSQL_USER: user_wp
+      MYSQL_PASSWORD: asdasd
+      MYSQL_ROOT_PASSWORD: asdasd
+    volumes:
+      - mariadb_data:/var/lib/mysql
+volumes:
+  wordpress_data:
+  mariadb_data:
+```
+
+### 📂 Utilizando Bind Mounts
+
+Este método permite gestionar los datos directamente desde el sistema de archivos del host.
+
+```yaml
+version: '3.1'
+services:
+  wordpress:
+    container_name: servidor_wp
+    image: wordpress
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: user_wp
+      WORDPRESS_DB_PASSWORD: asdasd
+      WORDPRESS_DB_NAME: bd_wp
+    ports:
+      - "80:80"
+    volumes:
+      - ./wordpress:/var/www/html/wp-content
+  db:
+    container_name: servidor_mysql
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_DATABASE: bd_wp
+      MYSQL_USER: user_wp
+      MYSQL_PASSWORD: asdasd
+      MYSQL_ROOT_PASSWORD: asdasd
+    volumes:
+      - ./mysql:/var/lib/mysql
+```
+
+### 🏗️ Despliegue de la Aplicación
+
+Para desplegar el entorno, ejecutamos:
+
+```bash
+$ docker compose up -d
+```
+
+Salida esperada:
+
+```bash
+[+] Running 5/5
+ ✔ Network wordpress_default          Created   
+ ✔ Volume "wordpress_wordpress_data"  Created   
+ ✔ Volume "wordpress_mariadb_data"    Created   
+ ✔ Container servidor_mysql           Started   
+ ✔ Container servidor_wp              Started   
+```
+
+### 🔎 Verificación del Despliegue
+
+Para listar los contenedores en ejecución:
+
+```bash
+$ docker compose ps
+```
+
+Salida esperada:
+
+```bash
+NAME             IMAGE       COMMAND                                     SERVICE     CREATED          STATUS          PORTS
+servidor_mysql   mariadb     "docker-entrypoint.sh mariadbd"             db          21 seconds ago   Up 19 seconds   3306/tcp
+servidor_wp      wordpress   "docker-entrypoint.sh apache2-foreground"   wordpress   21 seconds ago   Up 19 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp
+```
+
+### 🛑 Detener y Eliminar Contenedores
+
+Para detener los contenedores sin eliminarlos:
+
+```bash
+$ docker compose stop
+```
+
+Salida esperada:
+
+```bash
+[+] Stopping 2/2
+ ✔ Container servidor_mysql  Stopped  
+ ✔ Container servidor_wp     Stopped  
+```
+
+Para eliminar los contenedores:
+
+```bash
+$ docker compose rm
+```
+
+Salida esperada:
+
+```bash
+? Going to remove servidor_wp, servidor_mysql Yes
+[+] Removing 2/0
+ ✔ Container servidor_mysql  Removed  
+ ✔ Container servidor_wp     Removed  
+```
+
+Para eliminar todo el escenario, incluidos volúmenes y red:
+
+```bash
+$ docker compose down -v
+```
+
+### 🌍 Acceder a WordPress
+
+Una vez desplegado el entorno, podemos acceder a **WordPress** a través del navegador en la siguiente URL:
+
+```
+http://localhost
+```
+
+### 🎯 Conclusión
+
+Siguiendo estos pasos, hemos desplegado con éxito **WordPress + MariaDB** utilizando **Docker Compose**, asegurando persistencia de datos y facilidad de gestión. 🚀
 
 
+
+
+
+
+
+
+
+## 🔗 Ejemplo 3.2: Despliegue de Wordpress + MariaDB usando bind-mount
 
 ## 🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.
 
