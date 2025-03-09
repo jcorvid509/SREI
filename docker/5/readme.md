@@ -15,7 +15,7 @@
 > [!TIP]
 > Para volver a desplegar una aplicación de Docker, primero hemos de eliminar los contenedores existentes y volverlos a desplegar:
 > ```
-> sudo docker contenedor
+> sudo docker tu_contenedor
 > ``` 
 
 ## 📌 Ejemplo 1: Despliegue de la aplicación Guestbook
@@ -49,10 +49,11 @@ volumes:
 
 ### 🚀 Despliegue de la Aplicación
 
-Para desplegar la aplicación, ejecutamos el siguiente comando en el directorio donde se encuentra el archivo `docker-compose.yaml`:
+> [!IMPORTANT]  
+> Para desplegar la aplicación, ejecutamos el siguiente comando en el directorio donde se encuentra el archivo `docker-compose.yaml`:
 
 ```bash
-$ docker compose up -d
+sudo docker compose up -d
 ```
 
 Esto creará la red por defecto, los volúmenes necesarios y levantará los contenedores:
@@ -70,7 +71,7 @@ Esto creará la red por defecto, los volúmenes necesarios y levantará los cont
 Para listar los contenedores en ejecución:
 
 ```bash
-$ docker compose ps
+sudo docker compose ps
 ```
 
 Salida esperada:
@@ -86,7 +87,7 @@ redis       redis             "docker-entrypoint.sh redis-server --appendonly ye
 Para detener los contenedores sin eliminarlos:
 
 ```bash
-$ docker compose stop
+sudo docker compose stop
 ```
 
 Salida esperada:
@@ -100,7 +101,7 @@ Salida esperada:
 Para eliminar completamente los contenedores, la red y los volúmenes:
 
 ```bash
-$ docker compose down -v
+sudo docker compose down -v
 ```
 
 Salida esperada:
