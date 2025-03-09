@@ -16,8 +16,6 @@
 
 <summary>
 
----
-
 ## 📌 Indice
 
 </summary>
