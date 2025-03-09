@@ -35,13 +35,13 @@
 > Para volver a desplegar una aplicación de Docker, primero hemos de eliminar **todos** los contenedores existentes y volverlos a desplegar:
 > 
 > ```bash
-> # Parar contenedor tu_contenedor
-> sudo docker stop tu_contenedor
+> # Parar todos los contenedores
+> sudo docker stop $(sudo docker ps -q)
 > ```
 >
 > ```bash
-> # Eliminar contenedor tu_contenedor
-> sudo docker rm tu_contenedor
+> # Eliminar todos los contenedores
+> sudo docker rm $(sudo docker ps -aq)
 > ```
 
 ## 📖 Ejemplo 1: Despliegue de la aplicación Guestbook
