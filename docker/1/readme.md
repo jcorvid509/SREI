@@ -35,6 +35,8 @@
 
 </details>
 
+---
+
 ## ⚡ Actualizar el sistema
 
 ```bash

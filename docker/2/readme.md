@@ -38,6 +38,8 @@
 
 </details>
 
+---
+
 ## 🏗️ Primeros pasos con Docker
 
 ### ✅ 1. Ejecutar la imagen "hello-world"
