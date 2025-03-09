@@ -127,6 +127,8 @@ ls
 Dockerfile  public_html
 ```
 
+![alt text](image-5.png)
+
 `Dockerfile` para esta versión:
 
 ```dockerfile
@@ -143,6 +145,8 @@ Construcción y ejecución:
 
 ```bash
 $ docker build -t josedom24/ejemplo1:v2 .
+```
+```bash
 $ docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v2
 ```
 
