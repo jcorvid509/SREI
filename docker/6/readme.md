@@ -30,6 +30,14 @@
 
 ---
 
+> [!TIP]
+> Para borrar todas las imagenes de Docker, puedes utilizar el comando
+> 
+> ```bash
+> sudo docker rmi -f $(sudo docker images -a)
+> ```
+
+
 ## 🏗️ Ejemplo 1: Construcción de imágenes con una página estática
 
 ### 🛠️ Versión 1: Desde una Imagen Base
@@ -45,12 +53,15 @@ sudo unzip Descargas/version1.zip
 ```
 
 ```bash
+cd version1
 ls
 ```
 
 ```bash
 Dockerfile  public_html
 ```
+
+![alt text](image.png)
 
 El `Dockerfile` será:
 
@@ -66,9 +77,14 @@ CMD apache2ctl -D FOREGROUND
 
 Para crear la imagen:
 
+> [!IMPORTANT]  
+> Para crear la imagen, debemos estar en el directorio donde se encuentra el archivo `Dockerfile`.
+
 ```bash
 sudo docker build -t josedom24/ejemplo1:v1 .
 ```
+
+![alt text](image-1.png)
 
 Verificamos que la imagen se ha creado:
 
@@ -76,11 +92,15 @@ Verificamos que la imagen se ha creado:
 sudo docker images
 ```
 
+![alt text](image-2.png)
+
 Ejecutamos un contenedor:
 
 ```bash
 sudo docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v1
 ```
+
+![alt text](image-3.png)
 
 ---
 
@@ -119,3 +139,4 @@ Construcción y ejecución:
 $ docker build -t josedom24/ejemplo1:v3 .
 $ docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v3
 ```
+
