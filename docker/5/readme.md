@@ -35,7 +35,12 @@
     - [🌍 Prueba de Acceso](#-prueba-de-acceso-1)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-1)
   - [🌍 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
-  - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx](#-ejemplo-4-despliegue-de-tomcat--nginx)
+  - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.](#-ejemplo-4-despliegue-de-tomcat--nginx)
+    - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-2)
+    - [🚀 Despliegue de la Aplicación](#-despliegue-de-la-aplicación-2)
+    - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-2)
+    - [🌍 Prueba de Acceso](#-prueba-de-acceso-2)
+    - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-2)
 
 </details>
 
@@ -279,4 +284,109 @@ Salida esperada:
 
 ## 🌍 Ejemplo 3: Despliegue de Wordpress + MariaDB
 
-## 🐱 Ejemplo 4: Despliegue de Tomcat + Nginx
+
+
+## 🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.
+
+
+### ⚙️ Configuración con Docker Compose
+
+Para definir y gestionar el despliegue de los servicios, utilizaremos el siguiente archivo [`docker-compose.yaml`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo4/ejemplo4/docker-compose.yaml):
+
+```yaml
+version: '3.1'
+services:
+  aplicacionjava:
+    container_name: tomcat
+    image: tomcat:9.0
+    restart: always
+    volumes:
+      - ./sample.war:/usr/local/tomcat/webapps/sample.war:ro
+  proxy:
+    container_name: nginx
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf:ro
+```
+
+> [!IMPORTANT]  
+> En el mismo directorio en el que se encuentra el archivo `docker-compose.yaml`, tambien debemos de tener:
+> - [`default.conf`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo4/ejemplo4/default.conf)
+> - [`sample.war`](https://github.com/josedom24/curso_docker_ies/raw/refs/heads/main/ejemplos/modulo4/ejemplo4/sample.war)
+
+### 🚀 Despliegue de la Aplicación
+
+> [!IMPORTANT]  
+> Para desplegar la aplicación, ejecutamos el siguiente comando en el directorio donde se encuentra el archivo `docker-compose.yaml`:
+
+```bash
+sudo docker compose up -d
+```
+
+Esto creará la red por defecto y levantará los contenedores:
+
+```bash
+[+] Running 3/3  
+ ✔ Network temperaturas_default     Created  
+ ✔ Container temperaturas-backend   Started  
+ ✔ Container temperaturas-frontend  Started  
+```
+
+![alt text](image-5.png)
+
+### 📊 Verificar el Estado de los Contenedores
+
+Para listar los contenedores en ejecución:
+
+```bash
+sudo docker compose ps
+```
+
+Salida esperada:
+
+```bash
+NAME                    IMAGE                         COMMAND            SERVICE    CREATED          STATUS          PORTS  
+temperaturas-backend    iesgn/temperaturas_backend    "python3 app.py"   backend    20 seconds ago   Up 18 seconds   5000/tcp  
+temperaturas-frontend   iesgn/temperaturas_frontend   "python3 app.py"   frontend   20 seconds ago   Up 17 seconds   0.0.0.0:8081->3000/tcp, :::8081->3000/tcp  
+```
+
+### 🌍 Prueba de Acceso
+
+Podemos acceder a la aplicación a través del navegador ingresando:
+
+```
+http://localhost:8081
+```
+
+### 🛑 Detener y Eliminar Contenedores
+
+Para detener los contenedores sin eliminarlos:
+
+```bash
+sudo docker compose stop
+```
+
+Salida esperada:
+
+```bash
+[+] Stopping 2/2  
+ ✔ Container temperaturas-frontend  Stopped  
+ ✔ Container temperaturas-backend   Stopped  
+```
+
+Para eliminar completamente los contenedores y la red:
+
+```bash
+sudo docker compose down
+```
+
+Salida esperada:
+
+```bash
+[+] Running 3/3  
+ ✔ Container temperaturas-frontend  Removed  
+ ✔ Container temperaturas-backend   Removed  
+ ✔ Network temperaturas_default     Removed  
+```
