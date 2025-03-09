@@ -22,7 +22,7 @@
 
 - [🗂️ Gestión de Almacenamiento y Redes en Docker](#️-gestión-de-almacenamiento-y-redes-en-docker)
   - [📌 Indice](#-indice)
-  - [🚀 Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
+  - [� Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
     - [1️⃣ Crear una red Docker](#1️⃣-crear-una-red-docker)
     - [2️⃣ Desplegar la Base de Datos Redis](#2️⃣-desplegar-la-base-de-datos-redis)
     - [3️⃣ Desplegar la Aplicación Guestbook](#3️⃣-desplegar-la-aplicación-guestbook)
@@ -48,7 +48,7 @@
 
 ---
 
-## 🚀 Ejemplo 1: Despliegue de la aplicación Guestbook
+## 📖 Ejemplo 1: Despliegue de la aplicación Guestbook
 
 ### 1️⃣ Crear una red Docker
 Para que los contenedores se comuniquen entre sí, creamos una red llamada `red_guestbook`:
