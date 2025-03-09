@@ -138,6 +138,9 @@ EXPOSE 80
 
 Construcción y ejecución:
 
+> [!IMPORTANT]  
+> Para crear la imagen, debemos estar en el directorio donde se encuentra el archivo `Dockerfile`.
+
 ```bash
 $ docker build -t josedom24/ejemplo1:v2 .
 $ docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v2
@@ -161,8 +164,6 @@ ls
 Dockerfile  public_html
 ```
 
-
-
 `Dockerfile` para esta versión:
 
 ```dockerfile
@@ -173,6 +174,9 @@ EXPOSE 80
 ```
 
 Construcción y ejecución:
+
+> [!IMPORTANT]  
+> Para crear la imagen, debemos estar en el directorio donde se encuentra el archivo `Dockerfile`.
 
 ```bash
 $ docker build -t josedom24/ejemplo1:v3 .
