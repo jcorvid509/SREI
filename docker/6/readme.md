@@ -144,10 +144,13 @@ Construcción y ejecución:
 > Para crear la imagen, debemos estar en el directorio donde se encuentra el archivo `Dockerfile`.
 
 ```bash
-$ docker build -t josedom24/ejemplo1:v2 .
+sudo docker build -t josedom24/ejemplo1:v2 .
 ```
+
+![alt text](image-6.png)
+
 ```bash
-$ docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v2
+sudo docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v2
 ```
 
 ### 🌍 Versión 3: Desde una Imagen con Nginx
