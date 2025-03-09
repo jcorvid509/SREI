@@ -366,7 +366,7 @@ services:
 > Para desplegar la aplicación, ejecutamos el siguiente comando en el directorio donde se encuentra el archivo `docker-compose.yaml`:
 
 ```bash
-$ docker compose up -d
+sudo docker compose up -d
 ```
 
 Salida esperada:
@@ -385,7 +385,7 @@ Salida esperada:
 Para listar los contenedores en ejecución:
 
 ```bash
-$ docker compose ps
+sudo docker compose ps
 ```
 
 Salida esperada:
@@ -401,7 +401,7 @@ servidor_wp      wordpress   "docker-entrypoint.sh apache2-foreground"   wordpre
 Para detener los contenedores sin eliminarlos:
 
 ```bash
-$ docker compose stop
+sudo docker compose stop
 ```
 
 Salida esperada:
@@ -415,7 +415,7 @@ Salida esperada:
 Para eliminar los contenedores:
 
 ```bash
-$ docker compose rm
+sudo docker compose rm
 ```
 
 Salida esperada:
@@ -430,7 +430,7 @@ Salida esperada:
 Para eliminar todo el escenario, incluidos volúmenes y red:
 
 ```bash
-$ docker compose down -v
+sudo docker compose down -v
 ```
 
 ### 🌍 Acceder a WordPress
