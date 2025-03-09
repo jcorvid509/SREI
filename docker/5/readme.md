@@ -50,6 +50,8 @@
 
 </details>
 
+---
+
 > [!TIP]
 > Para volver a desplegar una aplicación de Docker, primero hemos de eliminar **todos** los contenedores existentes y volverlos a desplegar:
 > 
