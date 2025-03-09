@@ -39,14 +39,13 @@
     - [⚙️🔗 Configuración con Docker Compose usando Bind Mounts](#️-configuración-con-docker-compose-usando-bind-mounts)
     - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación-2)
     - [📊 Verificación del Despliegue](#-verificación-del-despliegue)
-    - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-2)
     - [🌍 Acceder a WordPress](#-acceder-a-wordpress)
   - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.](#-ejemplo-4-despliegue-de-tomcat--nginx)
     - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-2)
     - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación-3)
     - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-2)
     - [🌍 Prueba de Acceso](#-prueba-de-acceso-2)
-    - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-3)
+    - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-2)
 
 </details>
 
@@ -380,6 +379,8 @@ Salida esperada:
  ✔ Container servidor_wp              Started   
 ```
 
+![alt text](image-15.png)
+
 ### 📊 Verificación del Despliegue
 
 Para listar los contenedores en ejecución:
@@ -396,42 +397,7 @@ servidor_mysql   mariadb     "docker-entrypoint.sh mariadbd"             db     
 servidor_wp      wordpress   "docker-entrypoint.sh apache2-foreground"   wordpress   21 seconds ago   Up 19 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp
 ```
 
-### 🛑 Detener y Eliminar Contenedores
-
-Para detener los contenedores sin eliminarlos:
-
-```bash
-sudo docker compose stop
-```
-
-Salida esperada:
-
-```bash
-[+] Stopping 2/2
- ✔ Container servidor_mysql  Stopped  
- ✔ Container servidor_wp     Stopped  
-```
-
-Para eliminar los contenedores:
-
-```bash
-sudo docker compose rm
-```
-
-Salida esperada:
-
-```bash
-? Going to remove servidor_wp, servidor_mysql Yes
-[+] Removing 2/0
- ✔ Container servidor_mysql  Removed  
- ✔ Container servidor_wp     Removed  
-```
-
-Para eliminar todo el escenario, incluidos volúmenes y red:
-
-```bash
-sudo docker compose down -v
-```
+![alt text](image-16.png)
 
 ### 🌍 Acceder a WordPress
 
