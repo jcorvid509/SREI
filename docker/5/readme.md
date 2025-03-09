@@ -41,8 +41,6 @@
     - [📊 Verificación del Despliegue](#-verificación-del-despliegue)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-2)
     - [🌍 Acceder a WordPress](#-acceder-a-wordpress)
-    - [🎯 Conclusión](#-conclusión)
-  - [🔗 Ejemplo 3.2: Despliegue de Wordpress + MariaDB usando bind-mount](#-ejemplo-32-despliegue-de-wordpress--mariadb-usando-bind-mount)
   - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.](#-ejemplo-4-despliegue-de-tomcat--nginx)
     - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-2)
     - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación-3)
@@ -294,7 +292,7 @@ Salida esperada:
 
 ### ⚙️📦 Configuración con Docker Compose usando volumenes Docker
 
-Para definir y gestionar el despliegue de los servicios, utilizaremos el siguiente archivo [`docker-compose.yaml`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo4/ejemplo2/docker-compose.yaml), este método garantiza que los datos persistan entre reinicios sin necesidad de gestionar manualmente los archivos del sistema host.
+Para definir y gestionar el despliegue de los servicios, utilizaremos el siguiente archivo [`docker-compose.yaml`](https://github.com/josedom24/curso_docker_ies/blob/main/ejemplos/modulo4/ejemplo3/volumen/docker-compose.yaml), este método garantiza que los datos persistan entre reinicios sin necesidad de gestionar manualmente los archivos del sistema host.
 
 
 ```yaml
@@ -443,19 +441,9 @@ Una vez desplegado el entorno, podemos acceder a **WordPress** a través del nav
 http://localhost
 ```
 
-### 🎯 Conclusión
-
-Siguiendo estos pasos, hemos desplegado con éxito **WordPress + MariaDB** utilizando **Docker Compose**, asegurando persistencia de datos y facilidad de gestión. 🏗️
 
 
 
-
-
-
-
-
-
-## 🔗 Ejemplo 3.2: Despliegue de Wordpress + MariaDB usando bind-mount
 
 ## 🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.
 
