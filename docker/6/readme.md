@@ -21,6 +21,7 @@
 
 - [🖼️ Creación de Imágenes Docker](#️-creación-de-imágenes-docker)
   - [📌 Indice](#-indice)
+  - [🗑️ Borrar Imágenes Docker](#️-borrar-imágenes-docker)
   - [🏗️ Ejemplo 1: Construcción de imágenes con una página estática](#️-ejemplo-1-construcción-de-imágenes-con-una-página-estática)
     - [🛠️ Versión 1: Desde una Imagen Base](#️-versión-1-desde-una-imagen-base)
     - [🪶 Versión 2: Desde una Imagen con Apache2](#-versión-2-desde-una-imagen-con-apache2)
@@ -32,6 +33,8 @@
 </details>
 
 ---
+
+## 🗑️ Borrar Imágenes Docker
 
 > [!TIP]
 > Para borrar todas las imagenes de Docker, puedes utilizar el comando
