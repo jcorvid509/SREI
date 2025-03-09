@@ -32,7 +32,7 @@
     - [🛢️ Desplegar el Backend](#️-desplegar-el-backend)
     - [📟 Desplegar el Frontend](#-desplegar-el-frontend)
     - [🔍 Verificar el Despliegue](#-verificar-el-despliegue-1)
-  - [🌍 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
+  - [✒️ Ejemplo 3: Despliegue de Wordpress + MariaDB](#️-ejemplo-3-despliegue-de-wordpress--mariadb)
     - [🔗 Crear una red Docker](#-crear-una-red-docker-2)
     - [🛢️ Desplegar el Contenedor de Base de Datos MariaDB](#️-desplegar-el-contenedor-de-base-de-datos-mariadb)
     - [📟 Desplegar el Contenedor de WordPress](#-desplegar-el-contenedor-de-wordpress)
@@ -145,7 +145,7 @@ Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:
 
 ---
 
-## 🌍 Ejemplo 3: Despliegue de Wordpress + MariaDB
+## ✒️ Ejemplo 3: Despliegue de Wordpress + MariaDB
 
 > [!IMPORTANT]  
 > Antes de realizar este ejemplo, deberemos de cerrar las aplicaciones Guestbook y Redis que se ejecutaron en el ejemplo anterior.
