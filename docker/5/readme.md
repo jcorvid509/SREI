@@ -38,14 +38,14 @@
     - [⚙️📦 Configuración con Docker Compose usando volumenes Docker](#️-configuración-con-docker-compose-usando-volumenes-docker)
     - [⚙️🔗 Configuración con Docker Compose usando Bind Mounts](#️-configuración-con-docker-compose-usando-bind-mounts)
     - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación-2)
-    - [📊 Verificación del Despliegue](#-verificación-del-despliegue)
-    - [🌍 Acceder a WordPress](#-acceder-a-wordpress)
+    - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-2)
+    - [🌍 Prueba de Acceso](#-prueba-de-acceso-2)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-2)
   - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.](#-ejemplo-4-despliegue-de-tomcat--nginx)
     - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-2)
     - [🏗️ Despliegue de la Aplicación](#️-despliegue-de-la-aplicación-3)
-    - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-2)
-    - [🌍 Prueba de Acceso](#-prueba-de-acceso-2)
+    - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-3)
+    - [🌍 Prueba de Acceso](#-prueba-de-acceso-3)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-3)
 
 </details>
@@ -379,10 +379,15 @@ Salida esperada:
  ✔ Container servidor_mysql           Started   
  ✔ Container servidor_wp              Started   
 ```
+- Usando volumenes Docker
 
 ![alt text](image-15.png)
 
-### 📊 Verificación del Despliegue
+- Usando Bind Mounts
+
+![alt text](image-20.png)
+
+### 📊 Verificar el Estado de los Contenedores
 
 Para listar los contenedores en ejecución:
 
@@ -403,9 +408,9 @@ servidor_wp      wordpress   "docker-entrypoint.sh apache2-foreground"   wordpre
 
 - Usando Bind Mounts
 
+![alt text](image-21.png)
 
-
-### 🌍 Acceder a WordPress
+### 🌍 Prueba de Acceso
 
 Una vez desplegado el entorno, podemos acceder a **WordPress** a través del navegador en la siguiente URL:
 
@@ -418,6 +423,8 @@ http://localhost
 ![alt text](image-17.png)
 
 - Usando Bind Mounts
+
+![alt text](image-22.png)
 
 ### 🛑 Detener y Eliminar Contenedores
 
@@ -437,8 +444,11 @@ Salida esperada:
 
 - Usando volumenes Docker
 
+![alt text](image-18.png)
 
 - Usando Bind Mounts
+
+![alt text](image-23.png)
 
 Para eliminar completamente los contenedores y la red:
 
@@ -457,8 +467,11 @@ Salida esperada:
 
 - Usando volumenes Docker
 
+![alt text](image-19.png)
 
 - Usando Bind Mounts
+
+![alt text](image-24.png)
 
 ## 🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.
 
