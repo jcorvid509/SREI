@@ -210,6 +210,8 @@ Esto creará la red por defecto y levantará los contenedores:
  ✔ Container temperaturas-frontend  Started  
 ```
 
+![alt text](image-5.png)
+
 ### 📊 Verificar el Estado de los Contenedores
 
 Para listar los contenedores en ejecución:
@@ -226,6 +228,8 @@ temperaturas-backend    iesgn/temperaturas_backend    "python3 app.py"   backend
 temperaturas-frontend   iesgn/temperaturas_frontend   "python3 app.py"   frontend   20 seconds ago   Up 17 seconds   0.0.0.0:8081->3000/tcp, :::8081->3000/tcp  
 ```
 
+![alt text](image-6.png)
+
 ### 🌍 Prueba de Acceso
 
 Podemos acceder a la aplicación a través del navegador ingresando:
@@ -233,6 +237,8 @@ Podemos acceder a la aplicación a través del navegador ingresando:
 ```
 http://localhost:8081
 ```
+
+![alt text](image-7.png)
 
 ### 🛑 Detener y Eliminar Contenedores
 
@@ -250,6 +256,8 @@ Salida esperada:
  ✔ Container temperaturas-backend   Stopped  
 ```
 
+![alt text](image-8.png)
+
 Para eliminar completamente los contenedores y la red:
 
 ```bash
@@ -264,3 +272,5 @@ Salida esperada:
  ✔ Container temperaturas-backend   Removed  
  ✔ Network temperaturas_default     Removed  
 ```
+
+![alt text](image-9.png)
