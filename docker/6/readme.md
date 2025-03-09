@@ -38,6 +38,12 @@ Para esta versión, partimos de una imagen base **Debian** sin servicios adicion
 
 Descargamos los siguientes [archivos](https://downgit.github.io/#/home?url=https://github.com/josedom24/curso_docker_ies/tree/main/ejemplos/modulo5/ejemplo1/version1), estos contienen el fichero `Dockerfile` y un directorio `public_html` con la página web:
 
+Descomprimos el archivo `version1.zip`.
+
+```bash
+sudo unzip Descargas/version1.zip
+```
+
 ```bash
 ls
 ```
