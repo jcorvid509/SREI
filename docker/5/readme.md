@@ -359,8 +359,10 @@ tomcat  tomcat:9.0  "catalina.sh run"       aplicacionjava  About a minute ago  
 Podemos acceder a la aplicación a través del navegador ingresando:
 
 ```
-http://localhost:8081
+http://localhost:80
 ```
+
+![alt text](image-12.png)
 
 ### 🛑 Detener y Eliminar Contenedores
 
@@ -378,6 +380,8 @@ Salida esperada:
  ✔ Container temperaturas-backend   Stopped  
 ```
 
+![alt text](image-13.png)
+
 Para eliminar completamente los contenedores y la red:
 
 ```bash
@@ -392,3 +396,5 @@ Salida esperada:
  ✔ Container temperaturas-backend   Removed  
  ✔ Network temperaturas_default     Removed  
 ```
+
+![alt text](image-14.png)
