@@ -22,7 +22,7 @@
 
 - [📋 Docker-Compose](#-docker-compose)
   - [📌 Indice](#-indice)
-  - [� Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
+  - [📖 Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
     - [🛠️ Configuración con Docker Compose](#️-configuración-con-docker-compose)
     - [🚀 Despliegue de la Aplicación](#-despliegue-de-la-aplicación)
     - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores)
