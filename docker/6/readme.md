@@ -301,6 +301,8 @@ REPOSITORY             TAG    IMAGE ID       CREATED         SIZE
 josedom24/ejemplo2     v1     8c3275799063   1 minute ago   226MB
 ```
 
+![alt text](image-14.png)
+
 Creamos y ejecutamos un contenedor basado en la imagen:
 
 ```bash
