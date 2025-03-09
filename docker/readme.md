@@ -11,9 +11,6 @@ Course: `2º ASIR`
 
 Subject: `Servicios de Red e Internet`
 
-
-![Alt](https://repobeats.axiom.co/api/embed/9416879fc537d25ef29d5ee0ccecdb20d92649ac.svg "Repobeats analytics image")
-
 ---
 
 # 🐳 Práctica 2: DOCKER
