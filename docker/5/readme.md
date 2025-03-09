@@ -34,7 +34,7 @@
     - [📊 Verificar el Estado de los Contenedores](#-verificar-el-estado-de-los-contenedores-1)
     - [🌍 Prueba de Acceso](#-prueba-de-acceso-1)
     - [🛑 Detener y Eliminar Contenedores](#-detener-y-eliminar-contenedores-1)
-  - [🌍 Ejemplo 3: Despliegue de Wordpress + MariaDB](#-ejemplo-3-despliegue-de-wordpress--mariadb)
+  - [✒️ Ejemplo 3: Despliegue de Wordpress + MariaDB](#️-ejemplo-3-despliegue-de-wordpress--mariadb)
   - [🐱 Ejemplo 4: Despliegue de Tomcat + Nginx.](#-ejemplo-4-despliegue-de-tomcat--nginx)
     - [⚙️ Configuración con Docker Compose](#️-configuración-con-docker-compose-2)
     - [🚀 Despliegue de la Aplicación](#-despliegue-de-la-aplicación-2)
@@ -282,7 +282,7 @@ Salida esperada:
 
 ![alt text](image-9.png)
 
-## 🌍 Ejemplo 3: Despliegue de Wordpress + MariaDB
+## ✒️ Ejemplo 3: Despliegue de Wordpress + MariaDB
 
 
 
