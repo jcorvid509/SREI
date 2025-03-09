@@ -317,3 +317,7 @@ sudo docker ps
 Si todo está configurado correctamente, deberíamos ver los contenedores `proxy` y `aplicaciónjava` en ejecución.
 
 ![alt text](image-19.png)
+
+Ademas de que podremos ver lo siguiente si accedemos a la url `http://localhost:80`:
+
+![alt text](image-21.png)
