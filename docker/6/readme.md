@@ -254,8 +254,10 @@ ls
 ```
 
 ```bash
-Dockerfile  public_html
+app app.zip Dockerfile
 ```
+
+![alt text](image-12.png)
 
 El contenido del `Dockerfile` es el siguiente:
 
@@ -280,16 +282,18 @@ Explicación
 
 Construcción y Ejecución
 
-Para construir la imagen ejecutamos:
-
 ```bash
-$ docker build -t josedom24/ejemplo2:v1 .
+sudo docker build -t josedom24/ejemplo2:v1 .
 ```
+
+
 
 Comprobamos que la imagen se ha creado correctamente:
 
 ```bash
-$ docker images
+sudo docker images
+```
+```bash
 REPOSITORY             TAG    IMAGE ID       CREATED         SIZE
 josedom24/ejemplo2     v1     8c3275799063   1 minute ago   226MB
 ```
@@ -297,7 +301,7 @@ josedom24/ejemplo2     v1     8c3275799063   1 minute ago   226MB
 Creamos y ejecutamos un contenedor basado en la imagen:
 
 ```bash
-$ docker run -d -p 80:80 --name ejemplo2 josedom24/ejemplo2:v1
+sudo docker run -d -p 80:80 --name ejemplo2 josedom24/ejemplo2:v1
 ```
 
 Ahora podemos acceder a nuestra página en el navegador.
