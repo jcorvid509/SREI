@@ -51,6 +51,8 @@
 
 ### 🛠️ Versión 1: Desde una Imagen Base
 
+---
+
 Para esta versión, partimos de una imagen base **Debian** sin servicios adicionales y agregamos manualmente el servidor web **Apache**.
 
 Descargamos los siguientes [archivos](https://downgit.github.io/#/home?url=https://github.com/josedom24/curso_docker_ies/tree/main/ejemplos/modulo5/ejemplo1/version1), estos contienen el fichero `Dockerfile` y un directorio `public_html` con la página web:
@@ -121,6 +123,8 @@ Comprobamos `http://localhost:80`
 
 ### 🪶 Versión 2: Desde una Imagen con Apache2
 
+---
+
 Descargamos los siguientes [archivos](https://downgit.github.io/#/home?url=https://github.com/josedom24/curso_docker_ies/tree/main/ejemplos/modulo5/ejemplo1/version2), estos contienen el fichero `Dockerfile` y un directorio `public_html` con la página web:
 
 Descomprimos el archivo `version2.zip`.
@@ -175,6 +179,9 @@ Comprobamos `http://localhost:80`
 ---
 
 ### 🌍 Versión 3: Desde una Imagen con Nginx
+
+---
+
 Descargamos los siguientes [archivos](https://downgit.github.io/#/home?url=https://github.com/josedom24/curso_docker_ies/tree/main/ejemplos/modulo5/ejemplo1/version3), estos contienen el fichero `Dockerfile` y un directorio `public_html` con la página web:
 
 Descomprimos el archivo `version2.zip`.
@@ -228,6 +235,8 @@ sudo docker run -d -p 80:80 --name ejemplo1 josedom24/ejemplo1:v3
 ## 🏗️ Construcción de Imágenes Docker con una Aplicación PHP
 
 ### 🛠️ Versión 1: Desde una Imagen Base
+
+---
 
 Para este enfoque, en el directorio del proyecto tenemos el fichero `Dockerfile` y un directorio llamado `app` con nuestra aplicación.
 
@@ -300,6 +309,8 @@ La aplicación incluye un archivo `info.php` que nos proporciona información so
 ---
 
 ### 🖥️ Versión 2: Desde una Imagen con PHP Instalado
+
+---
 
 Descargamos los siguientes [archivos](https://downgit.github.io/#/home?url=https://github.com/josedom24/curso_docker_ies/tree/main/ejemplos/modulo5/ejemplo2/version2), estos contienen el fichero `Dockerfile` y un directorio `public_html` con la página web:
 
