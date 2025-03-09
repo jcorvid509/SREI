@@ -262,13 +262,12 @@ app app.zip Dockerfile
 El contenido del `Dockerfile` es el siguiente:
 
 > [!IMPORTANT]
-> Hemos de modificar el archivo `Dockerfile`, el archivo por defecto instala la versión de `PHP 7.4`, pero esta versión esta descontinuada, por lo que debemos cambiarla a `PHP 8.1`:
+> Hemos de modificar el archivo `Dockerfile`, el archivo por defecto instala la versión de `PHP 7.4`, pero esta versión esta descontinuada, por lo que debemos cambiarla a la verión mas reciente, por lo que quitamos el numero de la versión:
 
 ```dockerfile
 # syntax=docker/dockerfile:1
 FROM debian:stable-slim
-
-RUN apt-get update && apt-get install -y apache2 libapache2-mod-php8.1 php8.1 \
+RUN apt-get update && apt-get install -y apache2 libapache2-mod-php php \
     && apt-get clean && rm -rf /var/lib/apt/lists/* && rm /var/www/html/index.html
 COPY app /var/www/html/
 EXPOSE 80
@@ -290,7 +289,7 @@ Construcción y Ejecución
 sudo docker build -t josedom24/ejemplo2:v1 .
 ```
 
-
+![alt text](image-13.png)
 
 Comprobamos que la imagen se ha creado correctamente:
 
