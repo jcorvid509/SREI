@@ -21,7 +21,7 @@ Subject: `Servicios de Red e Internet`
 
 ## 📦 Gestion de imágenes y contenedores Docker<a href="3/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
-## 🗂️ Gestión de Almacenamiento y Redes en Docker<a href="4/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
+## 🗂️ Almacenamiento y Redes en Docker<a href="4/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 
 ## 📋 Docker-Compose<a href="5/readme.md"><img src="/.resGen/_arrow.svg" width="30" align="right"></a>
 

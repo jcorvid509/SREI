@@ -10,7 +10,7 @@
 
 ---
 
-# 🗂️ Gestión de Almacenamiento y Redes en Docker
+# 🗂️ Almacenamiento y Redes en Docker
 
 <details>
 
@@ -20,7 +20,7 @@
 
 </summary>
 
-- [🗂️ Gestión de Almacenamiento y Redes en Docker](#️-gestión-de-almacenamiento-y-redes-en-docker)
+- [🗂️ Almacenamiento y Redes en Docker](#️-almacenamiento-y-redes-en-docker)
   - [📌 Indice](#-indice)
   - [📖 Ejemplo 1: Despliegue de la aplicación Guestbook](#-ejemplo-1-despliegue-de-la-aplicación-guestbook)
     - [🔗 Crear una red Docker](#-crear-una-red-docker)
